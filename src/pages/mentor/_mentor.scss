@@ -1,0 +1,20 @@
+.mentor {
+  max-width: 500px;
+  min-height: calc(100vh);
+  margin-inline: auto;
+
+  .members {
+    height: calc(100vh - 20vh);
+    img {
+      max-width: 50px;
+      width: 100%;
+    }
+  }
+}
+
+.common-navbar {
+    height: 10vh;
+    .left-arrow {
+      font-size: 3rem;
+    }
+}

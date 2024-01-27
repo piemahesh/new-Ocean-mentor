@@ -1,0 +1,70 @@
+.student {
+  max-width: 500px;
+  min-height: calc(100vh);
+  margin-inline: auto;
+  .add-list {
+    .filters {
+      top: 80px;
+      overflow-x: scroll;
+      margin-left: 10px;
+      .filters-inner {
+        color: black;
+        border-radius: 10px;
+        min-width: fit-content;
+      }
+      .line {
+        min-height: 40px;
+        min-width: 2px;
+        background-color: rgb(197, 192, 192);
+      }
+    }
+    .filters::-webkit-scrollbar {
+      display: none;
+    }
+  }
+  .scroll {
+    height: calc(100vh - 30vh);
+    overflow-y: auto;
+  }
+  .scroll::-webkit-scrollbar {
+    display: none;
+  }
+  .scroll > main:last-child {
+    margin-bottom: 150px;
+  }
+
+  .studentadd {
+    position: fixed;
+    max-width: 500px;
+    width: 100%;
+    bottom: 70px;
+
+    .fab {
+      float: right;
+      margin: 20px;
+      height: 60px;
+      width: 60px;
+      font-size: 3rem;
+      font-weight: 500;
+    }
+  }
+}
+
+.StudentDetails {
+  border-bottom: 2px solid rgb(206, 198, 198);
+ #imgContainer{
+  height: 100px;
+  min-width: 100px;
+  border-radius: 50%;
+  overflow: hidden;
+  img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: top;
+  }
+ }
+  .title {
+    font-size: 12px;
+  }
+}

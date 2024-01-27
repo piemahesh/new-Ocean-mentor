@@ -1,0 +1,65 @@
+.UpdateDetails {
+  max-width: 500px;
+  margin-inline: auto;
+
+  .reg-img {
+    width: 100%;
+    max-width: 200px;
+    margin-inline: auto;
+  }
+
+  .outer-card {
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+    border-top-width: 50px;
+  }
+
+  .inner-card {
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+    border-top-width: 50px;
+    .identify {
+      height: 100px;
+      width: 100px;
+      .icon {
+        top: 50%;
+        left: 50%;
+        translate: -50% -50%;
+      }
+      .camera {
+        height: 50px;
+        width: 50px;
+        right: -15%;
+        bottom: 0;
+        background-color: #bbdbf7;
+        .icon {
+          top: 50%;
+          left: 50%;
+          translate: -50% -50%;
+        }
+      }
+    }
+    .form {
+      border-radius: 50px;
+      border: 2px solid #0074d974;
+      margin-block: 10px;
+      max-width: 90%;
+      width: 100%;
+    }
+    .form:focus-within {
+      border: 2px solid #0074d9;
+      box-shadow: 0 8px 8px -4px lightblue;
+
+      .icon {
+        fill: #0088ff;
+      }
+    }
+    .btn {
+      border-radius: 50px;
+    }
+    .remember {
+      max-width: 80%;
+      width: 100%;
+    }
+  }
+}

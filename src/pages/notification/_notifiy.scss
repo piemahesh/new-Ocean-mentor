@@ -1,0 +1,16 @@
+.notifiy {
+  max-width: 500px;
+  margin-inline: auto;
+  nav {
+    height: 10vh;
+    .left-arrow {
+      font-size: 3rem;
+    }
+  }
+  .msg {
+    height: calc(100vh - 10vh);
+    .icon {
+      font-size: 4rem;
+    }
+  }
+}

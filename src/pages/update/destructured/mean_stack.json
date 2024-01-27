@@ -1,0 +1,1380 @@
+{
+  "syllabus": [
+    {
+      "day_number": 1,
+      "topics": [
+        {
+          "topic": "HTML Introduction",
+          "isCompleted": false
+        },
+        {
+          "topic": "History of browser",
+          "isCompleted": false
+        },
+        {
+          "topic": "Why HTML?",
+          "isCompleted": false
+        },
+        {
+          "topic": "Structure of Hypertext Markup language",
+          "isCompleted": false
+        },
+        {
+          "topic": "Parts of HTML document",
+          "isCompleted": false
+        },
+        {
+          "topic": "Head",
+          "isCompleted": false
+        },
+        {
+          "topic": "Body",
+          "isCompleted": false
+        }
+      ]
+    },
+    {
+      "day_number": 2,
+      "topics": [
+        {
+          "topic": "Tags",
+          "isCompleted": false
+        },
+        {
+          "topic": "Paragraph",
+          "isCompleted": false
+        },
+        {
+          "topic": "Heading",
+          "isCompleted": false
+        },
+        {
+          "topic": "List (unordered, ordered, description list)",
+          "isCompleted": false
+        },
+        {
+          "topic": "Layout elements",
+          "isCompleted": false
+        },
+        {
+          "topic": "Exploring elements",
+          "isCompleted": false
+        }
+      ]
+    },
+    {
+      "day_number": 3,
+      "topics": [
+        {
+          "topic": "Table",
+          "isCompleted": false
+        }
+      ]
+    },
+    {
+      "day_number": 4,
+      "topics": [
+        {
+          "topic": "Form tags",
+          "isCompleted": false
+        },
+        {
+          "topic": "Input Types",
+          "isCompleted": false
+        },
+        {
+          "topic": "Text Area",
+          "isCompleted": false
+        },
+        {
+          "topic": "Dropdown",
+          "isCompleted": false
+        }
+      ]
+    },
+    {
+      "day_number": 5,
+      "topics": [
+        {
+          "topic": "CSS Introduction",
+          "isCompleted": false
+        },
+        {
+          "topic": "Importance of CSS",
+          "isCompleted": false
+        },
+        {
+          "topic": "Advantages",
+          "isCompleted": false
+        },
+        {
+          "topic": "Structure of a CSS rule",
+          "isCompleted": false
+        }
+      ]
+    },
+    {
+      "day_number": 6,
+      "topics": [
+        {
+          "topic": "Types",
+          "isCompleted": false
+        },
+        {
+          "topic": "Inline",
+          "isCompleted": false
+        },
+        {
+          "topic": "Embedded",
+          "isCompleted": false
+        },
+        {
+          "topic": "External CSS",
+          "isCompleted": false
+        }
+      ]
+    },
+    {
+      "day_number": 7,
+      "topics": [
+        {
+          "topic": "CSS Properties and Values",
+          "isCompleted": false
+        },
+        {
+          "topic": "Display and visibility properties",
+          "isCompleted": false
+        },
+        {
+          "topic": "Text related properties",
+          "isCompleted": false
+        },
+        {
+          "topic": "Font related properties",
+          "isCompleted": false
+        },
+        {
+          "topic": "Border related properties",
+          "isCompleted": false
+        },
+        {
+          "topic": "Background related properties",
+          "isCompleted": false
+        }
+      ]
+    },
+    {
+      "day_number": 8,
+      "topics": [
+        {
+          "topic": "Types of selectors",
+          "isCompleted": false
+        },
+        {
+          "topic": "Simple selectors",
+          "isCompleted": false
+        },
+        {
+          "topic": "Combinator selectors",
+          "isCompleted": false
+        },
+        {
+          "topic": "Pseudo class selectors",
+          "isCompleted": false
+        },
+        {
+          "topic": "Pseudo elements selectors",
+          "isCompleted": false
+        },
+        {
+          "topic": "Attribute selectors",
+          "isCompleted": false
+        }
+      ]
+    },
+    {
+      "day_number": 9,
+      "topics": [
+        {
+          "topic": "Position",
+          "isCompleted": false
+        },
+        {
+          "topic": "Static",
+          "isCompleted": false
+        },
+        {
+          "topic": "Relative",
+          "isCompleted": false
+        },
+        {
+          "topic": "Absolute",
+          "isCompleted": false
+        },
+        {
+          "topic": "Sticky",
+          "isCompleted": false
+        },
+        {
+          "topic": "Fixed",
+          "isCompleted": false
+        }
+      ]
+    },
+    {
+      "day_number": 10,
+      "topics": [
+        {
+          "topic": "Flex",
+          "isCompleted": false
+        }
+      ]
+    },
+    {
+      "day_number": 11,
+      "topics": [
+        {
+          "topic": "Grid",
+          "isCompleted": false
+        }
+      ]
+    },
+    {
+      "day_number": 12,
+      "topics": [
+        {
+          "topic": "Media Query",
+          "isCompleted": false
+        },
+        {
+          "topic": "Keyframes",
+          "isCompleted": false
+        }
+      ]
+    },
+    {
+      "day_number": 14,
+      "topics": [
+        {
+          "topic": "Sass",
+          "isCompleted": false
+        },
+        {
+          "topic": "Nesting",
+          "isCompleted": false
+        },
+        {
+          "topic": "Variables",
+          "isCompleted": false
+        },
+        {
+          "topic": "Partials and Imports",
+          "isCompleted": false
+        },
+        {
+          "topic": "Mixins",
+          "isCompleted": false
+        },
+        {
+          "topic": "Extend/Inheritance",
+          "isCompleted": false
+        }
+      ]
+    },
+    {
+      "day_number": 15,
+      "topics": [
+        {
+          "topic": "Interpolation",
+          "isCompleted": false
+        }
+      ]
+    },
+    {
+      "day_number": 16,
+      "topics": [
+        {
+          "topic": "Map",
+          "isCompleted": false
+        },
+        {
+          "topic": "Content",
+          "isCompleted": false
+        },
+        {
+          "topic": "Media",
+          "isCompleted": false
+        },
+        {
+          "topic": "Conditions",
+          "isCompleted": false
+        }
+      ]
+    },
+    {
+      "day_number": 17,
+      "topics": [
+        {
+          "topic": "Looping",
+          "isCompleted": false
+        },
+        {
+          "topic": "i) For loop",
+          "isCompleted": false
+        },
+        {
+          "topic": "ii) Each loop",
+          "isCompleted": false
+        },
+        {
+          "topic": "iii) While loop",
+          "isCompleted": false
+        }
+      ]
+    },
+    {
+      "day_number": 18,
+      "topics": [
+        {
+          "topic": "JavaScript Introduction to JavaScript",
+          "isCompleted": false
+        },
+        {
+          "topic": "Difference types of Javascript engine?",
+          "isCompleted": false
+        },
+        {
+          "topic": "Where is Javascript used?",
+          "isCompleted": false
+        },
+        {
+          "topic": "Difference between Javascript and Java?",
+          "isCompleted": false
+        },
+        {
+          "topic": "Who introduced Javascript language?",
+          "isCompleted": false
+        },
+        {
+          "topic": "Official name of Javascript?",
+          "isCompleted": false
+        },
+        {
+          "topic": "What is ECMAScript?",
+          "isCompleted": false
+        }
+      ]
+    },
+    {
+      "day_number": 19,
+      "topics": [
+        {
+          "topic": "Fundamentals of JavaScript",
+          "isCompleted": false
+        },
+        {
+          "topic": "Basic syntax",
+          "isCompleted": false
+        },
+        {
+          "topic": "JS in <head> or <body>",
+          "isCompleted": false
+        },
+        {
+          "topic": "Comments",
+          "isCompleted": false
+        },
+        {
+          "topic": "JS Outputs",
+          "isCompleted": false
+        },
+        {
+          "topic": "Basic keywords",
+          "isCompleted": false
+        },
+        {
+          "topic": "i) Var",
+          "isCompleted": false
+        },
+        {
+          "topic": "ii) Let",
+          "isCompleted": false
+        },
+        {
+          "topic": "iii) Const",
+          "isCompleted": false
+        },
+        {
+          "topic": "Reserved words",
+          "isCompleted": false
+        },
+        {
+          "topic": "Variables and datatypes",
+          "isCompleted": false
+        }
+      ]
+    },
+    {
+      "day_number": 20,
+      "topics": [
+        {
+          "topic": "Strings",
+          "isCompleted": false
+        },
+        {
+          "topic": "Length",
+          "isCompleted": false
+        },
+        {
+          "topic": "IndexOf",
+          "isCompleted": false
+        },
+        {
+          "topic": "LastindexOf",
+          "isCompleted": false
+        },
+        {
+          "topic": "Substring",
+          "isCompleted": false
+        },
+        {
+          "topic": "Substr",
+          "isCompleted": false
+        },
+        {
+          "topic": "To uppercase",
+          "isCompleted": false
+        },
+        {
+          "topic": "To lowercase",
+          "isCompleted": false
+        },
+        {
+          "topic": "Slice",
+          "isCompleted": false
+        }
+      ]
+    },
+    {
+      "day_number": 21,
+      "topics": [
+        {
+          "topic": "Objects",
+          "isCompleted": false
+        },
+        {
+          "topic": "Object definition",
+          "isCompleted": false
+        },
+        {
+          "topic": "Object properties",
+          "isCompleted": false
+        },
+        {
+          "topic": "Object methods",
+          "isCompleted": false
+        },
+        {
+          "topic": "Accessing properties and methods",
+          "isCompleted": false
+        }
+      ]
+    },
+    {
+      "day_number": 22,
+      "topics": [
+        {
+          "topic": "Array",
+          "isCompleted": false
+        },
+        {
+          "topic": "Introduction to array",
+          "isCompleted": false
+        },
+        {
+          "topic": "Accessing elements",
+          "isCompleted": false
+        },
+        {
+          "topic": "Array methods",
+          "isCompleted": false
+        }
+      ]
+    },
+    {
+      "day_number": 23,
+      "topics": [
+        {
+          "topic": "JS primitive type and reference type",
+          "isCompleted": false
+        }
+      ]
+    },
+    {
+      "day_number": 24,
+      "topics": [
+        {
+          "topic": "Exploring ES6",
+          "isCompleted": false
+        },
+        {
+          "topic": "Destructing",
+          "isCompleted": false
+        },
+        {
+          "topic": "Spread operator",
+          "isCompleted": false
+        },
+        {
+          "topic": "Rest operator",
+          "isCompleted": false
+        }
+      ]
+    },
+    {
+      "day_number": 25,
+      "topics": [
+        {
+          "topic": "Hoisting-level1",
+          "isCompleted": false
+        }
+      ]
+    },
+    {
+      "day_number": 26,
+      "topics": [
+        {
+          "topic": "Operators",
+          "isCompleted": false
+        }
+      ]
+    },
+    {
+      "day_number": 27,
+      "topics": [
+        {
+          "topic": "Scopes",
+          "isCompleted": false
+        },
+        {
+          "topic": "Global",
+          "isCompleted": false
+        },
+        {
+          "topic": "Block",
+          "isCompleted": false
+        },
+        {
+          "topic": "Script",
+          "isCompleted": false
+        },
+        {
+          "topic": "Function / Local",
+          "isCompleted": false
+        }
+      ]
+    },
+    {
+      "day_number": 28,
+      "topics": [
+        {
+          "topic": "Conditional Statement",
+          "isCompleted": false
+        },
+        {
+          "topic": "If else",
+          "isCompleted": false
+        },
+        {
+          "topic": "If else If",
+          "isCompleted": false
+        },
+        {
+          "topic": "Switch",
+          "isCompleted": false
+        }
+      ]
+    },
+    {
+      "day_number": 29,
+      "topics": [
+        {
+          "topic": "Looping Statement",
+          "isCompleted": false
+        },
+        {
+          "topic": "For",
+          "isCompleted": false
+        },
+        {
+          "topic": "While",
+          "isCompleted": false
+        },
+        {
+          "topic": "DO While",
+          "isCompleted": false
+        },
+        {
+          "topic": "Control Statement",
+          "isCompleted": false
+        },
+        {
+          "topic": "Break",
+          "isCompleted": false
+        },
+        {
+          "topic": "Continue",
+          "isCompleted": false
+        }
+      ]
+    },
+    {
+      "day_number": 30,
+      "topics": [
+        {
+          "topic": "Looping through array and object",
+          "isCompleted": false
+        },
+        {
+          "topic": "Array iteration methods",
+          "isCompleted": false
+        },
+        {
+          "topic": "For each",
+          "isCompleted": false
+        },
+        {
+          "topic": "Map",
+          "isCompleted": false
+        },
+        {
+          "topic": "Filter",
+          "isCompleted": false
+        },
+        {
+          "topic": "Reduce",
+          "isCompleted": false
+        },
+        {
+          "topic": "Object iteration methods",
+          "isCompleted": false
+        },
+        {
+          "topic": "Entries",
+          "isCompleted": false
+        },
+        {
+          "topic": "Keys",
+          "isCompleted": false
+        },
+        {
+          "topic": "Values",
+          "isCompleted": false
+        },
+        {
+          "topic": "For in",
+          "isCompleted": false
+        }
+      ]
+    },
+    {
+      "day_number": 31,
+      "topics": [
+        {
+          "topic": "Function",
+          "isCompleted": false
+        },
+        {
+          "topic": "Three types of function",
+          "isCompleted": false
+        },
+        {
+          "topic": "i) Statement/Expression function",
+          "isCompleted": false
+        },
+        {
+          "topic": "ii) Anonymous function",
+          "isCompleted": false
+        },
+        {
+          "topic": "Difference between arguments and parameters",
+          "isCompleted": false
+        },
+        {
+          "topic": "Arrow function",
+          "isCompleted": false
+        },
+        {
+          "topic": "Self-invoking function/immediately invoked function expressions (IIFE)",
+          "isCompleted": false
+        }
+      ]
+    },
+    {
+      "day_number": 32,
+      "topics": [
+        {
+          "topic": "Built-in-methods",
+          "isCompleted": false
+        },
+        {
+          "topic": "Math",
+          "isCompleted": false
+        },
+        {
+          "topic": "Dates",
+          "isCompleted": false
+        }
+      ]
+    },
+    {
+      "day_number": 33,
+      "topics": [
+        {
+          "topic": "Regular expression",
+          "isCompleted": false
+        }
+      ]
+    },
+    {
+      "day_number": 34,
+      "topics": [
+        {
+          "topic": "Exception Handling",
+          "isCompleted": false
+        },
+        {
+          "topic": "Try",
+          "isCompleted": false
+        },
+        {
+          "topic": "Catch",
+          "isCompleted": false
+        },
+        {
+          "topic": "Throw",
+          "isCompleted": false
+        },
+        {
+          "topic": "Finally",
+          "isCompleted": false
+        }
+      ]
+    },
+    {
+      "day_number": 35,
+      "topics": [
+        {
+          "topic": "Javascript Async",
+          "isCompleted": false
+        },
+        {
+          "topic": "Callbacks",
+          "isCompleted": false
+        },
+        {
+          "topic": "Asynchronous",
+          "isCompleted": false
+        },
+        {
+          "topic": "Promises",
+          "isCompleted": false
+        }
+      ]
+    },
+    {
+      "day_number": 36,
+      "topics": [
+        {
+          "topic": "Window object",
+          "isCompleted": false
+        },
+        {
+          "topic": "About window object",
+          "isCompleted": false
+        },
+        {
+          "topic": "DOM (Document object module)",
+          "isCompleted": false
+        },
+        {
+          "topic": "i) HTML DOM elements",
+          "isCompleted": false
+        },
+        {
+          "topic": "ii) HTML Attributes",
+          "isCompleted": false
+        },
+        {
+          "topic": "iii) HTML Events",
+          "isCompleted": false
+        },
+        {
+          "topic": "iv) HTML Events Objects",
+          "isCompleted": false
+        },
+        {
+          "topic": "v) Difference between HTML collections and Node List",
+          "isCompleted": false
+        },
+        {
+          "topic": "vi) HTML Styles",
+          "isCompleted": false
+        }
+      ]
+    },
+    {
+      "day_number": 37,
+      "topics": [
+        {
+          "topic": "BOM (Browse Object Module)",
+          "isCompleted": false
+        },
+        {
+          "topic": "i) Screen",
+          "isCompleted": false
+        },
+        {
+          "topic": "ii) Location",
+          "isCompleted": false
+        },
+        {
+          "topic": "iii) Popup alert",
+          "isCompleted": false
+        },
+        {
+          "topic": "iv) Cookies",
+          "isCompleted": false
+        },
+        {
+          "topic": "v) History",
+          "isCompleted": false
+        },
+        {
+          "topic": "vi)Navigator",
+          "isCompleted": false
+        },
+        {
+          "topic": "vii)Timing",
+          "isCompleted": false
+        }
+      ]
+    },
+    {
+      "day_number": 41,
+      "topics": [
+        {
+          "topic": "NODE JS Introduction",
+          "isCompleted": false
+        },
+        {
+          "topic": "Who introduced NodeJs",
+          "isCompleted": false
+        },
+        {
+          "topic": "Benefits",
+          "isCompleted": false
+        },
+        {
+          "topic": "Node architecture",
+          "isCompleted": false
+        },
+        {
+          "topic": "How NodeJs work",
+          "isCompleted": false
+        },
+        {
+          "topic": "How to install NodeJs",
+          "isCompleted": false
+        }
+      ]
+    },
+    {
+      "day_number": 42,
+      "topics": [
+        {
+          "topic": "Node Module System",
+          "isCompleted": false
+        },
+        {
+          "topic": "os",
+          "isCompleted": false
+        },
+        {
+          "topic": "fs",
+          "isCompleted": false
+        },
+        {
+          "topic": "events",
+          "isCompleted": false
+        },
+        {
+          "topic": "http",
+          "isCompleted": false
+        }
+      ]
+    },
+    {
+      "day_number": 45,
+      "topics": [
+        {
+          "topic": "Global Object in NodeJS",
+          "isCompleted": false
+        },
+        {
+          "topic": "Modules",
+          "isCompleted": false
+        },
+        {
+          "topic": "Class",
+          "isCompleted": false
+        }
+      ]
+    },
+    {
+      "day_number": 47,
+      "topics": [
+        {
+          "topic": "Introduction to NPM",
+          "isCompleted": false
+        },
+        {
+          "topic": "How to create package.json",
+          "isCompleted": false
+        },
+        {
+          "topic": "About package.json",
+          "isCompleted": false
+        },
+        {
+          "topic": "Developing-time-dependencies",
+          "isCompleted": false
+        }
+      ]
+    },
+    {
+      "day_number": 48,
+      "topics": [
+        {
+          "topic": "Express JS Introduction",
+          "isCompleted": false
+        },
+        {
+          "topic": "How to start server",
+          "isCompleted": false
+        },
+        {
+          "topic": "Project Structure(MVC)",
+          "isCompleted": false
+        }
+      ]
+    },
+    {
+      "day_number": 49,
+      "topics": [
+        {
+          "topic": "Routing",
+          "isCompleted": false
+        }
+      ]
+    },
+    {
+      "day_number": 50,
+      "topics": [
+        {
+          "topic": "How to use Postman",
+          "isCompleted": false
+        },
+        {
+          "topic": "HTTP Methods",
+          "isCompleted": false
+        }
+      ]
+    },
+    {
+      "day_number": 51,
+      "topics": [
+        {
+          "topic": "Middleware",
+          "isCompleted": false
+        }
+      ]
+    },
+    {
+      "day_number": 53,
+      "topics": [
+        {
+          "topic": "MongoDB",
+          "isCompleted": false
+        },
+        {
+          "topic": "How to create Model(schema)",
+          "isCompleted": false
+        },
+        {
+          "topic": "Create operations",
+          "isCompleted": false
+        },
+        {
+          "topic": "Read operations",
+          "isCompleted": false
+        },
+        {
+          "topic": "Update operations",
+          "isCompleted": false
+        },
+        {
+          "topic": "Delete operations",
+          "isCompleted": false
+        }
+      ]
+    },
+    {
+      "day_number": 57,
+      "topics": [
+        {
+          "topic": "JWT User Authentication",
+          "isCompleted": false
+        },
+        {
+          "topic": "Deployment",
+          "isCompleted": false
+        }
+      ]
+    },
+    {
+      "day_number": 58,
+      "topics": [
+        {
+          "topic": "Angular JS: What is Angular and why is it used?",
+          "isCompleted": false
+        },
+        {
+          "topic": "Angular Versions and their differences",
+          "isCompleted": false
+        },
+        {
+          "topic": "Setting up the development environment",
+          "isCompleted": false
+        },
+        {
+          "topic": "Angular CLI",
+          "isCompleted": false
+        }
+      ]
+    },
+    {
+      "day_number": 59,
+      "topics": [
+        {
+          "topic": "Setup a new project",
+          "isCompleted": false
+        },
+        {
+          "topic": "Create your First App",
+          "isCompleted": false
+        },
+        {
+          "topic": "Difference between the Current angular version and before.",
+          "isCompleted": false
+        },
+        {
+          "topic": "Project structure and explanation.",
+          "isCompleted": false
+        }
+      ]
+    },
+    {
+      "day_number": 60,
+      "topics": [
+        {
+          "topic": "TypeScript: What is Typescript?",
+          "isCompleted": false
+        },
+        {
+          "topic": "Why do we use typescript?",
+          "isCompleted": false
+        },
+        {
+          "topic": "Difference between typescript and javascript.",
+          "isCompleted": false
+        },
+        {
+          "topic": "Basic types, Variables, and functions",
+          "isCompleted": false
+        }
+      ]
+    },
+    {
+      "day_number": 61,
+      "topics": [
+        {
+          "topic": "Interfaces and classes",
+          "isCompleted": false
+        },
+        {
+          "topic": "Communication between components using input, output, and viewchild.",
+          "isCompleted": false
+        },
+        {
+          "topic": "Generic components.",
+          "isCompleted": false
+        }
+      ]
+    },
+    {
+      "day_number": 62,
+      "topics": [
+        {
+          "topic": "Components: What is a component in Angular?",
+          "isCompleted": false
+        },
+        {
+          "topic": "Create Components using CLI.",
+          "isCompleted": false
+        },
+        {
+          "topic": "What is a nesting Component?",
+          "isCompleted": false
+        },
+        {
+          "topic": "Component Styles and Selectors",
+          "isCompleted": false
+        },
+        {
+          "topic": "Lifecycle hooks.",
+          "isCompleted": false
+        }
+      ]
+    },
+    {
+      "day_number": 63,
+      "topics": [
+        {
+          "topic": "Data Binding: What is Data binding?",
+          "isCompleted": false
+        },
+        {
+          "topic": "String Interpolation",
+          "isCompleted": false
+        },
+        {
+          "topic": "What are Binding Properties and Events",
+          "isCompleted": false
+        },
+        {
+          "topic": "Splitting Application into Components",
+          "isCompleted": false
+        },
+        {
+          "topic": "Two Way binding",
+          "isCompleted": false
+        },
+        {
+          "topic": "What is Property Binding",
+          "isCompleted": false
+        },
+        {
+          "topic": "Combine Forms with Data binding",
+          "isCompleted": false
+        }
+      ]
+    },
+    {
+      "day_number": 64,
+      "topics": [
+        {
+          "topic": "Directives: What is Directives",
+          "isCompleted": false
+        },
+        {
+          "topic": "Built-in directives nglf, ngFor, ngStyle.",
+          "isCompleted": false
+        },
+        {
+          "topic": "Creating custom directives.",
+          "isCompleted": false
+        },
+        {
+          "topic": "Understanding Dependency Injection.",
+          "isCompleted": false
+        },
+        {
+          "topic": "What are services?",
+          "isCompleted": false
+        },
+        {
+          "topic": "Injecting services into components.",
+          "isCompleted": false
+        },
+        {
+          "topic": "Sharing data between components using services.",
+          "isCompleted": false
+        }
+      ]
+    },
+    {
+      "day_number": 65,
+      "topics": [
+        {
+          "topic": "Forms: What is Reactive Forms",
+          "isCompleted": false
+        },
+        {
+          "topic": "Syncing of HTML and Form",
+          "isCompleted": false
+        },
+        {
+          "topic": "Form submission",
+          "isCompleted": false
+        },
+        {
+          "topic": "Form Validation",
+          "isCompleted": false
+        },
+        {
+          "topic": "Form control name, form group, form array, form data.",
+          "isCompleted": false
+        }
+      ]
+    },
+    {
+      "day_number": 66,
+      "topics": [
+        {
+          "topic": "Routing and Navigation: What is Routing?",
+          "isCompleted": false
+        },
+        {
+          "topic": "Navigation and its path",
+          "isCompleted": false
+        },
+        {
+          "topic": "Route configuration",
+          "isCompleted": false
+        },
+        {
+          "topic": "Config Query Parameters",
+          "isCompleted": false
+        },
+        {
+          "topic": "Protect Routes With canActivate",
+          "isCompleted": false
+        },
+        {
+          "topic": "Define Parameters in Routing",
+          "isCompleted": false
+        },
+        {
+          "topic": "Observables",
+          "isCompleted": false
+        },
+        {
+          "topic": "Nested Routing",
+          "isCompleted": false
+        },
+        {
+          "topic": "Route Guards",
+          "isCompleted": false
+        }
+      ]
+    },
+    {
+      "day_number": 67,
+      "topics": [
+        {
+          "topic": "Pipes: What are Pipes in Angular",
+          "isCompleted": false
+        },
+        {
+          "topic": "Filter Pipe",
+          "isCompleted": false
+        },
+        {
+          "topic": "async Pipes",
+          "isCompleted": false
+        },
+        {
+          "topic": "How We use Pipes",
+          "isCompleted": false
+        }
+      ]
+    },
+    {
+      "day_number": 68,
+      "topics": [
+        {
+          "topic": "Modules: What is a Module in Angular?",
+          "isCompleted": false
+        },
+        {
+          "topic": "What is Lazy Loading",
+          "isCompleted": false
+        },
+        {
+          "topic": "What is Core Module",
+          "isCompleted": false
+        },
+        {
+          "topic": "What are App Modules",
+          "isCompleted": false
+        }
+      ]
+    },
+    {
+      "day_number": 69,
+      "topics": [
+        {
+          "topic": "Angular Material: Introduction to angular material.",
+          "isCompleted": false
+        },
+        {
+          "topic": "Using pre-built components such as mat-buttons, mat-input, mat-table",
+          "isCompleted": false
+        },
+        {
+          "topic": "Customizing themes and styles.",
+          "isCompleted": false
+        }
+      ]
+    },
+    {
+      "day_number": 70,
+      "topics": [
+        {
+          "topic": "HTTP Request: What is an HTTP request?",
+          "isCompleted": false
+        },
+        {
+          "topic": "How it works, how to send request, handling request headers",
+          "isCompleted": false
+        },
+        {
+          "topic": "How to handle get and put methods",
+          "isCompleted": false
+        },
+        {
+          "topic": "Catching HTTP errors.",
+          "isCompleted": false
+        }
+      ]
+    },
+    {
+      "day_number": 71,
+      "topics": [
+        {
+          "topic": "Deployment: Build an angular application for production.",
+          "isCompleted": false
+        },
+        {
+          "topic": "Deploying to a server or cloud platform.",
+          "isCompleted": false
+        },
+        {
+          "topic": "Optimizing Performance.",
+          "isCompleted": false
+        }
+      ]
+    }
+  ]
+}

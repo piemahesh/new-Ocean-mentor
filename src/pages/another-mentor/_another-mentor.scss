@@ -1,0 +1,24 @@
+.another-mentor{
+    max-width: 500px;
+    min-height: calc(100vh);
+    margin-inline: auto;
+    .scroll {
+        height: calc(100vh - 30vh);
+        overflow-y: auto;
+      }
+      .scroll::-webkit-scrollbar {
+        display: none;
+      }
+      .scroll > main:last-child {
+        margin-bottom: 150px;
+      }
+  
+}
+.mentor-list{
+    background-color: rgba(241, 238, 238, 0.485);
+    img{
+        max-width: 30px;
+        width: 100%;
+        margin-right: 10px;
+    }
+}

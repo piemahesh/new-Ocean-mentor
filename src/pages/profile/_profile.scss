@@ -1,0 +1,98 @@
+.profile {
+  max-width: 500px;
+  min-height: calc(100vh);
+  margin-inline: auto;
+  background-color: #f6f6f6;
+  .profile-top {
+    margin-bottom: 1rem;
+    padding: 5px 0px 40px 0px;
+    background: #0a88d2;
+    overflow: hidden;
+    border-bottom-left-radius: 200px;
+    border-bottom-right-radius: 200px;
+    .left-circle {
+      height: 90px;
+      width: 90px;
+      background: linear-gradient(to bottom, white, rgba(255, 255, 255, 0));
+      opacity: 0.2;
+      bottom: 90px;
+    }
+    .right-circle {
+      height: 90px;
+      width: 90px;
+      background: linear-gradient(to bottom, white, rgba(255, 255, 255, 0));
+      opacity: 0.3;
+      right: -10px;
+      top: 60px;
+      rotate: -27deg;
+    }
+    nav {
+      .left-arrow {
+        font-size: 3rem;
+      }
+      .share {
+        padding: 7px 20px;
+        border-radius: 10px;
+        span {
+          font-size: 18px;
+        }
+      }
+    }
+    .profile-inner {
+      margin-top: 30px;
+      .center-circle {
+        height: 160px;
+        width: 160px;
+        background-color: #0285d1;
+        box-shadow: 0px 0px 0px 80px #4db4f4ae;
+        img {
+          max-width: 100px;
+          width: 100%;
+        }
+      }
+
+      .icons {
+        height: 50px;
+        width: 50px;
+        border-radius: 10px;
+        background-color: rgba(255, 255, 255, 0.354);
+      }
+    }
+  }
+
+  .card-view {
+    border-radius: 20px;
+    .icons1 {
+      height: 50px;
+      width: 50px;
+    }
+    .icons2 {
+      height: 50px;
+      width: 50px;
+      background-color: rgba(255, 255, 255, 0.498);
+    }
+
+    article {
+      border-radius: 15px;
+    }
+    a{
+      border-radius: 15px;
+    }
+    section {
+      article:nth-of-type(2) {
+        background-color: rgb(101, 218, 51);
+      }
+    }
+  }
+  
+  .ongoing-process {
+    border-radius: 20px;
+    img {
+      max-width: 75px;
+      width: 100%;
+    }
+    article {
+      border-radius: 10px;
+    }
+  }
+}

@@ -1,0 +1,45 @@
+#loadIcon {
+  max-width: 500px;
+  margin-inline: auto;
+  height: 100vh;
+  /* margin-block: 2rem; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #0a88d2;
+  position: relative;
+  #iconContainer{
+    display: flex;
+    height: 350px;
+    width: 350px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    #circle {
+      height: 100%;
+      width: 100%;
+      border-radius: 50%;
+      border-top: 5px solid snow;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      animation: 700ms spin infinite linear;
+      position: absolute;
+      img {
+        height:90%;
+        width: 90%;
+        object-fit: contain;
+      }
+    }
+  }
+}
+
+@keyframes spin{
+  0%{
+    transform: rotate(0deg);
+  }
+  100%{
+    transform: rotate(360deg);
+  }
+}

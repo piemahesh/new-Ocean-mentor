@@ -1,0 +1,15 @@
+.course {
+  max-width: 500px;
+  margin-inline: auto;
+
+  nav {
+    height: 10vh;
+    background-color: cornflowerblue;
+    .left-arrow {
+      font-size: 3rem;
+    }
+  }
+  .course-text{
+    padding-block: 40px;
+  }
+}

@@ -1,0 +1,584 @@
+{
+  "syllabus": [
+    {
+      "day_number": 1,
+      "topics": [
+        {
+          "topic": "Python Introduction",
+          "isCompleted": false
+        },
+        {
+          "topic": "History",
+          "isCompleted": false
+        },
+        {
+          "topic": "Features",
+          "isCompleted": false
+        },
+        {
+          "topic": "Setting up path",
+          "isCompleted": false
+        },
+        {
+          "topic": "Working with python",
+          "isCompleted": false
+        },
+        {
+          "topic": "Keywords in Python",
+          "isCompleted": false
+        },
+        {
+          "topic": "Basic Syntax",
+          "isCompleted": false
+        }
+      ]
+    },
+    {
+      "day_number": 2,
+      "topics": [
+        {
+          "topic": "Variable and Data types",
+          "isCompleted": false
+        }
+      ]
+    },
+    {
+      "day_number": 3,
+      "topics": [
+        {
+          "topic": "Operators",
+          "isCompleted": false
+        },
+        {
+          "topic": "Arithmetic Operator",
+          "isCompleted": false
+        },
+        {
+          "topic": "Relational Operator",
+          "isCompleted": false
+        },
+        {
+          "topic": "Logical Operator",
+          "isCompleted": false
+        },
+        {
+          "topic": "Assignment Operator",
+          "isCompleted": false
+        },
+        {
+          "topic": "Bitwise Operator",
+          "isCompleted": false
+        },
+        {
+          "topic": "Membership Operator",
+          "isCompleted": false
+        },
+        {
+          "topic": "Identity Operator",
+          "isCompleted": false
+        }
+      ]
+    },
+    {
+      "day_number": 5,
+      "topics": [
+        {
+          "topic": "Conditional Statements",
+          "isCompleted": false
+        },
+        {
+          "topic": "If",
+          "isCompleted": false
+        },
+        {
+          "topic": "If-else",
+          "isCompleted": false
+        }
+      ]
+    },
+    {
+      "day_number": 6,
+      "topics": [
+        {
+          "topic": "Nested if –else",
+          "isCompleted": false
+        }
+      ]
+    },
+    {
+      "day_number": 8,
+      "topics": [
+        {
+          "topic": "Looping",
+          "isCompleted": false
+        },
+        {
+          "topic": "For",
+          "isCompleted": false
+        }
+      ]
+    },
+    {
+      "day_number": 9,
+      "topics": [
+        {
+          "topic": "While",
+          "isCompleted": false
+        }
+      ]
+    },
+    {
+      "day_number": 10,
+      "topics": [
+        {
+          "topic": "Nested loops",
+          "isCompleted": false
+        }
+      ]
+    },
+    {
+      "day_number": 11,
+      "topics": [
+        {
+          "topic": "Control Statements",
+          "isCompleted": false
+        },
+        {
+          "topic": "Break",
+          "isCompleted": false
+        },
+        {
+          "topic": "Continue",
+          "isCompleted": false
+        },
+        {
+          "topic": "Pass",
+          "isCompleted": false
+        }
+      ]
+    },
+    {
+      "day_number": 12,
+      "topics": [
+        {
+          "topic": "String Manipulation",
+          "isCompleted": false
+        },
+        {
+          "topic": "Accessing Strings",
+          "isCompleted": false
+        },
+        {
+          "topic": "Basic Operations",
+          "isCompleted": false
+        },
+        {
+          "topic": "String slices",
+          "isCompleted": false
+        }
+      ]
+    },
+    {
+      "day_number": 13,
+      "topics": [
+        {
+          "topic": "Function and Method",
+          "isCompleted": false
+        }
+      ]
+    },
+    {
+      "day_number": 14,
+      "topics": [
+        {
+          "topic": "Lists Introduction",
+          "isCompleted": false
+        },
+        {
+          "topic": "Accessing list",
+          "isCompleted": false
+        },
+        {
+          "topic": "Operations",
+          "isCompleted": false
+        }
+      ]
+    },
+    {
+      "day_number": 15,
+      "topics": [
+        {
+          "topic": "Working with lists Function and Methods",
+          "isCompleted": false
+        }
+      ]
+    },
+    {
+      "day_number": 18,
+      "topics": [
+        {
+          "topic": "Tuple Introduction",
+          "isCompleted": false
+        },
+        {
+          "topic": "Accessing Tuple",
+          "isCompleted": false
+        },
+        {
+          "topic": "Operations",
+          "isCompleted": false
+        },
+        {
+          "topic": "Working Function and Methods",
+          "isCompleted": false
+        }
+      ]
+    },
+    {
+      "day_number": 19,
+      "topics": [
+        {
+          "topic": "Set Introduction",
+          "isCompleted": false
+        },
+        {
+          "topic": "Accessing Set",
+          "isCompleted": false
+        },
+        {
+          "topic": "Operations",
+          "isCompleted": false
+        },
+        {
+          "topic": "Working Function and Methods",
+          "isCompleted": false
+        }
+      ]
+    },
+    {
+      "day_number": 20,
+      "topics": [
+        {
+          "topic": "Dictionaries Introduction",
+          "isCompleted": false
+        },
+        {
+          "topic": "Accessing values in dictionaries",
+          "isCompleted": false
+        },
+        {
+          "topic": "Working with dictionaries",
+          "isCompleted": false
+        }
+      ]
+    },
+    {
+      "day_number": 21,
+      "topics": [
+        {
+          "topic": "Properties Functions",
+          "isCompleted": false
+        }
+      ]
+    },
+    {
+      "day_number": 22,
+      "topics": [
+        {
+          "topic": "Functions",
+          "isCompleted": false
+        },
+        {
+          "topic": "Defining a function",
+          "isCompleted": false
+        },
+        {
+          "topic": "Calling a function",
+          "isCompleted": false
+        },
+        {
+          "topic": "Types of functions",
+          "isCompleted": false
+        }
+      ]
+    },
+    {
+      "day_number": 23,
+      "topics": [
+        {
+          "topic": "Function Arguments",
+          "isCompleted": false
+        }
+      ]
+    },
+    {
+      "day_number": 24,
+      "topics": [
+        {
+          "topic": "Anonymous functions",
+          "isCompleted": false
+        }
+      ]
+    },
+    {
+      "day_number": 25,
+      "topics": [
+        {
+          "topic": "Global and local variables",
+          "isCompleted": false
+        }
+      ]
+    },
+    {
+      "day_number": 26,
+      "topics": [
+        {
+          "topic": "Built-in Functions",
+          "isCompleted": false
+        },
+        {
+          "topic": "Map",
+          "isCompleted": false
+        },
+        {
+          "topic": "Reduce",
+          "isCompleted": false
+        },
+        {
+          "topic": "Filter",
+          "isCompleted": false
+        }
+      ]
+    },
+    {
+      "day_number": 27,
+      "topics": [
+        {
+          "topic": "Modules",
+          "isCompleted": false
+        },
+        {
+          "topic": "Importing module",
+          "isCompleted": false
+        }
+      ]
+    },
+    {
+      "day_number": 28,
+      "topics": [
+        {
+          "topic": "Math module",
+          "isCompleted": false
+        }
+      ]
+    },
+    {
+      "day_number": 29,
+      "topics": [
+        {
+          "topic": "Random module",
+          "isCompleted": false
+        }
+      ]
+    },
+    {
+      "day_number": 30,
+      "topics": [
+        {
+          "topic": "Packages",
+          "isCompleted": false
+        }
+      ]
+    },
+    {
+      "day_number": 31,
+      "topics": [
+        {
+          "topic": "File Handling",
+          "isCompleted": false
+        },
+        {
+          "topic": "File Handling methods and modes",
+          "isCompleted": false
+        },
+        {
+          "topic": "Opening and closing file",
+          "isCompleted": false
+        },
+        {
+          "topic": "Reading and writing files",
+          "isCompleted": false
+        }
+      ]
+    },
+    {
+      "day_number": 32,
+      "topics": [
+        {
+          "topic": "Exception Handling",
+          "isCompleted": false
+        },
+        {
+          "topic": "Exception handling",
+          "isCompleted": false
+        },
+        {
+          "topic": "Except Clause",
+          "isCompleted": false
+        }
+      ]
+    },
+    {
+      "day_number": 33,
+      "topics": [
+        {
+          "topic": "Try? finally clause",
+          "isCompleted": false
+        }
+      ]
+    },
+    {
+      "day_number": 34,
+      "topics": [
+        {
+          "topic": "User Defined exceptions",
+          "isCompleted": false
+        }
+      ]
+    },
+    {
+      "day_number": 35,
+      "topics": [
+        {
+          "topic": "Python Decorators",
+          "isCompleted": false
+        }
+      ]
+    },
+    {
+      "day_number": 36,
+      "topics": [
+        {
+          "topic": "Oops Concept",
+          "isCompleted": false
+        },
+        {
+          "topic": "Class and object",
+          "isCompleted": false
+        },
+        {
+          "topic": "Attributes",
+          "isCompleted": false
+        },
+        {
+          "topic": "Inheritance",
+          "isCompleted": false
+        },
+        {
+          "topic": "Overriding",
+          "isCompleted": false
+        },
+        {
+          "topic": "Data hiding",
+          "isCompleted": false
+        }
+      ]
+    },
+    {
+      "day_number": 37,
+      "topics": [
+        {
+          "topic": "Regular Expression",
+          "isCompleted": false
+        },
+        {
+          "topic": "Importance of Regular Expressions",
+          "isCompleted": false
+        },
+        {
+          "topic": "Types of Methods",
+          "isCompleted": false
+        },
+        {
+          "topic": "Match",
+          "isCompleted": false
+        },
+        {
+          "topic": "Search",
+          "isCompleted": false
+        },
+        {
+          "topic": "Split",
+          "isCompleted": false
+        },
+        {
+          "topic": "Sub",
+          "isCompleted": false
+        },
+        {
+          "topic": "Find all",
+          "isCompleted": false
+        }
+      ]
+    },
+    {
+      "day_number": 39,
+      "topics": [
+        {
+          "topic": "Database",
+          "isCompleted": false
+        },
+        {
+          "topic": "Introduction to Database",
+          "isCompleted": false
+        },
+        {
+          "topic": "Creating database in MongoDB",
+          "isCompleted": false
+        }
+      ]
+    },
+    {
+      "day_number": 40,
+      "topics": [
+        {
+          "topic": "Creating collection",
+          "isCompleted": false
+        },
+        {
+          "topic": "Inserting Documents",
+          "isCompleted": false
+        },
+        {
+          "topic": "Update Collection",
+          "isCompleted": false
+        }
+      ]
+    },
+    {
+      "day_number": 41,
+      "topics": [
+        {
+          "topic": "Delete Document",
+          "isCompleted": false
+        },
+        {
+          "topic": "Find",
+          "isCompleted": false
+        },
+        {
+          "topic": "Sort",
+          "isCompleted": false
+        },
+        {
+          "topic": "Query",
+          "isCompleted": false
+        },
+        {
+          "topic": "Limit",
+          "isCompleted": false
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,316 @@
+{
+  "syllabus": [
+    {
+      "day_number": 1,
+      "topics": [
+        {"topic": "Manual Testing", "isCompleted": false},
+        {"topic": "Basic introduction about Testing", "isCompleted": false},
+        {"topic": "Difference between Manual and Automation Testing", "isCompleted": false},
+        {"topic": "Hierarchical structure of roles and responsibilities in a project", "isCompleted": false}
+      ]
+    },
+    {
+      "day_number": 2,
+      "topics": [
+        {"topic": "Testing Types and Testing Team", "isCompleted": false},
+        {"topic": "STLC process", "isCompleted": false},
+        {"topic": "Reporting process", "isCompleted": false}
+      ]
+    },
+    {
+      "day_number": 3,
+      "topics": [
+        {"topic": "Bug life cycle", "isCompleted": false},
+        {"topic": "SDLC process", "isCompleted": false}
+      ]
+    },
+    {
+      "day_number": 4,
+      "topics": [
+        {"topic": "Software development model", "isCompleted": false}
+      ]
+    },
+    {
+      "day_number": 5,
+      "topics": [
+        {"topic": "What is SCRUM and overview about SCRUM?", "isCompleted": false},
+        {"topic": "What is Sprint and Sprint backlog?", "isCompleted": false},
+        {"topic": "What is SCRUM call?", "isCompleted": false},
+        {"topic": "What is Sprint planning?", "isCompleted": false}
+      ]
+    },
+    {
+      "day_number": 6,
+      "topics": [
+        {"topic": "Simple form validation check example?", "isCompleted": false},
+        {"topic": "Test Scenario vs Test Case", "isCompleted": false},
+        {"topic": "What is Traceability matrix and how to create it?", "isCompleted": false}
+      ]
+    },
+    {
+      "day_number": 7,
+      "topics": [
+        {"topic": "What are the levels of Testing?", "isCompleted": false},
+        {"topic": "Manual Testing types?", "isCompleted": false}
+      ]
+    },
+    {
+      "day_number": 8,
+      "topics": [
+        {"topic": "Introduction to Selenium", "isCompleted": false},
+        {"topic": "History of selenium?", "isCompleted": false},
+        {"topic": "About Automation Testing", "isCompleted": false},
+        {"topic": "About Selenium web driver architecture", "isCompleted": false},
+        {"topic": "How to install Java, Eclipse", "isCompleted": false},
+        {"topic": "Maven Introduction and Installation", "isCompleted": false}
+      ]
+    },
+    {
+      "day_number": 9,
+      "topics": [
+        {"topic": "How to create maven project and project structure", "isCompleted": false},
+        {"topic": "How to manage dependencies with maven", "isCompleted": false},
+        {"topic": "How to use webDriverManager?", "isCompleted": false}
+      ]
+    },
+    {
+      "day_number": 10,
+      "topics": [
+        {"topic": "To Open the browser and Close the browser and Maximize the browser", "isCompleted": false},
+        {"topic": "How to navigate to URL?", "isCompleted": false},
+        {"topic": "Verify Page Title in Selenium Webdriver", "isCompleted": false},
+        {"topic": "How to locate element and what action to be performed?", "isCompleted": false},
+        {"topic": "How to findElement using Id and class?", "isCompleted": false}
+      ]
+    },
+    {
+      "day_number": 13,
+      "topics": [
+        {"topic": "Understanding selenium webdriver interface?", "isCompleted": false},
+        {"topic": "What are locators in selenium webdriver?", "isCompleted": false},
+        {"topic": "What are relative locators in selenium webdriver?", "isCompleted": false}
+      ]
+    },
+    {
+      "day_number": 14,
+      "topics": [
+        {"topic": "Introduction to Xpath?", "isCompleted": false},
+        {"topic": "What is the difference between relative and absolute Xpath?", "isCompleted": false},
+        {"topic": "What are different ways of writing relative Xpath", "isCompleted": false}
+      ]
+    },
+    {
+      "day_number": 15,
+      "topics": [
+        {"topic": "What are basic methods available in Selenium webDriver interface", "isCompleted": false}
+      ]
+    },
+    {
+      "day_number": 16,
+      "topics": [
+        {"topic": "What are webElement methods in selenium", "isCompleted": false}
+      ]
+    },
+    {
+      "day_number": 17,
+      "topics": [
+        {"topic": "How to handle dropdown in selenium", "isCompleted": false},
+        {"topic": "How to perform actions in selenium?", "isCompleted": false}
+      ]
+    },
+    {
+      "day_number": 18,
+      "topics": [
+        {"topic": "Types of waits in selenium", "isCompleted": false},
+        {"topic": "What are implicit wait?", "isCompleted": false},
+        {"topic": "What are explicit wait?", "isCompleted": false}
+      ]
+    },
+    {
+      "day_number": 19,
+      "topics": [
+        {"topic": "How to perform Mouse Hover action in selenium?", "isCompleted": false},
+        {"topic": "How to handle multiple windows in selenium?", "isCompleted": false}
+      ]
+    },
+    {
+      "day_number": 20,
+      "topics": [
+        {"topic": "How to handle frames in selenium?", "isCompleted": false},
+        {"topic": "How to handle Alert Popup in selenium?", "isCompleted": false}
+      ]
+    },
+    {
+      "day_number": 21,
+      "topics": [
+        {"topic": "What is javascript executor?", "isCompleted": false},
+        {"topic": "How to scroll to specific element using javascript executor?", "isCompleted": false}
+      ]
+    },
+    {
+      "day_number": 22,
+      "topics": [
+        {"topic": "How to take screenshot in selenium?", "isCompleted": false}
+      ]
+    },
+    {
+      "day_number": 23,
+      "topics": [
+        {"topic": "TestNG Framework", "isCompleted": false},
+        {"topic": "What is TestNg framework?", "isCompleted": false},
+        {"topic": "To install TestNG framework in eclipse", "isCompleted": false},
+        {"topic": "To write the first program using TestNG", "isCompleted": false}
+      ]
+    },
+    {
+      "day_number": 24,
+      "topics": [
+        {"topic": "What are the parameter available in the @Test annotation", "isCompleted": false},
+        {"topic": "Annotations in TestNG framework", "isCompleted": false}
+      ]
+    },
+    {
+      "day_number": 25,
+      "topics": [
+        {"topic": "To group test methods, classes?", "isCompleted": false},
+        {"topic": "How to create TestNg.xml for test suites?", "isCompleted": false},
+        {"topic": "Managing multiple Test Suites", "isCompleted": false},
+        {"topic": "To include and exclude groups in TestNg framework", "isCompleted": false}
+      ]
+    },
+    {
+      "day_number": 26,
+      "topics": [
+        {"topic": "To include parameter in TestNg.xml and access it into Class", "isCompleted": false},
+        {"topic": "Dataproviders in TestNG framework", "isCompleted": false}
+      ]
+    },
+    {
+      "day_number": 27,
+      "topics": [
+        {"topic": "How to retrieve data from an external Excelsheet?", "isCompleted": false},
+        {"topic": "To move dataproviders into different file and access", "isCompleted": false}
+      ]
+    },
+    {
+      "day_number": 28,
+      "topics": [
+        {"topic": "What are Assertions and its types?", "isCompleted": false},
+        {"topic": "What is difference between Hard and soft assertion?", "isCompleted": false}
+      ]
+    },
+    {
+      "day_number": 29,
+      "topics": [
+        {"topic": "What is TestNG Listeners and how to implement TestNG Listener in Selenium Webdriver", "isCompleted": false}
+      ]
+    },
+    {
+      "day_number": 30,
+      "topics": [
+        {"topic": "To take screenshot on failed Test cases using TestNg", "isCompleted": false},
+        {"topic": "Fetching TestNg report.", "isCompleted": false}
+      ]
+    },
+    {
+      "day_number": 31,
+      "topics": [
+        {"topic": "TestNG maven configuration Maven-surefire-report-plugin with TestNg", "isCompleted": false},
+        {"topic": "Executing testng.xml from maven on Command prompt", "isCompleted": false}
+      ]
+    },
+    {
+      "day_number": 32,
+      "topics": [
+        {"topic": "Generating Maven Surefire Reports", "isCompleted": false},
+        {"topic": "Generating XSLT Reports with Maven", "isCompleted": false}
+      ]
+    },
+    {
+      "day_number": 33,
+      "topics": [
+        {"topic": "Extent Reports Introduction", "isCompleted": false},
+        {"topic": "Extent Reports Generation", "isCompleted": false},
+        {"topic": "Capturing Screenshots and Including in Extent Reports", "isCompleted": false}
+      ]
+    },
+    {
+      "day_number": 34,
+      "topics": [
+        {"topic": "GIT", "isCompleted": false},
+        {"topic": "What is GIT and how to use it?", "isCompleted": false},
+        {"topic": "Git user Id creation, Git bash installation, Git explanation", "isCompleted": false}
+      ]
+    },
+    {
+      "day_number": 35,
+      "topics": [
+        {"topic": "Cucumber Framework", "isCompleted": false}
+      ]
+    },
+    {
+      "day_number": 36,
+      "topics": [
+        {"topic": "Introduction to Cucumber frameworks?", "isCompleted": false},
+        {"topic": "How to install cucumber?", "isCompleted": false}
+      ]
+    },
+    {
+      "day_number": 37,
+      "topics": [
+        {"topic": "Cucumber feature file creation", "isCompleted": false},
+        {"topic": "Creating StepDefinition file creation", "isCompleted": false}
+      ]
+    },
+    {
+      "day_number": 38,
+      "topics": [
+        {"topic": "Creating RunnerClass file", "isCompleted": false},
+        {"topic": "Mapping the Feature file with Step definition file", "isCompleted": false},
+        {"topic": "Parameterization in Cumcumber framework", "isCompleted": false}
+      ]
+    },
+    {
+      "day_number": 39,
+      "topics": [
+        {"topic": "Creating Scenario Outline in cucumber framework", "isCompleted": false},
+        {"topic": "Default report generation with cucumber framework", "isCompleted": false},
+        {"topic": "Background Option in Feature file", "isCompleted": false}
+      ]
+    },
+    {
+      "day_number": 40,
+      "topics": [
+        {"topic": "Using tags in Cucumber framework to group", "isCompleted": false},
+        {"topic": "Hooks concept in Cucumber framework", "isCompleted": false}
+      ]
+    },
+    {
+      "day_number": 41,
+      "topics": [
+        {"topic": "To create DriverInstance and to take screenshot on Failure", "isCompleted": false},
+        {"topic": "To cleanup data with hooks in Cucumber framework", "isCompleted": false}
+      ]
+    },
+    {
+      "day_number": 42,
+      "topics": [
+        {"topic": "Methods available in Scenario interface", "isCompleted": false},
+        {"topic": "Extent Report with the Cucumber framework", "isCompleted": false},
+        {"topic": "Creating properties file for configuring properties instead of XML configuration", "isCompleted": false},
+        {"topic": "How to clean, verify and run using build in cucumber ?", "isCompleted": false}
+      ]
+    },
+    {
+      "day_number": 43,
+      "topics": [
+        {"topic": "Page Object Model", "isCompleted": false},
+        {"topic": "What is Page Object Model?", "isCompleted": false},
+        {"topic": "When to use POM", "isCompleted": false},
+        {"topic": "Examples to POM", "isCompleted": false},
+        {"topic": "POM using Page Factory", "isCompleted": false},
+        {"topic": "Sample Examples for POM", "isCompleted": false}
+      ]
+    }
+  ]
+}

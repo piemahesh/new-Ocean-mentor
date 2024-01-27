@@ -1,0 +1,64 @@
+.student-attendance {
+  max-width: 500px;
+  margin-inline: auto;
+  min-height: 100vh;
+  .student-attendance-top {
+    background: #0a88d2;
+    overflow: hidden;
+    border-bottom-left-radius: 200px;
+    border-bottom-right-radius: 200px;
+    .left-circle {
+      height: 90px;
+      width: 90px;
+      background: linear-gradient(to bottom, white, rgba(255, 255, 255, 0));
+      opacity: 0.2;
+      bottom: 90px;
+    }
+    .right-circle {
+      height: 90px;
+      width: 90px;
+      background: linear-gradient(to bottom, white, rgba(255, 255, 255, 0));
+      opacity: 0.3;
+      right: -10px;
+      top: 60px;
+      rotate: -27deg;
+    }
+    nav {
+      .left-arrow {
+        font-size: 3rem;
+      }
+      .share {
+        padding: 7px 20px;
+        border-radius: 10px;
+        span {
+          font-size: 18px;
+        }
+      }
+    }
+    .student-attendance-inner {
+      margin-top: 50px;
+      .center-circle {
+        height: 160px;
+        width: 160px;
+        background-color: #0285d1;
+        box-shadow: 0px 0px 0px 80px #4db4f4ae;
+        box-shadow: 5px 7px 15px rgb(3, 166, 248);
+        overflow: hidden;
+        border: 7px solid rgba(13, 144, 225, 0.255);
+        img {
+          height: 100%;
+          object-fit: cover;
+          object-position: top;
+          width: 100%;
+        }
+      }
+
+      .icons {
+        height: 50px;
+        width: 50px;
+        border-radius: 10px;
+        background-color: rgba(255, 255, 255, 0.354);
+      }
+    }
+  }
+}

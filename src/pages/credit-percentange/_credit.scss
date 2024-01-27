@@ -1,0 +1,41 @@
+.credit {
+  max-width: 500px;
+  min-height: 100vh;
+  margin-inline: auto;
+  .credit-details {
+    img {
+      max-width: 70px;
+      width: 100%;
+    }
+  }
+  .credit-graph {
+    margin-bottom: 10px;
+    .credit-graph-logo {
+      top: 0%;
+      right: 0%;
+      p {
+        font-size: 13px;
+      }
+      .logo {
+        height: 40px;
+        width: 40px;
+        background-color: blue;
+        img {
+          max-width: 20px;
+          width: 100%;
+        }
+      }
+    }
+  }
+  .credit-card {
+    border-radius: 30px;
+    .credit-card-inner {
+      max-width: 90%;
+      width: 100%;
+    }
+    button {
+      border-radius: 50px;
+      padding: 10px 25px;
+    }
+  }
+}

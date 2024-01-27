@@ -1,0 +1,112 @@
+.batch {
+  max-width: 500px;
+  margin-inline: auto;
+  min-height: 100vh;
+  .batch-header {
+    background-color: #0A88D2;
+    overflow: hidden;
+    .circle1{
+      top: -10px;
+      left: -10%;
+    }
+    .circle2{
+      top: 5%;
+      right: -10%;
+    }
+    .circle3{
+      bottom: 15%;
+      left: -15px;
+    }
+    .circle4{
+      bottom: 10%;
+      right: -5%;
+    }
+    .circle5{
+      top: 50%;
+      left: 65%;
+      transform: translate(-80%, -60%);
+    }
+    nav {
+      top: 0%;
+      height: 10vh;
+      .left-arrow {
+        font-size: 3rem;
+      }
+      .award {
+        margin-right: 5px;
+      }
+      .info {
+        font-size: 2rem;
+      }
+    }
+    .batch-trophy {
+      top: 20%;
+      .trophy2{
+        max-width: 60px;
+        width: 100%;
+        z-index: 4;
+      }
+      .trophy1{
+        max-width: 120px;
+        width: 100%;
+        transform: translateY(-30%);
+        z-index: 4;
+      }
+      .trophy3{
+        max-width: 60px;
+        width: 100%;
+      }
+    }
+  }
+  .batch-trophy-win {
+    div{
+      flex: 1;
+    }
+    .trophy-winner {
+      max-width: 60px;
+      width: 100%;
+      border-radius: 5px;
+    }
+    .batch-trophy-win1 {
+    border-radius: 20px 20px 0px 0px;
+    transform: translateY(-10%);
+    }
+    .batch-trophy-text{
+      p{
+        color: #0A88D2;
+      }
+      span{
+        font-size: 13px;
+      }
+    }
+    .batch-trophy-win2 {
+      border-radius: 20px 20px 0px 0px;
+      transform: translateY(-50%);
+    }
+    .batch-trophy-win3 {
+      border-radius: 20px 20px 0px 0px;
+      transform: translateY(-10%);
+    }
+    .star{
+      font-size: 3rem;
+    color: #F70077;
+    }
+    .number{
+      font-size: 13px;
+      z-index: 3;
+      color: white;
+    }
+  }
+}
+
+.StudentTask{
+  padding: 10px 20px;
+  gap: 50px;
+  .star{
+    font-size: 40px;
+  }
+  .number{
+    z-index: 1;
+    font-size: 10px;
+  }
+}

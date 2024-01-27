@@ -1,0 +1,18 @@
+.syllabus {
+  max-width: 500px;
+  margin-inline: auto;
+  nav {
+    height: 10vh;
+    .left-arrow {
+      font-size: 3rem;
+    }
+  }
+  .pdf {
+    height: calc(100vh - 10vh);
+    -ms-overflow-style: none; /* Internet Explorer 10+ */
+    scrollbar-width: none;
+  }
+  .pdf::-webkit-scrollbar {
+    display: none; /* Safari and Chrome */
+  }
+}

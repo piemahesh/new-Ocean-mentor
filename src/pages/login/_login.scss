@@ -1,0 +1,78 @@
+.login {
+  max-width: 500px;
+  margin-inline: auto;
+  margin-block: 2rem;
+
+  #errorMentor {
+    color: red;
+  }
+  .login-img {
+    width: 100%;
+    max-width: 220px;
+    margin-inline: auto;
+  }
+
+  .outer-card {
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+    border-top-width: 50px;
+  }
+
+  .inner-card {
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+    border-top-width: 50px;
+
+    .inputField{
+      /* border: green 2px solid; */
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      width: 100%;
+      max-width: 350px;
+      margin-bottom: 15px;
+      .icon{
+        position: absolute;
+        color: #0074d9;
+        font-size: 1.5em;
+        margin-right: 10px;
+      }
+      input{
+        padding-inline-start: 10px;
+        width: 100%;
+        border:2px  solid #0074d9;
+        padding: 10px;
+        border-radius: 12px;
+      }
+    }
+
+    #errorThrow {
+      color: red;
+    }
+
+    .form {
+      border-radius: 50px;
+      border: 2px solid #0074d974;
+      margin-block: 10px;
+      max-width: 90%;
+      width: 100%;
+      overflow: hidden;
+    }
+    .form:focus-within {
+      border: 2px solid #0074d9;
+      box-shadow: 0 8px 8px -4px lightblue;
+      .icon {
+        fill: #0088ff;
+      }
+    }
+    .btn {
+      border-radius: 50px;
+    }
+    .remember {
+      font-size: 15px;
+      max-width: 90%;
+      width: 100%;
+      text-wrap: nowrap;
+    }
+  }
+}

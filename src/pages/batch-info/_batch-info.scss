@@ -1,0 +1,24 @@
+.batchinfo {
+  max-width: 500px;
+  min-height: 100vh;
+  margin-inline: auto;
+  nav {
+    .left-arrow {
+      font-size: 3rem;
+    }
+      span{
+        margin-right: 5px;
+      }
+    
+  }
+  .batchinfo-inner{
+    height: calc(100vh - 10vh);
+    .batchinfo-got{
+      height: 50px;
+      width: 100px;
+      border-radius: 50px;
+      bottom: 5%;
+      right: 5%;
+    }
+  }
+}

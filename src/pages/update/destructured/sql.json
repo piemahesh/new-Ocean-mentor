@@ -1,0 +1,379 @@
+{
+  "syllabus": [
+    {
+      "day_number": 1,
+      "topics": [
+        {
+          "topic": "Introduction to Basic Database Concepts",
+          "isCompleted": false
+        },
+        {
+          "topic": "What is database?",
+          "isCompleted": false
+        },
+        {
+          "topic": "What is Field?",
+          "isCompleted": false
+        },
+        {
+          "topic": "What is Record?",
+          "isCompleted": false
+        },
+        {
+          "topic": "Difference between MySQL and SQL",
+          "isCompleted": false
+        },
+        {
+          "topic": "Limitations of File Management System",
+          "isCompleted": false
+        },
+        {
+          "topic": "Basic Concepts of Advantages of DBMS",
+          "isCompleted": false
+        }
+      ]
+    },
+    {
+      "day_number": 2,
+      "topics": [
+        {
+          "topic": "Introduction to SQL",
+          "isCompleted": false
+        },
+        {
+          "topic": "Basics of SQL types and SQL Statements",
+          "isCompleted": false
+        }
+      ]
+    },
+    {
+      "day_number": 3,
+      "topics": [
+        {
+          "topic": "DDL, DML, DQL and DCL",
+          "isCompleted": false
+        }
+      ]
+    },
+    {
+      "day_number": 5,
+      "topics": [
+        {
+          "topic": "Create Database",
+          "isCompleted": false
+        },
+        {
+          "topic": "Data types",
+          "isCompleted": false
+        }
+      ]
+    },
+    {
+      "day_number": 6,
+      "topics": [
+        {
+          "topic": "Exploring DDL Statements on Table",
+          "isCompleted": false
+        }
+      ]
+    },
+    {
+      "day_number": 8,
+      "topics": [
+        {
+          "topic": "DDL Statements",
+          "isCompleted": false
+        },
+        {
+          "topic": "Create",
+          "isCompleted": false
+        },
+        {
+          "topic": "Drop",
+          "isCompleted": false
+        },
+        {
+          "topic": "Alter",
+          "isCompleted": false
+        },
+        {
+          "topic": "Truncate",
+          "isCompleted": false
+        }
+      ]
+    },
+    {
+      "day_number": 9,
+      "topics": [
+        {
+          "topic": "Working with Constraints",
+          "isCompleted": false
+        },
+        {
+          "topic": "Unique",
+          "isCompleted": false
+        },
+        {
+          "topic": "Not NULL",
+          "isCompleted": false
+        },
+        {
+          "topic": "Primary Key",
+          "isCompleted": false
+        },
+        {
+          "topic": "Default",
+          "isCompleted": false
+        },
+        {
+          "topic": "Check",
+          "isCompleted": false
+        },
+        {
+          "topic": "Foreign Key",
+          "isCompleted": false
+        }
+      ]
+    },
+    {
+      "day_number": 10,
+      "topics": [
+        {
+          "topic": "DML Statements",
+          "isCompleted": false
+        },
+        {
+          "topic": "Select",
+          "isCompleted": false
+        },
+        {
+          "topic": "Insert",
+          "isCompleted": false
+        }
+      ]
+    },
+    {
+      "day_number": 11,
+      "topics": [
+        {
+          "topic": "Update",
+          "isCompleted": false
+        },
+        {
+          "topic": "Delete",
+          "isCompleted": false
+        }
+      ]
+    },
+    {
+      "day_number": 12,
+      "topics": [
+        {
+          "topic": "DCL Statements",
+          "isCompleted": false
+        },
+        {
+          "topic": "Grant",
+          "isCompleted": false
+        },
+        {
+          "topic": "Revoke",
+          "isCompleted": false
+        }
+      ]
+    },
+    {
+      "day_number": 13,
+      "topics": [
+        {
+          "topic": "Working with Queries (DQL)",
+          "isCompleted": false
+        },
+        {
+          "topic": "Understanding select statement",
+          "isCompleted": false
+        },
+        {
+          "topic": "Usage of keywords",
+          "isCompleted": false
+        },
+        {
+          "topic": "Using String and Arithmetic Expressions",
+          "isCompleted": false
+        },
+        {
+          "topic": "Exploring Where Clause with Operators",
+          "isCompleted": false
+        }
+      ]
+    },
+    {
+      "day_number": 14,
+      "topics": [
+        {
+          "topic": "Sorting data using Order By Clause",
+          "isCompleted": false
+        },
+        {
+          "topic": "Working with basics of Sub Queries",
+          "isCompleted": false
+        }
+      ]
+    },
+    {
+      "day_number": 15,
+      "topics": [
+        {
+          "topic": "Aggregate Functions",
+          "isCompleted": false
+        },
+        {
+          "topic": "Count",
+          "isCompleted": false
+        },
+        {
+          "topic": "Sum",
+          "isCompleted": false
+        },
+        {
+          "topic": "Min",
+          "isCompleted": false
+        },
+        {
+          "topic": "Max",
+          "isCompleted": false
+        },
+        {
+          "topic": "Avg",
+          "isCompleted": false
+        }
+      ]
+    },
+    {
+      "day_number": 16,
+      "topics": [
+        {
+          "topic": "Joins Operations",
+          "isCompleted": false
+        },
+        {
+          "topic": "Inner join",
+          "isCompleted": false
+        },
+        {
+          "topic": "Left join",
+          "isCompleted": false
+        },
+        {
+          "topic": "Right join",
+          "isCompleted": false
+        },
+        {
+          "topic": "Full join",
+          "isCompleted": false
+        }
+      ]
+    },
+    {
+      "day_number": 17,
+      "topics": [
+        {
+          "topic": "PL/SQL Introduction",
+          "isCompleted": false
+        },
+        {
+          "topic": "Architecture of PL/SQL",
+          "isCompleted": false
+        }
+      ]
+    },
+    {
+      "day_number": 18,
+      "topics": [
+        {
+          "topic": "Advantages of PL/SQL",
+          "isCompleted": false
+        },
+        {
+          "topic": "Data types",
+          "isCompleted": false
+        },
+        {
+          "topic": "Variables",
+          "isCompleted": false
+        }
+      ]
+    },
+    {
+      "day_number": 19,
+      "topics": [
+        {
+          "topic": "Constants and Literals",
+          "isCompleted": false
+        },
+        {
+          "topic": "Operators",
+          "isCompleted": false
+        },
+        {
+          "topic": "Conditions",
+          "isCompleted": false
+        }
+      ]
+    },
+    {
+      "day_number": 20,
+      "topics": [
+        {
+          "topic": "Loops",
+          "isCompleted": false
+        }
+      ]
+    },
+    {
+      "day_number": 21,
+      "topics": [
+        {
+          "topic": "Strings",
+          "isCompleted": false
+        }
+      ]
+    },
+    {
+      "day_number": 22,
+      "topics": [
+        {
+          "topic": "Procedures",
+          "isCompleted": false
+        }
+      ]
+    },
+    {
+      "day_number": 23,
+      "topics": [
+        {
+          "topic": "Functions",
+          "isCompleted": false
+        }
+      ]
+    },
+    {
+      "day_number": 24,
+      "topics": [
+        {
+          "topic": "Triggers",
+          "isCompleted": false
+        }
+      ]
+    },
+    {
+      "day_number": 25,
+      "topics": [
+        {
+          "topic": "Data and time",
+          "isCompleted": false
+        }
+      ]
+    }
+  ]
+}

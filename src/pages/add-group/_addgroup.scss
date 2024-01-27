@@ -1,0 +1,35 @@
+.add-group {
+  max-width: 500px;
+  margin-inline: auto;
+  nav {
+    height: 10vh;
+    .left-arrow {
+      font-size: 3rem;
+    }
+  }
+  .add {
+    border-radius: 20px;
+  }
+
+  .inner-card {
+    margin-top: 15px;
+
+    .form {
+      border-bottom: 2px solid rgba(40, 39, 39, 0.091);
+      margin-block: 1rem;
+      max-width: 90%;
+      width: 100%;
+    }
+    .form:focus-within {
+      border-bottom: 2px solid #0074d9;
+      box-shadow: 0 8px 8px -4px lightblue;
+      .icon {
+        fill: #0088ff;
+      }
+    }
+    .btn {
+      max-width: 90%;
+      border-radius: 50px;
+    }
+  }
+}

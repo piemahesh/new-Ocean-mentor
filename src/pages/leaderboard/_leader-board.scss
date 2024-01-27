@@ -1,0 +1,177 @@
+.leader {
+  max-width: 500px;
+  min-height: 100vh;
+  margin-inline: auto;
+
+  .leader-header {
+    background-color: #0a88d2;
+    border-bottom-left-radius: 100px;
+    border-bottom-right-radius: 100px;
+    overflow: hidden;
+    nav {
+      height: 10vh;
+      .left-arrow {
+        font-size: 3rem;
+      }
+    }
+    .leader-filter {
+      background: #134ad9;
+      border-radius: 20px;
+      z-index: 9999;
+      .time {
+        border-radius: 20px;
+      }
+    }
+    .leader-smallcircle {
+      .circle1 {
+        top: -15px;
+        left: -30px;
+      }
+      .circle2 {
+        right: -20px;
+        top: 30px;
+      }
+      .circle3 {
+        left: -20px;
+        bottom: 0%;
+        z-index: 2;
+      }
+      .circle4 {
+        right: -20px;
+        bottom: -30px;
+        z-index: 2;
+      }
+    }
+    .leader-place {
+      background-color: #0a88d2;
+      margin: 50px 0px 30px 0px;
+      .leader-place-inner1 {
+        transform: translateY(10%);
+        .degree1 {
+          $ro: 45deg;
+          position: absolute;
+          height: 15px;
+          width: 15px;
+          background-color: #80cdf9;
+          left: 50%;
+          bottom: -20%;
+          transform: translate(-50%, -50%) rotate($ro);
+          border-radius: 4px;
+          span {
+            transform: rotate(-$ro);
+            font-size: 10px;
+          }
+        }
+        .leader-place-image1 {
+          max-width: 80px;
+          width: 100%;
+        }
+        .leader-place-name1 {
+          span {
+            color: #68d5ff;
+            font-size: 15px;
+          }
+        }
+      }
+
+      .leader-place-inner2 {
+        .degree2 {
+          $ro: 45deg;
+          position: absolute;
+          height: 25px;
+          width: 25px;
+          background-color: #ffaa00;
+          left: 50%;
+          bottom: -20%;
+          transform: translate(-50%, -50%) rotate($ro);
+          border-radius: 5px;
+          span {
+            transform: rotate(-$ro);
+            font-size: 15px;
+          }
+        }
+        .leader-place-name2 {
+          font-weight: 600;
+          span {
+            color: #caff06;
+            font-size: 20px;
+          }
+        }
+        .chess {
+          top: -50px;
+          font-size: 45px;
+        }
+        .leader-place-image2 {
+          max-width: 100px;
+          width: 100%;
+          box-shadow: 0px 0px 0px 20px rgba(255, 255, 255, 0.182);
+        }
+      }
+
+      .leader-place-inner3 {
+        transform: translateY(10%);
+        .degree3 {
+          $ro: 45deg;
+          position: absolute;
+          height: 15px;
+          width: 15px;
+          background-color: #179b25;
+          left: 50%;
+          bottom: -20%;
+          transform: translate(-50%, -50%) rotate($ro);
+          border-radius: 4px;
+          span {
+            transform: rotate(-$ro);
+            font-size: 10px;
+          }
+        }
+        .leader-place-name3 {
+          span {
+            color: #73ffb1;
+            font-size: 15px;
+          }
+        }
+        .leader-place-image3 {
+          max-width: 80px;
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+
+.student-attendance-details {
+  padding: 10px 15px;
+  background: #d0ebff;
+  border-radius: 20px;
+  .student-attendance-inner {
+    img {
+      max-width: 40px;
+      width: 100%;
+    }
+    .degree {
+      $ro: 45deg;
+      position: absolute;
+      height: 15px;
+      width: 15px;
+      background-color: #8cbea2;
+      left: 50%;
+      bottom: -20%;
+      transform: translate(-50%, -50%) rotate($ro);
+      border-radius: 4px;
+      span {
+        transform: rotate(-$ro);
+        font-size: 10px;
+      }
+    }
+    .student-attendance-box {
+      .percentage {
+        color: #ffaa00;
+        font-weight: 500;
+      }
+    }
+  }
+  &:last-child {
+    margin-bottom: 20px;
+  }
+}

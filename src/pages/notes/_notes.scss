@@ -1,0 +1,43 @@
+.notes {
+  max-width: 500px;
+  min-height: calc(100vh);
+  margin-inline: auto;
+
+ 
+  .notes-add {
+    height: calc(100vh - 10vh);
+    overflow-y: auto;
+  }
+  .notes-add::-webkit-scrollbar {
+    display: none;
+  }
+  .note-text {
+    border-radius: 20px;
+  }
+
+  .add-note {
+    margin: 20px;
+    right: 2%;
+    bottom: 15px;
+    height: 60px;
+    width: 60px;
+    font-size: 3rem;
+    font-weight: 500;
+  }
+  .fab {
+    bottom: 20px;
+    float: right;
+    margin: 20px;
+    height: 60px;
+    width: 60px;
+    font-size: 3rem;
+    font-weight: 500;
+  }
+}
+
+.groupinfo-navbar{
+  height: 10vh;
+  .left-arrow {
+    font-size: 3rem;
+  }
+}

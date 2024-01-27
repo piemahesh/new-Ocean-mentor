@@ -1,0 +1,124 @@
+.create-group {
+  max-width: 500px;
+  min-height: calc(100vh);
+  margin-inline: auto;
+
+  .camera {
+    height: 50px;
+    width: 50px;
+    background-color: #c1c1c1;
+  }
+  .create-group-inner {
+    .create-group-content {
+      border-bottom: 2px solid #c1c1c1;
+      &:nth-of-type(1){
+       select{
+        
+        outline: none;
+       }
+      }
+      &:nth-of-type(2){
+       input{
+        border: none;
+        outline: none;
+       }
+      }
+      &:nth-of-type(3){
+       input{
+        border: none;
+        outline: none;
+       }
+      }
+    }
+
+    .create-group-input {
+      border-bottom: 2px solid #0d6efd;
+      input {
+        outline: none;
+      }
+    }
+    .fab2 {
+      height: 60px;
+      width: 60px;
+      font-size: 2rem;
+      font-weight: 600;
+    }
+
+    /* Dropdown */
+
+    .dropdown {
+      display: inline-block;
+      position: relative;
+      
+      .dd-input {
+        display: none;
+      }
+
+      .dd-menu {
+        z-index: 4;
+        position: absolute;
+        top: 40px;
+        left: -100px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        padding: 0;
+        margin: 2px 0 0 0;
+        box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.1);
+        background-color: #ffffff;
+        list-style-type: none;
+      }
+
+      .dd-input + .dd-menu {
+        display: none;
+      }
+
+      .dd-input:checked + .dd-menu {
+        display: block;
+      }
+
+      .dd-menu li {
+        padding: 10px 20px;
+        color: black;
+        cursor: pointer;
+        border-bottom: 1px solid rgb(185, 177, 177);
+        white-space: nowrap;
+        &:last-child {
+          border-bottom: none;
+        }
+      }
+
+      .dd-menu li:hover {
+        background-color: #f6f6f6;
+      }
+    }
+
+    .btns {
+      border-radius: 10px;
+    }
+    .groupadd {
+      position: fixed;
+      max-width: 500px;
+      width: 100%;
+      bottom: 70px;
+      .fab1 {
+        float: right;
+        margin: 20px;
+        height: 50px;
+        width: 60px;
+        font-size: 2rem;
+        border-radius: 10px;
+      }
+    }
+  }
+}
+
+.AddStudent-inner {
+  img {
+    max-width: 60px;
+    width: 100%;
+  }
+  span {
+    font-size: 16px;
+    font-weight: 600;
+  }
+}

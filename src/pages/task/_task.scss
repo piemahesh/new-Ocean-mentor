@@ -1,0 +1,128 @@
+.task {
+  max-width: 500px;
+  min-height: calc(100vh);
+  margin-inline: auto;
+
+  nav {
+    height: 10vh;
+    .left-arrow {
+      font-size: 3rem;
+    }
+    /* Dropdown */
+
+    .dropdown {
+      display: inline-block;
+      position: relative;
+      .dd-input {
+        display: none;
+      }
+      .dd-menu {
+        position: absolute;
+        top: 60px;
+        left: -70px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        padding: 5px 10px;
+        box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.1);
+        background-color: #ffffff;
+        list-style-type: none;
+      }
+      .dd-input + .dd-menu {
+        display: none;
+      }
+      .dd-input:checked + .dd-menu {
+        display: block;
+      }
+      .dd-menu span {
+        cursor: pointer;
+        padding: 0px 3px;
+        white-space: nowrap;
+      }
+      .dd-menu {
+        span:nth-of-type(2) {
+          color: black;
+          font-weight: 600;
+        }
+      }
+    }
+  }
+  .fliter-shadow {
+    padding: 10px 30px;
+  }
+
+  .add-content {
+    height: calc(100vh - 10vh);
+    overflow-y: auto;
+  }
+  .content {
+    .class-content {
+      border-radius: 15px;
+      font-size: 16px;
+      span {
+        font-size: 10px;
+      }
+    }
+  }
+
+  .taskadd {
+    position: fixed;
+    max-width: 500px;
+    width: 100%;
+    bottom: 0;
+    .fab {
+      float: right;
+      margin: 20px;
+      height: 60px;
+      width: 60px;
+      font-size: 3rem;
+      font-weight: 500;
+    }
+  }
+}
+
+.filtertask {
+  border-top-left-radius: 50px;
+  border-top-right-radius: 50px;
+  bottom: 0%;
+  max-width: 500px;
+  width: 100%;
+  .tab-line {
+    height: 3px;
+    width: 100px;
+    border-radius: 10px;
+    background-color: #c1c1c1;
+  }
+  .filtertask-inner {
+    max-width: 90%;
+    width: 100%;
+    article {
+      border-bottom: 2px solid #c1c1c1;
+    }
+    button {
+      border-radius: 30px;
+    }
+  }
+}
+.uploadtask {
+  border-top-left-radius: 50px;
+  border-top-right-radius: 50px;
+  bottom: 0%;
+  max-width: 500px;
+  width: 100%;
+
+  .uploadtask-inner {
+    max-width: 90%;
+    width: 100%;
+    .uploadtask-inner-input {
+      max-width: 90%;
+      width: 100%;
+      border-radius: 20px;
+      input {
+        outline: none;
+      }
+    }
+    button {
+      border-radius: 30px;
+    }
+  }
+}

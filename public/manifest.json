@@ -1,0 +1,62 @@
+{
+    "name": "Ocean Mentor App",
+    "short_name": "OA Mentor App",
+    "description": "Ocean Academy Mentor Survilance",
+    "start_url": "/",
+    "display": "standalone",
+    "background_color": "#ffffff",
+    "theme_color": "#0274bf",
+    "id":"/",
+    "screenshots" : [
+        {
+         "src": "loginScreenshot.webp",
+         "sizes": "1280x720",
+         "type": "image/webp",
+         "form_factor": "wide",
+         "label": "login screen"
+            },
+            {
+              "src": "welcomeDesktop.webp",
+              "sizes": "1280x720",
+              "type": "image/webp",
+              "form_factor": "wide",
+              "label": "mentor profile"
+            }
+          ],
+    "icons": [
+        {
+            "src": "/android-chrome-192x192.png",
+            "sizes": "192x192",
+            "type": "image/png",
+            "purpose":"maskable"
+        },
+        {
+            "src": "/mstile-150x150.png",
+            "sizes": "270x270",
+            "type": "image/png"
+
+        },
+        {
+            "src": "/mstile-150x150.png",
+            "sizes": "270x270",
+            "type": "image/png"
+
+        },
+        {
+            "src": "/android-chrome-384x384.png",
+            "sizes": "384x384",
+            "type": "image/png"
+        },
+        {
+            "src": "/android-chrome-512x512.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        },
+        {
+            "src": "/favicon-32x32.png",
+            "sizes": "32x32",
+            "type": "image/png"
+        }
+ 
+    ]
+}

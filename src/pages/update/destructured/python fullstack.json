@@ -1,0 +1,2141 @@
+{
+  "syllabus": [
+    {
+      "day_number": 1,
+      "topics": [
+        {
+          "topic": "Python Introduction",
+          "isCompleted": false
+        },
+        {
+          "topic": "History",
+          "isCompleted": false
+        },
+        {
+          "topic": "Features",
+          "isCompleted": false
+        },
+        {
+          "topic": "Setting up path",
+          "isCompleted": false
+        },
+        {
+          "topic": "Working with Python",
+          "isCompleted": false
+        },
+        {
+          "topic": "Keywords in Python",
+          "isCompleted": false
+        },
+        {
+          "topic": "Basic Syntax",
+          "isCompleted": false
+        }
+      ]
+    },
+    {
+      "day_number": 2,
+      "topics": [
+        {
+          "topic": "Variable and Data types",
+          "isCompleted": false
+        }
+      ]
+    },
+    {
+      "day_number": 3,
+      "topics": [
+        {
+          "topic": "Operators",
+          "isCompleted": false
+        },
+        {
+          "topic": "i) Arithmetic operators",
+          "isCompleted": false
+        },
+        {
+          "topic": "ii) Assignment operators",
+          "isCompleted": false
+        },
+        {
+          "topic": "iii) Comparison operators",
+          "isCompleted": false
+        },
+        {
+          "topic": "iv) Logical operators",
+          "isCompleted": false
+        },
+        {
+          "topic": "v) Identity operators",
+          "isCompleted": false
+        },
+        {
+          "topic": "vi) Membership operators",
+          "isCompleted": false
+        },
+        {
+          "topic": "vii) Bitwise operators",
+          "isCompleted": false
+        }
+      ]
+    },
+    {
+      "day_number": 4,
+      "topics": [
+        {
+          "topic": "Conditional Statements",
+          "isCompleted": false
+        },
+        {
+          "topic": "If",
+          "isCompleted": false
+        },
+        {
+          "topic": "If-else",
+          "isCompleted": false
+        }
+      ]
+    },
+    {
+      "day_number": 5,
+      "topics": [
+        {
+          "topic": "Nested if–else",
+          "isCompleted": false
+        }
+      ]
+    },
+    {
+      "day_number": 6,
+      "topics": [
+        {
+          "topic": "Looping",
+          "isCompleted": false
+        },
+        {
+          "topic": "For",
+          "isCompleted": false
+        }
+      ]
+    },
+    {
+      "day_number": 7,
+      "topics": [
+        {
+          "topic": "While",
+          "isCompleted": false
+        }
+      ]
+    },
+    {
+      "day_number": 8,
+      "topics": [
+        {
+          "topic": "Nested loops",
+          "isCompleted": false
+        }
+      ]
+    },
+    {
+      "day_number": 9,
+      "topics": [
+        {
+          "topic": "Control Statements",
+          "isCompleted": false
+        },
+        {
+          "topic": "Break",
+          "isCompleted": false
+        },
+        {
+          "topic": "Continue",
+          "isCompleted": false
+        },
+        {
+          "topic": "Pass",
+          "isCompleted": false
+        }
+      ]
+    },
+    {
+      "day_number": 10,
+      "topics": [
+        {
+          "topic": "String Manipulation",
+          "isCompleted": false
+        },
+        {
+          "topic": "Accessing Strings",
+          "isCompleted": false
+        },
+        {
+          "topic": "Basic Operations",
+          "isCompleted": false
+        },
+        {
+          "topic": "String slices",
+          "isCompleted": false
+        }
+      ]
+    },
+    {
+      "day_number": 11,
+      "topics": [
+        {
+          "topic": "Lists",
+          "isCompleted": false
+        },
+        {
+          "topic": "Introduction",
+          "isCompleted": false
+        },
+        {
+          "topic": "Accessing list",
+          "isCompleted": false
+        },
+        {
+          "topic": "Operations",
+          "isCompleted": false
+        }
+      ]
+    },
+    {
+      "day_number": 12,
+      "topics": [
+        {
+          "topic": "Tuple",
+          "isCompleted": false
+        },
+        {
+          "topic": "Introduction",
+          "isCompleted": false
+        },
+        {
+          "topic": "Accessing tuple",
+          "isCompleted": false
+        },
+        {
+          "topic": "Operations",
+          "isCompleted": false
+        }
+      ]
+    },
+    {
+      "day_number": 13,
+      "topics": [
+        {
+          "topic": "Set",
+          "isCompleted": false
+        },
+        {
+          "topic": "Introduction",
+          "isCompleted": false
+        },
+        {
+          "topic": "Accessing Set",
+          "isCompleted": false
+        },
+        {
+          "topic": "Operations",
+          "isCompleted": false
+        }
+      ]
+    },
+    {
+      "day_number": 14,
+      "topics": [
+        {
+          "topic": "Dictionaries",
+          "isCompleted": false
+        },
+        {
+          "topic": "Introduction",
+          "isCompleted": false
+        },
+        {
+          "topic": "Accessing values in dictionaries",
+          "isCompleted": false
+        },
+        {
+          "topic": "Working",
+          "isCompleted": false
+        }
+      ]
+    },
+    {
+      "day_number": 15,
+      "topics": [
+        {
+          "topic": "Properties",
+          "isCompleted": false
+        },
+        {
+          "topic": "Functions",
+          "isCompleted": false
+        }
+      ]
+    },
+    {
+      "day_number": 16,
+      "topics": [
+        {
+          "topic": "Functions",
+          "isCompleted": false
+        },
+        {
+          "topic": "Defining a function",
+          "isCompleted": false
+        },
+        {
+          "topic": "Calling a function",
+          "isCompleted": false
+        },
+        {
+          "topic": "Types of functions",
+          "isCompleted": false
+        }
+      ]
+    },
+    {
+      "day_number": 17,
+      "topics": [
+        {
+          "topic": "Function Arguments",
+          "isCompleted": false
+        }
+      ]
+    },
+    {
+      "day_number": 18,
+      "topics": [
+        {
+          "topic": "Anonymous functions",
+          "isCompleted": false
+        }
+      ]
+    },
+    {
+      "day_number": 19,
+      "topics": [
+        {
+          "topic": "Global and local variables",
+          "isCompleted": false
+        }
+      ]
+    },
+    {
+      "day_number": 20,
+      "topics": [
+        {
+          "topic": "Built-in Functions",
+          "isCompleted": false
+        },
+        {
+          "topic": "Map",
+          "isCompleted": false
+        },
+        {
+          "topic": "Reduce",
+          "isCompleted": false
+        },
+        {
+          "topic": "Filter",
+          "isCompleted": false
+        }
+      ]
+    },
+    {
+      "day_number": 21,
+      "topics": [
+        {
+          "topic": "Modules",
+          "isCompleted": false
+        },
+        {
+          "topic": "Importing module",
+          "isCompleted": false
+        }
+      ]
+    },
+    {
+      "day_number": 22,
+      "topics": [
+        {
+          "topic": "Math module",
+          "isCompleted": false
+        }
+      ]
+    },
+    {
+      "day_number": 23,
+      "topics": [
+        {
+          "topic": "Random module",
+          "isCompleted": false
+        }
+      ]
+    },
+    {
+      "day_number": 24,
+      "topics": [
+        {
+          "topic": "Packages",
+          "isCompleted": false
+        }
+      ]
+    },
+    {
+      "day_number": 25,
+      "topics": [
+        {
+          "topic": "File Handling",
+          "isCompleted": false
+        },
+        {
+          "topic": "File Handling methods and modes",
+          "isCompleted": false
+        }
+      ]
+    },
+    {
+      "day_number": 26,
+      "topics": [
+        {
+          "topic": "Opening and closing file",
+          "isCompleted": false
+        }
+      ]
+    },
+    {
+      "day_number": 27,
+      "topics": [
+        {
+          "topic": "Reading and writing files",
+          "isCompleted": false
+        }
+      ]
+    },
+    {
+      "day_number": 28,
+      "topics": [
+        {
+          "topic": "Exception Handling",
+          "isCompleted": false
+        },
+        {
+          "topic": "Exception",
+          "isCompleted": false
+        }
+      ]
+    },
+    {
+      "day_number": 29,
+      "topics": [
+        {
+          "topic": "Exception handling",
+          "isCompleted": false
+        }
+      ]
+    },
+    {
+      "day_number": 30,
+      "topics": [
+        {
+          "topic": "Except Clause",
+          "isCompleted": false
+        }
+      ]
+    },
+    {
+      "day_number": 31,
+      "topics": [
+        {
+          "topic": "Try? finally clause",
+          "isCompleted": false
+        }
+      ]
+    },
+    {
+      "day_number": 32,
+      "topics": [
+        {
+          "topic": "User Defined exceptions",
+          "isCompleted": false
+        }
+      ]
+    },
+    {
+      "day_number": 33,
+      "topics": [
+        {
+          "topic": "Python Decorators",
+          "isCompleted": false
+        }
+      ]
+    },
+    {
+      "day_number": 34,
+      "topics": [
+        {
+          "topic": "Oops Concept",
+          "isCompleted": false
+        },
+        {
+          "topic": "Class and object",
+          "isCompleted": false
+        }
+      ]
+    },
+    {
+      "day_number": 35,
+      "topics": [
+        {
+          "topic": "Attributes",
+          "isCompleted": false
+        }
+      ]
+    },
+    {
+      "day_number": 36,
+      "topics": [
+        {
+          "topic": "Inheritance",
+          "isCompleted": false
+        }
+      ]
+    },
+    {
+      "day_number": 37,
+      "topics": [
+        {
+          "topic": "Overriding",
+          "isCompleted": false
+        },
+        {
+          "topic": "Data hiding",
+          "isCompleted": false
+        }
+      ]
+    },
+    {
+      "day_number": 38,
+      "topics": [
+        {
+          "topic": "Regular Expression",
+          "isCompleted": false
+        },
+        {
+          "topic": "Importance of Regular Expressions",
+          "isCompleted": false
+        },
+        {
+          "topic": "Types of Methods",
+          "isCompleted": false
+        },
+        {
+          "topic": "Match",
+          "isCompleted": false
+        },
+        {
+          "topic": "Search",
+          "isCompleted": false
+        },
+        {
+          "topic": "Split",
+          "isCompleted": false
+        },
+        {
+          "topic": "Sub",
+          "isCompleted": false
+        },
+        {
+          "topic": "Find all",
+          "isCompleted": false
+        }
+      ]
+    },
+    {
+      "day_number": 40,
+      "topics": [
+        {
+          "topic": "Database",
+          "isCompleted": false
+        },
+        {
+          "topic": "Introduction to Database",
+          "isCompleted": false
+        },
+        {
+          "topic": "Creating database in MongoDB",
+          "isCompleted": false
+        }
+      ]
+    },
+    {
+      "day_number": 41,
+      "topics": [
+        {
+          "topic": "Creating collection",
+          "isCompleted": false
+        }
+      ]
+    },
+    {
+      "day_number": 42,
+      "topics": [
+        {
+          "topic": "Inserting Documents",
+          "isCompleted": false
+        }
+      ]
+    },
+    {
+      "day_number": 43,
+      "topics": [
+        {
+          "topic": "Update Collection",
+          "isCompleted": false
+        }
+      ]
+    },
+    {
+      "day_number": 44,
+      "topics": [
+        {
+          "topic": "Delete Document",
+          "isCompleted": false
+        },
+        {
+          "topic": "Find",
+          "isCompleted": false
+        },
+        {
+          "topic": "Sort",
+          "isCompleted": false
+        },
+        {
+          "topic": "Query",
+          "isCompleted": false
+        },
+        {
+          "topic": "Limit",
+          "isCompleted": false
+        }
+      ]
+    },
+    {
+      "day_number": 45,
+      "topics": [
+        {
+          "topic": "HTML",
+          "isCompleted": false
+        },
+        {
+          "topic": "Introduction",
+          "isCompleted": false
+        },
+        {
+          "topic": "History of browser",
+          "isCompleted": false
+        },
+        {
+          "topic": "Why HTML?",
+          "isCompleted": false
+        },
+        {
+          "topic": "Structure of Hypertext Markup language",
+          "isCompleted": false
+        },
+        {
+          "topic": "Parts of HTML document",
+          "isCompleted": false
+        },
+        {
+          "topic": "Head",
+          "isCompleted": false
+        },
+        {
+          "topic": "Body",
+          "isCompleted": false
+        }
+      ]
+    },
+    {
+      "day_number": 46,
+      "topics": [
+        {
+          "topic": "Tags",
+          "isCompleted": false
+        },
+        {
+          "topic": "Paragraph",
+          "isCompleted": false
+        },
+        {
+          "topic": "Heading",
+          "isCompleted": false
+        },
+        {
+          "topic": "List",
+          "isCompleted": false
+        },
+        {
+          "topic": "Layout elements",
+          "isCompleted": false
+        }
+      ]
+    },
+    {
+      "day_number": 47,
+      "topics": [
+        {
+          "topic": "Table",
+          "isCompleted": false
+        }
+      ]
+    },
+    {
+      "day_number": 48,
+      "topics": [
+        {
+          "topic": "Form tags",
+          "isCompleted": false
+        },
+        {
+          "topic": "Textbox",
+          "isCompleted": false
+        },
+        {
+          "topic": "Button-Push, Reset and submit",
+          "isCompleted": false
+        },
+        {
+          "topic": "Checkbox",
+          "isCompleted": false
+        }
+      ]
+    },
+    {
+      "day_number": 49,
+      "topics": [
+        {
+          "topic": "Radio button",
+          "isCompleted": false
+        },
+        {
+          "topic": "Dropdown list",
+          "isCompleted": false
+        },
+        {
+          "topic": "List box",
+          "isCompleted": false
+        }
+      ]
+    },
+    {
+      "day_number": 50,
+      "topics": [
+        {
+          "topic": "CSS",
+          "isCompleted": false
+        },
+        {
+          "topic": "Introduction",
+          "isCompleted": false
+        },
+        {
+          "topic": "Importance of CSS",
+          "isCompleted": false
+        },
+        {
+          "topic": "Advantages",
+          "isCompleted": false
+        },
+        {
+          "topic": "Structure of a CSS rule",
+          "isCompleted": false
+        }
+      ]
+    },
+    {
+      "day_number": 51,
+      "topics": [
+        {
+          "topic": "Types",
+          "isCompleted": false
+        },
+        {
+          "topic": "Inline",
+          "isCompleted": false
+        },
+        {
+          "topic": "Embedded",
+          "isCompleted": false
+        },
+        {
+          "topic": "External CSS",
+          "isCompleted": false
+        }
+      ]
+    },
+    {
+      "day_number": 52,
+      "topics": [
+        {
+          "topic": "CSS Properties and Values",
+          "isCompleted": false
+        },
+        {
+          "topic": "Display and visibility properties",
+          "isCompleted": false
+        },
+        {
+          "topic": "Text related properties",
+          "isCompleted": false
+        },
+        {
+          "topic": "Font related properties",
+          "isCompleted": false
+        },
+        {
+          "topic": "Border related properties",
+          "isCompleted": false
+        },
+        {
+          "topic": "Background related properties",
+          "isCompleted": false
+        }
+      ]
+    },
+    {
+      "day_number": 53,
+      "topics": [
+        {
+          "topic": "Types of selectors",
+          "isCompleted": false
+        },
+        {
+          "topic": "Simple selectors",
+          "isCompleted": false
+        },
+        {
+          "topic": "Combinator selectors",
+          "isCompleted": false
+        },
+        {
+          "topic": "Pseudo class selectors",
+          "isCompleted": false
+        },
+        {
+          "topic": "Pseudo elements selectors",
+          "isCompleted": false
+        },
+        {
+          "topic": "Attribute selectors",
+          "isCompleted": false
+        }
+      ]
+    },
+    {
+      "day_number": 54,
+      "topics": [
+        {
+          "topic": "Position",
+          "isCompleted": false
+        },
+        {
+          "topic": "Static",
+          "isCompleted": false
+        },
+        {
+          "topic": "Relative",
+          "isCompleted": false
+        },
+        {
+          "topic": "Absolute",
+          "isCompleted": false
+        },
+        {
+          "topic": "Sticky",
+          "isCompleted": false
+        },
+        {
+          "topic": "Fixed",
+          "isCompleted": false
+        }
+      ]
+    },
+    {
+      "day_number": 55,
+      "topics": [
+        {
+          "topic": "Flex",
+          "isCompleted": false
+        }
+      ]
+    },
+    {
+      "day_number": 56,
+      "topics": [
+        {
+          "topic": "Grid",
+          "isCompleted": false
+        }
+      ]
+    },
+    {
+      "day_number": 57,
+      "topics": [
+        {
+          "topic": "Media Query",
+          "isCompleted": false
+        },
+        {
+          "topic": "Keyframes",
+          "isCompleted": false
+        }
+      ]
+    },
+    {
+      "day_number": 59,
+      "topics": [
+        {
+          "topic": "Sass",
+          "isCompleted": false
+        },
+        {
+          "topic": "Nesting",
+          "isCompleted": false
+        },
+        {
+          "topic": "Variables",
+          "isCompleted": false
+        },
+        {
+          "topic": "Partials and Imports",
+          "isCompleted": false
+        },
+        {
+          "topic": "Mixins",
+          "isCompleted": false
+        },
+        {
+          "topic": "Extend/Inheritance",
+          "isCompleted": false
+        }
+      ]
+    },
+    {
+      "day_number": 60,
+      "topics": [
+        {
+          "topic": "Operators",
+          "isCompleted": false
+        },
+        {
+          "topic": "i) Equality",
+          "isCompleted": false
+        },
+        {
+          "topic": "ii) Numeric",
+          "isCompleted": false
+        },
+        {
+          "topic": "iii) Relational",
+          "isCompleted": false
+        },
+        {
+          "topic": "iv) String",
+          "isCompleted": false
+        },
+        {
+          "topic": "v) Boolean",
+          "isCompleted": false
+        }
+      ]
+    },
+    {
+      "day_number": 61,
+      "topics": [
+        {
+          "topic": "Interpolation",
+          "isCompleted": false
+        },
+        {
+          "topic": "Functions",
+          "isCompleted": false
+        }
+      ]
+    },
+    {
+      "day_number": 62,
+      "topics": [
+        {
+          "topic": "Inbuilt Functions",
+          "isCompleted": false
+        },
+        {
+          "topic": "i) Number",
+          "isCompleted": false
+        },
+        {
+          "topic": "ii) String",
+          "isCompleted": false
+        },
+        {
+          "topic": "iii) Colors",
+          "isCompleted": false
+        },
+        {
+          "topic": "iv) Lists",
+          "isCompleted": false
+        },
+        {
+          "topic": "v) Selectors",
+          "isCompleted": false
+        },
+        {
+          "topic": "vi) Introspection",
+          "isCompleted": false
+        }
+      ]
+    },
+    {
+      "day_number": 63,
+      "topics": [
+        {
+          "topic": "Map",
+          "isCompleted": false
+        },
+        {
+          "topic": "Content",
+          "isCompleted": false
+        },
+        {
+          "topic": "Media",
+          "isCompleted": false
+        },
+        {
+          "topic": "Conditions",
+          "isCompleted": false
+        }
+      ]
+    },
+    {
+      "day_number": 64,
+      "topics": [
+        {
+          "topic": "Looping",
+          "isCompleted": false
+        },
+        {
+          "topic": "i) For loop",
+          "isCompleted": false
+        },
+        {
+          "topic": "ii) Each loop",
+          "isCompleted": false
+        },
+        {
+          "topic": "iii) While loop",
+          "isCompleted": false
+        }
+      ]
+    },
+    {
+      "day_number": 65,
+      "topics": [
+        {
+          "topic": "JavaScript",
+          "isCompleted": false
+        },
+        {
+          "topic": "Introduction to JavaScript",
+          "isCompleted": false
+        },
+        {
+          "topic": "Difference types of Javascript engine?",
+          "isCompleted": false
+        },
+        {
+          "topic": "Where is Javascript used?",
+          "isCompleted": false
+        },
+        {
+          "topic": "Difference between Javascript and Java?",
+          "isCompleted": false
+        },
+        {
+          "topic": "Who introduced Javascript language?",
+          "isCompleted": false
+        },
+        {
+          "topic": "Official name of Javascript?",
+          "isCompleted": false
+        },
+        {
+          "topic": "What is ECMAScript?",
+          "isCompleted": false
+        }
+      ]
+    },
+    {
+      "day_number": 66,
+      "topics": [
+        {
+          "topic": "Fundamentals of Javascript",
+          "isCompleted": false
+        },
+        {
+          "topic": "Basic syntax",
+          "isCompleted": false
+        },
+        {
+          "topic": "JS in <head> or <body>",
+          "isCompleted": false
+        },
+        {
+          "topic": "Comments",
+          "isCompleted": false
+        },
+        {
+          "topic": "JS Outputs",
+          "isCompleted": false
+        },
+        {
+          "topic": "Basic keywords",
+          "isCompleted": false
+        },
+        {
+          "topic": "i) Var",
+          "isCompleted": false
+        },
+        {
+          "topic": "ii) Let",
+          "isCompleted": false
+        },
+        {
+          "topic": "iii) Const",
+          "isCompleted": false
+        },
+        {
+          "topic": "Reserved words",
+          "isCompleted": false
+        },
+        {
+          "topic": "Variables and datatypes",
+          "isCompleted": false
+        },
+        {
+          "topic": "JS primitive type and reference type",
+          "isCompleted": false
+        }
+      ]
+    },
+    {
+      "day_number": 68,
+      "topics": [
+        {
+          "topic": "Hoisting-level1",
+          "isCompleted": false
+        }
+      ]
+    },
+    {
+      "day_number": 69,
+      "topics": [
+        {
+          "topic": "Operators",
+          "isCompleted": false
+        }
+      ]
+    },
+    {
+      "day_number": 70,
+      "topics": [
+        {
+          "topic": "Number",
+          "isCompleted": false
+        },
+        {
+          "topic": "Number properties",
+          "isCompleted": false
+        },
+        {
+          "topic": "Number methods",
+          "isCompleted": false
+        },
+        {
+          "topic": "Strings",
+          "isCompleted": false
+        },
+        {
+          "topic": "Length",
+          "isCompleted": false
+        },
+        {
+          "topic": "IndexOf",
+          "isCompleted": false
+        },
+        {
+          "topic": "LastindexOf",
+          "isCompleted": false
+        },
+        {
+          "topic": "Substring",
+          "isCompleted": false
+        },
+        {
+          "topic": "Substr",
+          "isCompleted": false
+        },
+        {
+          "topic": "To uppercase",
+          "isCompleted": false
+        },
+        {
+          "topic": "To lowercase",
+          "isCompleted": false
+        },
+        {
+          "topic": "Slice",
+          "isCompleted": false
+        }
+      ]
+    },
+    {
+      "day_number": 71,
+      "topics": [
+        {
+          "topic": "Scopes",
+          "isCompleted": false
+        },
+        {
+          "topic": "Global",
+          "isCompleted": false
+        },
+        {
+          "topic": "Block",
+          "isCompleted": false
+        },
+        {
+          "topic": "Script",
+          "isCompleted": false
+        },
+        {
+          "topic": "Function / Local",
+          "isCompleted": false
+        }
+      ]
+    },
+    {
+      "day_number": 72,
+      "topics": [
+        {
+          "topic": "Conditional Statement",
+          "isCompleted": false
+        },
+        {
+          "topic": "If else",
+          "isCompleted": false
+        },
+        {
+          "topic": "If else If",
+          "isCompleted": false
+        },
+        {
+          "topic": "Switch",
+          "isCompleted": false
+        }
+      ]
+    },
+    {
+      "day_number": 73,
+      "topics": [
+        {
+          "topic": "Looping Statement",
+          "isCompleted": false
+        },
+        {
+          "topic": "For",
+          "isCompleted": false
+        },
+        {
+          "topic": "While",
+          "isCompleted": false
+        },
+        {
+          "topic": "DO While",
+          "isCompleted": false
+        },
+        {
+          "topic": "For In",
+          "isCompleted": false
+        },
+        {
+          "topic": "For Of",
+          "isCompleted": false
+        },
+        {
+          "topic": "Break",
+          "isCompleted": false
+        },
+        {
+          "topic": "Continue",
+          "isCompleted": false
+        }
+      ]
+    },
+    {
+      "day_number": 74,
+      "topics": [
+        {
+          "topic": "Functions",
+          "isCompleted": false
+        },
+        {
+          "topic": "Function declaration",
+          "isCompleted": false
+        },
+        {
+          "topic": "Function expression",
+          "isCompleted": false
+        },
+        {
+          "topic": "Anonymous function",
+          "isCompleted": false
+        },
+        {
+          "topic": "Arrow function",
+          "isCompleted": false
+        },
+        {
+          "topic": "Callback function",
+          "isCompleted": false
+        },
+        {
+          "topic": "Higher order function",
+          "isCompleted": false
+        },
+        {
+          "topic": "Function constructor",
+          "isCompleted": false
+        },
+        {
+          "topic": "Recursion",
+          "isCompleted": false
+        }
+      ]
+    },
+    {
+      "day_number": 75,
+      "topics": [
+        {
+          "topic": "Array",
+          "isCompleted": false
+        },
+        {
+          "topic": "Array creation",
+          "isCompleted": false
+        },
+        {
+          "topic": "Array properties",
+          "isCompleted": false
+        },
+        {
+          "topic": "Array methods",
+          "isCompleted": false
+        },
+        {
+          "topic": "Map",
+          "isCompleted": false
+        },
+        {
+          "topic": "Filter",
+          "isCompleted": false
+        },
+        {
+          "topic": "Reduce",
+          "isCompleted": false
+        },
+        {
+          "topic": "Concat",
+          "isCompleted": false
+        },
+        {
+          "topic": "Slice",
+          "isCompleted": false
+        }
+      ]
+    },
+    {
+      "day_number": 76,
+      "topics": [
+        {
+          "topic": "Object",
+          "isCompleted": false
+        },
+        {
+          "topic": "Object creation",
+          "isCompleted": false
+        },
+        {
+          "topic": "Object properties",
+          "isCompleted": false
+        },
+        {
+          "topic": "Object methods",
+          "isCompleted": false
+        },
+        {
+          "topic": "Object constructor",
+          "isCompleted": false
+        },
+        {
+          "topic": "Object destructuring",
+          "isCompleted": false
+        }
+      ]
+    },
+    {
+      "day_number": 77,
+      "topics": [
+        {
+          "topic": "Exception handling",
+          "isCompleted": false
+        },
+        {
+          "topic": "Try catch",
+          "isCompleted": false
+        },
+        {
+          "topic": "Throw",
+          "isCompleted": false
+        },
+        {
+          "topic": "Finally",
+          "isCompleted": false
+        }
+      ]
+    },
+    {
+      "day_number": 78,
+      "topics": [
+        {
+          "topic": "DOM Manipulation",
+          "isCompleted": false
+        },
+        {
+          "topic": "What is DOM?",
+          "isCompleted": false
+        },
+        {
+          "topic": "DOM tree",
+          "isCompleted": false
+        },
+        {
+          "topic": "DOM methods",
+          "isCompleted": false
+        },
+        {
+          "topic": "DOM events",
+          "isCompleted": false
+        },
+        {
+          "topic": "Window object",
+          "isCompleted": false
+        },
+        {
+          "topic": "Location object",
+          "isCompleted": false
+        },
+        {
+          "topic": "History object",
+          "isCompleted": false
+        }
+      ]
+    },
+    {
+      "day_number": 79,
+      "topics": [
+        {
+          "topic": "AJAX",
+          "isCompleted": false
+        },
+        {
+          "topic": "What is AJAX?",
+          "isCompleted": false
+        },
+        {
+          "topic": "How AJAX works?",
+          "isCompleted": false
+        },
+        {
+          "topic": "XMLHttpRequest",
+          "isCompleted": false
+        },
+        {
+          "topic": "AJAX methods",
+          "isCompleted": false
+        },
+        {
+          "topic": "AJAX events",
+          "isCompleted": false
+        }
+      ]
+    },
+    {
+      "day_number": 80,
+      "topics": [
+        {
+          "topic": "JSON",
+          "isCompleted": false
+        },
+        {
+          "topic": "What is JSON?",
+          "isCompleted": false
+        },
+        {
+          "topic": "JSON syntax rules",
+          "isCompleted": false
+        },
+        {
+          "topic": "JSON data types",
+          "isCompleted": false
+        },
+        {
+          "topic": "JSON object",
+          "isCompleted": false
+        },
+        {
+          "topic": "JSON array",
+          "isCompleted": false
+        },
+        {
+          "topic": "JSON parse",
+          "isCompleted": false
+        },
+        {
+          "topic": "JSON stringify",
+          "isCompleted": false
+        }
+      ]
+    },
+    {
+      "day_number": 81,
+      "topics": [
+        {
+          "topic": "ES6",
+          "isCompleted": false
+        },
+        {
+          "topic": "What is ES6?",
+          "isCompleted": false
+        },
+        {
+          "topic": "Let and const",
+          "isCompleted": false
+        },
+        {
+          "topic": "Template literals",
+          "isCompleted": false
+        },
+        {
+          "topic": "Arrow functions",
+          "isCompleted": false
+        },
+        {
+          "topic": "Destructuring assignment",
+          "isCompleted": false
+        },
+        {
+          "topic": "Spread and rest operator",
+          "isCompleted": false
+        },
+        {
+          "topic": "Promises",
+          "isCompleted": false
+        },
+        {
+          "topic": "Classes",
+          "isCompleted": false
+        }
+      ]
+    },
+    {
+      "day_number": 82,
+      "topics": [
+        {
+          "topic": "React.js",
+          "isCompleted": false
+        },
+        {
+          "topic": "Introduction to React",
+          "isCompleted": false
+        },
+        {
+          "topic": "Why React?",
+          "isCompleted": false
+        },
+        {
+          "topic": "React components",
+          "isCompleted": false
+        },
+        {
+          "topic": "Functional components",
+          "isCompleted": false
+        },
+        {
+          "topic": "Class components",
+          "isCompleted": false
+        },
+        {
+          "topic": "JSX",
+          "isCompleted": false
+        }
+      ]
+    },
+    {
+      "day_number": 83,
+      "topics": [
+        {
+          "topic": "Props and state",
+          "isCompleted": false
+        },
+        {
+          "topic": "Props",
+          "isCompleted": false
+        },
+        {
+          "topic": "State",
+          "isCompleted": false
+        },
+        {
+          "topic": "Handling events",
+          "isCompleted": false
+        },
+        {
+          "topic": "Conditional rendering",
+          "isCompleted": false
+        },
+        {
+          "topic": "Lists and keys",
+          "isCompleted": false
+        }
+      ]
+    },
+    {
+      "day_number": 84,
+      "topics": [
+        {
+          "topic": "Forms",
+          "isCompleted": false
+        },
+        {
+          "topic": "Controlled components",
+          "isCompleted": false
+        },
+        {
+          "topic": "Uncontrolled components",
+          "isCompleted": false
+        },
+        {
+          "topic": "Form validation",
+          "isCompleted": false
+        },
+        {
+          "topic": "Lifting state up",
+          "isCompleted": false
+        },
+        {
+          "topic": "Composition vs inheritance",
+          "isCompleted": false
+        }
+      ]
+    },
+    {
+      "day_number": 85,
+      "topics": [
+        {
+          "topic": "React Router",
+          "isCompleted": false
+        },
+        {
+          "topic": "Installation",
+          "isCompleted": false
+        },
+        {
+          "topic": "Basic routing",
+          "isCompleted": false
+        },
+        {
+          "topic": "Nested routing",
+          "isCompleted": false
+        },
+        {
+          "topic": "Programmatic navigation",
+          "isCompleted": false
+        },
+        {
+          "topic": "Route parameters",
+          "isCompleted": false
+        }
+      ]
+    },
+    {
+      "day_number": 86,
+      "topics": [
+        {
+          "topic": "Redux",
+          "isCompleted": false
+        },
+        {
+          "topic": "Introduction to Redux",
+          "isCompleted": false
+        },
+        {
+          "topic": "Three principles",
+          "isCompleted": false
+        },
+        {
+          "topic": "Actions",
+          "isCompleted": false
+        },
+        {
+          "topic": "Reducers",
+          "isCompleted": false
+        },
+        {
+          "topic": "Store",
+          "isCompleted": false
+        },
+        {
+          "topic": "Redux thunk",
+          "isCompleted": false
+        }
+      ]
+    },
+    {
+      "day_number": 87,
+      "topics": [
+        {
+          "topic": "React Hooks",
+          "isCompleted": false
+        },
+        {
+          "topic": "Introduction",
+          "isCompleted": false
+        },
+        {
+          "topic": "useState Hook",
+          "isCompleted": false
+        },
+        {
+          "topic": "useEffect Hook",
+          "isCompleted": false
+        },
+        {
+          "topic": "useContext Hook",
+          "isCompleted": false
+        },
+        {
+          "topic": "useReducer Hook",
+          "isCompleted": false
+        },
+        {
+          "topic": "Custom Hooks",
+          "isCompleted": false
+        }
+      ]
+    },
+    {
+      "day_number": 88,
+      "topics": [
+        {
+          "topic": "Node.js",
+          "isCompleted": false
+        },
+        {
+          "topic": "Introduction to Node.js",
+          "isCompleted": false
+        },
+        {
+          "topic": "Non-blocking I/O",
+          "isCompleted": false
+        },
+        {
+          "topic": "Event-driven architecture",
+          "isCompleted": false
+        },
+        {
+          "topic": "Node Package Manager (npm)",
+          "isCompleted": false
+        },
+        {
+          "topic": "Creating a basic server",
+          "isCompleted": false
+        },
+        {
+          "topic": "Routing in Node.js",
+          "isCompleted": false
+        }
+      ]
+    },
+    {
+      "day_number": 89,
+      "topics": [
+        {
+          "topic": "Express.js",
+          "isCompleted": false
+        },
+        {
+          "topic": "Introduction to Express.js",
+          "isCompleted": false
+        },
+        {
+          "topic": "Setting up Express.js",
+          "isCompleted": false
+        },
+        {
+          "topic": "Middleware in Express.js",
+          "isCompleted": false
+        },
+        {
+          "topic": "Routing in Express.js",
+          "isCompleted": false
+        },
+        {
+          "topic": "Template engines",
+          "isCompleted": false
+        },
+        {
+          "topic": "Handling forms in Express.js",
+          "isCompleted": false
+        }
+      ]
+    },
+    {
+      "day_number": 90,
+      "topics": [
+        {
+          "topic": "RESTful APIs",
+          "isCompleted": false
+        },
+        {
+          "topic": "Introduction to RESTful APIs",
+          "isCompleted": false
+        },
+        {
+          "topic": "HTTP methods",
+          "isCompleted": false
+        },
+        {
+          "topic": "Creating RESTful APIs with Express.js",
+          "isCompleted": false
+        },
+        {
+          "topic": "Authentication and authorization",
+          "isCompleted": false
+        },
+        {
+          "topic": "JSON Web Tokens (JWT)",
+          "isCompleted": false
+        }
+      ]
+    },
+    {
+      "day_number": 91,
+      "topics": [
+        {
+          "topic": "MongoDB",
+          "isCompleted": false
+        },
+        {
+          "topic": "Introduction to MongoDB",
+          "isCompleted": false
+        },
+        {
+          "topic": "NoSQL vs SQL databases",
+          "isCompleted": false
+        },
+        {
+          "topic": "Document-oriented data",
+          "isCompleted": false
+        },
+        {
+          "topic": "Connecting to MongoDB with Node.js",
+          "isCompleted": false
+        },
+        {
+          "topic": "Mongoose ODM",
+          "isCompleted": false
+        },
+        {
+          "topic": "CRUD operations in MongoDB",
+          "isCompleted": false
+        }
+      ]
+    },
+    {
+      "day_number": 92,
+      "topics": [
+        {
+          "topic": "Authentication and Authorization",
+          "isCompleted": false
+        },
+        {
+          "topic": "Passport.js",
+          "isCompleted": false
+        },
+        {
+          "topic": "User registration and login",
+          "isCompleted": false
+        },
+        {
+          "topic": "Securing routes",
+          "isCompleted": false
+        },
+        {
+          "topic": "OAuth and Social Media login",
+          "isCompleted": false
+        }
+      ]
+    },
+    {
+      "day_number": 93,
+      "topics": [
+        {
+          "topic": "GraphQL",
+          "isCompleted": false
+        },
+        {
+          "topic": "Introduction to GraphQL",
+          "isCompleted": false
+        },
+        {
+          "topic": "Schema and types",
+          "isCompleted": false
+        },
+        {
+          "topic": "Resolvers",
+          "isCompleted": false
+        },
+        {
+          "topic": "GraphQL queries and mutations",
+          "isCompleted": false
+        },
+        {
+          "topic": "Apollo Server and Client",
+          "isCompleted": false
+        },
+        {
+          "topic": "GraphQL vs REST",
+          "isCompleted": false
+        }
+      ]
+    },
+    {
+      "day_number": 94,
+      "topics": [
+        {
+          "topic": "Docker",
+          "isCompleted": false
+        },
+        {
+          "topic": "Introduction to Docker",
+          "isCompleted": false
+        },
+        {
+          "topic": "Containers and images",
+          "isCompleted": false
+        },
+        {
+          "topic": "Dockerfile",
+          "isCompleted": false
+        },
+        {
+          "topic": "Docker Compose",
+          "isCompleted": false
+        },
+        {
+          "topic": "Deploying applications with Docker",
+          "isCompleted": false
+        }
+      ]
+    },
+    {
+      "day_number": 95,
+      "topics": [
+        {
+          "topic": "Kubernetes",
+          "isCompleted": false
+        },
+        {
+          "topic": "Introduction to Kubernetes",
+          "isCompleted": false
+        },
+        {
+          "topic": "Pods, Services, and Deployments",
+          "isCompleted": false
+        },
+        {
+          "topic": "Kubernetes architecture",
+          "isCompleted": false
+        },
+        {
+          "topic": "Kubectl",
+          "isCompleted": false
+        },
+        {
+          "topic": "Scaling applications in Kubernetes",
+          "isCompleted": false
+        }
+      ]
+    },
+    {
+      "day_number": 96,
+      "topics": [
+        {
+          "topic": "Jest Testing",
+          "isCompleted": false
+        },
+        {
+          "topic": "Introduction to Jest",
+          "isCompleted": false
+        },
+        {
+          "topic": "Writing and running tests",
+          "isCompleted": false
+        },
+        {
+          "topic": "Mocking functions",
+          "isCompleted": false
+        },
+        {
+          "topic": "Snapshot testing",
+          "isCompleted": false
+        },
+        {
+          "topic": "Asynchronous testing",
+          "isCompleted": false
+        }
+      ]
+    },
+    {
+      "day_number": 97,
+      "topics": [
+        {
+          "topic": "CI/CD",
+          "isCompleted": false
+        },
+        {
+          "topic": "Continuous Integration",
+          "isCompleted": false
+        },
+        {
+          "topic": "Continuous Deployment",
+          "isCompleted": false
+        },
+        {
+          "topic": "Setting up CI/CD pipelines",
+          "isCompleted": false
+        },
+        {
+          "topic": "Monitoring and Logging",
+          "isCompleted": false
+        },
+        {
+          "topic": "Common CI/CD tools",
+          "isCompleted": false
+        }
+      ]
+    },
+    {
+      "day_number": 98,
+      "topics": [
+        {
+          "topic": "Final Project",
+          "isCompleted": false
+        },
+        {
+          "topic": "Project planning",
+          "isCompleted": false
+        },
+        {
+          "topic": "Building and testing",
+          "isCompleted": false
+        },
+        {
+          "topic": "Deploying the project",
+          "isCompleted": false
+        },
+        {
+          "topic": "Showcasing the project",
+          "isCompleted": false
+        }
+      ]
+    },
+    {
+      "day_number": 99,
+      "topics": [
+        {
+          "topic": "Soft Skills",
+          "isCompleted": false
+        },
+        {
+          "topic": "Communication skills",
+          "isCompleted": false
+        },
+        {
+          "topic": "Team collaboration",
+          "isCompleted": false
+        },
+        {
+          "topic": "Problem-solving",
+          "isCompleted": false
+        },
+        {
+          "topic": "Adaptability",
+          "isCompleted": false
+        },
+        {
+          "topic": "Time management",
+          "isCompleted": false
+        },
+        {
+          "topic": "Continuous learning",
+          "isCompleted": false
+        }
+      ]
+    },
+    {
+      "day_number": 100,
+      "topics": [
+        {
+          "topic": "Job Search and Interviewing",
+          "isCompleted": false
+        },
+        {
+          "topic": "Creating a strong portfolio",
+          "isCompleted": false
+        },
+        {
+          "topic": "Resume building",
+          "isCompleted": false
+        },
+        {
+          "topic": "Job search strategies",
+          "isCompleted": false
+        },
+        {
+          "topic": "Preparing for technical interviews",
+          "isCompleted": false
+        },
+        {
+          "topic": "Negotiating job offers",
+          "isCompleted": false
+        }
+      ]
+    }
+  ]
+}

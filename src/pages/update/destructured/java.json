@@ -1,0 +1,477 @@
+{
+  "syllabus": [
+    {
+      "day_number": 1,
+      "topics": [
+        {
+          "topic": "JAVA FUNDAMENTALS",
+          "isCompleted": false
+        },
+        {
+          "topic": "Java - What, Where and Why?",
+          "isCompleted": false
+        },
+        {
+          "topic": "History and Features of Java",
+          "isCompleted": false
+        },
+        {
+          "topic": "Internals of Java Program",
+          "isCompleted": false
+        }
+      ]
+    },
+    {
+      "day_number": 2,
+      "topics": [
+        {
+          "topic": "Difference between JDK, JRE and JVM",
+          "isCompleted": false
+        },
+        {
+          "topic": "Internal Details of JVM",
+          "isCompleted": false
+        },
+        {
+          "topic": "Variable and Data Type",
+          "isCompleted": false
+        }
+      ]
+    },
+    {
+      "day_number": 3,
+      "topics": [
+        {
+          "topic": "Naming Convention",
+          "isCompleted": false
+        },
+        {
+          "topic": "Byte code interpretation",
+          "isCompleted": false
+        }
+      ]
+    },
+    {
+      "day_number": 4,
+      "topics": [
+        {
+          "topic": "Data types, variable",
+          "isCompleted": false
+        }
+      ]
+    },
+    {
+      "day_number": 5,
+      "topics": [
+        {
+          "topic": "Arrays",
+          "isCompleted": false
+        }
+      ]
+    },
+    {
+      "day_number": 6,
+      "topics": [
+        {
+          "topic": "Expressions, operators, and control structures",
+          "isCompleted": false
+        }
+      ]
+    },
+    {
+      "day_number": 7,
+      "topics": [
+        {
+          "topic": "Expressions, operators, and control structures",
+          "isCompleted": false
+        }
+      ]
+    },
+    {
+      "day_number": 8,
+      "topics": [
+        {
+          "topic": "OOP IN JAVA",
+          "isCompleted": false
+        },
+        {
+          "topic": "Class and its benefits",
+          "isCompleted": false
+        },
+        {
+          "topic": "Wrapper classes",
+          "isCompleted": false
+        },
+        {
+          "topic": "Objects",
+          "isCompleted": false
+        }
+      ]
+    },
+    {
+      "day_number": 9,
+      "topics": [
+        {
+          "topic": "Constructor",
+          "isCompleted": false
+        },
+        {
+          "topic": "Garbage Collection",
+          "isCompleted": false
+        }
+      ]
+    },
+    {
+      "day_number": 10,
+      "topics": [
+        {
+          "topic": "INHERITANCE",
+          "isCompleted": false
+        },
+        {
+          "topic": "Use and Benefits of Inheritance in OOP",
+          "isCompleted": false
+        },
+        {
+          "topic": "Types of Inheritance in Java",
+          "isCompleted": false
+        },
+        {
+          "topic": "Inheriting Data Members and Methods",
+          "isCompleted": false
+        },
+        {
+          "topic": "Role of Constructors in inheritance",
+          "isCompleted": false
+        },
+        {
+          "topic": "Overriding SuperClass Methods.",
+          "isCompleted": false
+        }
+      ]
+    },
+    {
+      "day_number": 11,
+      "topics": [
+        {
+          "topic": "Use of “super”.",
+          "isCompleted": false
+        },
+        {
+          "topic": "Polymorphism in inheritance.",
+          "isCompleted": false
+        },
+        {
+          "topic": "Type Compatibility and Conversion",
+          "isCompleted": false
+        },
+        {
+          "topic": "Implementing interfaces.",
+          "isCompleted": false
+        }
+      ]
+    },
+    {
+      "day_number": 12,
+      "topics": [
+        {
+          "topic": "Method Overloading",
+          "isCompleted": false
+        },
+        {
+          "topic": "Method Overriding",
+          "isCompleted": false
+        }
+      ]
+    },
+    {
+      "day_number": 13,
+      "topics": [
+        {
+          "topic": "Understanding Interface",
+          "isCompleted": false
+        }
+      ]
+    },
+    {
+      "day_number": 14,
+      "topics": [
+        {
+          "topic": "Packages",
+          "isCompleted": false
+        },
+        {
+          "topic": "Creation of user defined packages",
+          "isCompleted": false
+        },
+        {
+          "topic": "Access modifiers and their Scope",
+          "isCompleted": false
+        }
+      ]
+    },
+    {
+      "day_number": 15,
+      "topics": [
+        {
+          "topic": "KEYWORDS IN JAVA",
+          "isCompleted": false
+        },
+        {
+          "topic": "Abstract classes and methods",
+          "isCompleted": false
+        },
+        {
+          "topic": "Static variable, method and block",
+          "isCompleted": false
+        },
+        {
+          "topic": "Final variable and method",
+          "isCompleted": false
+        }
+      ]
+    },
+    {
+      "day_number": 16,
+      "topics": [
+        {
+          "topic": "Usage of This keyword",
+          "isCompleted": false
+        },
+        {
+          "topic": "Super and strictfp keywords",
+          "isCompleted": false
+        }
+      ]
+    },
+    {
+      "day_number": 17,
+      "topics": [
+        {
+          "topic": "STRING HANDLING",
+          "isCompleted": false
+        },
+        {
+          "topic": "Needs of String",
+          "isCompleted": false
+        },
+        {
+          "topic": "Immutable String",
+          "isCompleted": false
+        },
+        {
+          "topic": "String Comparison",
+          "isCompleted": false
+        },
+        {
+          "topic": "String Concatenation",
+          "isCompleted": false
+        },
+        {
+          "topic": "Substring",
+          "isCompleted": false
+        },
+        {
+          "topic": "Methods of String class",
+          "isCompleted": false
+        },
+        {
+          "topic": "StringBuffer class",
+          "isCompleted": false
+        },
+        {
+          "topic": "toString method",
+          "isCompleted": false
+        }
+      ]
+    },
+    {
+      "day_number": 18,
+      "topics": [
+        {
+          "topic": "StringTokenizer class",
+          "isCompleted": false
+        }
+      ]
+    },
+    {
+      "day_number": 19,
+      "topics": [
+        {
+          "topic": "EXCEPTION HANDLING",
+          "isCompleted": false
+        },
+        {
+          "topic": "Importance of Exception Handling",
+          "isCompleted": false
+        },
+        {
+          "topic": "Exception Propagation",
+          "isCompleted": false
+        },
+        {
+          "topic": "Exception Types",
+          "isCompleted": false
+        }
+      ]
+    },
+    {
+      "day_number": 20,
+      "topics": [
+        {
+          "topic": "Using try and catch",
+          "isCompleted": false
+        }
+      ]
+    },
+    {
+      "day_number": 21,
+      "topics": [
+        {
+          "topic": "throw, throws, finally",
+          "isCompleted": false
+        },
+        {
+          "topic": "Writing User defined Exceptions",
+          "isCompleted": false
+        }
+      ]
+    },
+    {
+      "day_number": 22,
+      "topics": [
+        {
+          "topic": "IO PACKAGE",
+          "isCompleted": false
+        },
+        {
+          "topic": "Input streams",
+          "isCompleted": false
+        },
+        {
+          "topic": "Output streams",
+          "isCompleted": false
+        }
+      ]
+    },
+    {
+      "day_number": 23,
+      "topics": [
+        {
+          "topic": "Object serialization",
+          "isCompleted": false
+        },
+        {
+          "topic": "Deserialization",
+          "isCompleted": false
+        }
+      ]
+    },
+    {
+      "day_number": 24,
+      "topics": [
+        {
+          "topic": "COLLECTION",
+          "isCompleted": false
+        },
+        {
+          "topic": "Collection Framework",
+          "isCompleted": false
+        },
+        {
+          "topic": "ArrayList class",
+          "isCompleted": false
+        },
+        {
+          "topic": "LinkedList class",
+          "isCompleted": false
+        },
+        {
+          "topic": "HashSet class",
+          "isCompleted": false
+        },
+        {
+          "topic": "LinkedHashSet class",
+          "isCompleted": false
+        },
+        {
+          "topic": "Map Interface and its Classes",
+          "isCompleted": false
+        }
+      ]
+    },
+    {
+      "day_number": 25,
+      "topics": [
+        {
+          "topic": "MULTI THREADING",
+          "isCompleted": false
+        },
+        {
+          "topic": "Introduction to Multithreading",
+          "isCompleted": false
+        },
+        {
+          "topic": "Understanding Threads and its States",
+          "isCompleted": false
+        }
+      ]
+    },
+    {
+      "day_number": 26,
+      "topics": [
+        {
+          "topic": "Thread class and Runnable Interface",
+          "isCompleted": false
+        }
+      ]
+    },
+    {
+      "day_number": 27,
+      "topics": [
+        {
+          "topic": "Thread Synchronization",
+          "isCompleted": false
+        },
+        {
+          "topic": "Inter thread Communication",
+          "isCompleted": false
+        }
+      ]
+    },
+    {
+      "day_number": 28,
+      "topics": [
+        {
+          "topic": "DATABASE CONNECTIVITY",
+          "isCompleted": false
+        },
+        {
+          "topic": "JDBC architecture",
+          "isCompleted": false
+        },
+        {
+          "topic": "Establishing connectivity and working with connection interface",
+          "isCompleted": false
+        },
+        {
+          "topic": "Working with statements",
+          "isCompleted": false
+        }
+      ]
+    },
+    {
+      "day_number": 29,
+      "topics": [
+        {
+          "topic": "Creating and executing SQL statements",
+          "isCompleted": false
+        },
+        {
+          "topic": "Working with Result Set",
+          "isCompleted": false
+        }
+      ]
+    }
+  ]
+}

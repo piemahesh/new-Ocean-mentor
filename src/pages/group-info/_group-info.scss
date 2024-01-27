@@ -1,0 +1,95 @@
+.group-info {
+  max-width: 500px;
+  min-height: calc(100vh);
+  margin-inline: auto;
+  background-color: #f6f6f6;
+  nav {
+    height: 10vh;
+    .left-arrow {
+      font-size: 3rem;
+    }
+    .share {
+      border-radius: 10px;
+    }
+  }
+  .pic {
+    img {
+      max-width: 150px;
+      width: 100%;
+    }
+    p {
+      bottom: 20%;
+    }
+    .progress-bar {
+      width: 160px;
+      height: 160px;
+      border-radius: 50%;
+      background: radial-gradient(closest-side, white 79%, transparent 90% 100%),
+        conic-gradient(rgba(0, 116, 218, 0.542) 30%, white 0);
+    }
+    .percentage {
+      background-color: white;
+      height: 50px;
+      width: 50px;
+      border-radius: 50%;
+      right: -10%;
+      bottom: 10%;
+    }
+  }
+  .range {
+    border-radius: 20px;
+  }
+  .icons {
+    height: 50px;
+    width: 50px;
+  }
+  .search {
+    border-radius: 10px;
+    input {
+      border: none;
+      outline: none;
+    }
+  }
+  .group-mentor {
+    .group-mentor-inner {
+      max-width: 70px;
+      width: 100%;
+      border: 4px solid #0d6efd;
+      img {
+        max-width: 70px;
+        width: 100%;
+      }
+    }
+  }
+  .group-member {
+    .imgContainer {
+      height: 100px;
+      min-width: 100px;
+      border: 5px solid rgba(3, 101, 248, 0.548);
+      border-radius: 50%;
+      img {
+        height: 100%;
+        /* max-width: 80px; */
+        width: 100%;
+        object-fit: cover;
+        object-position: top;
+        filter: brightness(1.2);
+      }
+    }
+  }
+  .group-member > article:last-child {
+    margin-bottom: 100px;
+  }
+  .footer {
+    max-width: 500px;
+    height: 70px;
+    bottom: 0%;
+    p {
+      font-size: 14px;
+    }
+  }
+}
+
+.studCont {
+  margin-bottom: 70px;
+}
