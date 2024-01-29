@@ -13,6 +13,7 @@ export const Notes = () => {
   const { batchId } = useParams();
   const [opennote, setOpenNote] = useState();
   const [notes, setNotes] = useState([]);
+  const navigate = useNavigate();
   const getData = async () => {
     const resp = api.get(`${GET_NOTES}/${batchId}`);
     resp
@@ -40,8 +41,14 @@ export const Notes = () => {
     return () => getData();
   }, []);
 
+  const newNotes = notes || [];
+  const delNotes = (index) => {
+    newNotes.pop(newNotes[index]);
+    addData({ notes: newNotes });
+    navigate(0);
+  };
+  console.log(newNotes);
   const handleNotes = (datas) => {
-    const newNotes = notes || [];
     newNotes.push(datas);
     addData({ notes: newNotes });
   };
@@ -50,7 +57,7 @@ export const Notes = () => {
       <GroupInfoNavbar name="Notes" />
       <div className="notes-add d-flex flex-column justify-content-center align-items-center gap-2">
         {notes.length === 0 ? (
-          <div className="d-flex flex-column justify-content-center align-items-center gap-2">
+          <div className="d-flex emptyNotes flex-column justify-content-center align-items-center gap-2">
             <img src={note} alt="note-img not found" />
             <h5 className="text-secondary">No Notes exist here</h5>
           </div>
@@ -60,7 +67,7 @@ export const Notes = () => {
       </div>
 
       <div className="p-3 notes-add">
-        <h1 className="py-2">All notes</h1>
+        {notes.length > 0 ? <h1 className="py-2">All notes</h1> : <h1></h1>}
         {notes.map((e, i) => {
           const cal = new Date(e.startDate);
           const date = cal.getDate();
@@ -70,15 +77,17 @@ export const Notes = () => {
           return (
             <AddNotes
               key={i}
+              index={i}
               title={`Notes for ${dayFormat}`}
               content={e.message}
               date={dayFormat}
+              delNotes={delNotes}
             />
           );
         })}
       </div>
       <button
-        className="fab  shadow d-flex justify-content-center align-items-center bg-primary text-white text-decoration-none rounded-circle"
+        className="fab position-sticky shadow d-flex justify-content-center align-items-center bg-primary text-white text-decoration-none rounded-circle"
         onClick={() => {
           setOpenNote(!opennote);
         }}
@@ -117,11 +126,19 @@ export const GroupInfoNavbar = (props) => {
 };
 
 export const AddNotes = (props) => {
+  const delNotes = props.delNotes;
+
   return (
     <section className="note-text d-flex flex-column shadow justify-content-center m-auto p-3">
       <h5 className="fw-bold">{props.title}</h5>
       <p className="my-0">{props.content}</p>
       <span className="d-flex justify-content-end">{props.date}</span>
+      <button
+        className="w-25 align-self-end border-2 rounded-2"
+        onClick={() => delNotes(props.index)}
+      >
+        delete
+      </button>
     </section>
   );
 };
