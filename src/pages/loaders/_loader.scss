@@ -2,7 +2,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 100%;
+  max-height: 100vh;
+  min-height: 100%;
   .loader {
     --path: #2268f5;
     --dot: rgb(141, 26, 0);
@@ -45,12 +46,14 @@
           cubic-bezier(0.785, 0.135, 0.15, 0.86) infinite;
       }
       rect {
-        stroke-dasharray: calc(256 / 4 * 3) calc(256 / 4) calc(256 / 4 * 3) calc(256 / 4);
+        stroke-dasharray: calc(256 / 4 * 3) calc(256 / 4) calc(256 / 4 * 3)
+          calc(256 / 4);
         stroke-dashoffset: 0;
         animation: pathRect 3s cubic-bezier(0.785, 0.135, 0.15, 0.86) infinite;
       }
       circle {
-        stroke-dasharray: calc(200 / 4 * 3) calc(200 / 4) calc(200 / 4 * 3) calc(200 / 4);
+        stroke-dasharray: calc(200 / 4 * 3) calc(200 / 4) calc(200 / 4 * 3)
+          calc(200 / 4);
         stroke-dashoffset: 75;
         animation: pathCircle var(--duration)
           cubic-bezier(0.785, 0.135, 0.15, 0.86) infinite;

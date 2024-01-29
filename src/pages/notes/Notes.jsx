@@ -8,27 +8,19 @@ import { useEffect, useState } from "react";
 import { Description } from "../update/Update";
 import api from "../../ApiService";
 import { GET_NOTES, PUT_NOTES } from "../../constant/ApiEndpoint";
+import { OALoaders } from "../loaders/Loader";
 
 export const Notes = () => {
   const { batchId } = useParams();
   const [opennote, setOpenNote] = useState();
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
   const [notes, setNotes] = useState([]);
   const navigate = useNavigate();
-  const getData = async () => {
-    const resp = api.get(`${GET_NOTES}/${batchId}`);
-    resp
-      .then((res) => {
-        console.log(res.data);
-        setNotes(res.data.notes);
-      })
-      .catch((err) => {
-        console.log(err);
-      });
-  };
 
   const addData = async (datas) => {
-    const resp = api.post(`${PUT_NOTES}/${batchId}`, datas);
-    resp
+    await api
+      .post(`${PUT_NOTES}/${batchId}`, datas)
       .then((res) => {
         console.log(res);
       })
@@ -38,19 +30,43 @@ export const Notes = () => {
   };
 
   useEffect(() => {
-    return () => getData();
-  }, []);
+    const fetchData = async () => {
+      try {
+        setLoading(true);
+        const response = await api.get(`${GET_NOTES}/${batchId}`);
+        setNotes(response.data.notes);
+        console.log(response.data);
+      } catch (error) {
+        setError(error);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchData();
+  }, [batchId]);
 
   const newNotes = notes || [];
-  const delNotes = (index) => {
-    newNotes.pop(newNotes[index]);
+  const delNotes = async (index) => {
+    // newNotes.pop(newNotes[index]);
+    newNotes.splice(index, 1);
     addData({ notes: newNotes });
-    navigate(0);
+    setTimeout(() => navigate(0), 300);
+    console.log(newNotes);
   };
-  console.log(newNotes);
+
+  if (loading) {
+    return <OALoaders />;
+  }
+
+  if (error) {
+    return <div>error.....</div>;
+  }
+
   const handleNotes = (datas) => {
     newNotes.push(datas);
     addData({ notes: newNotes });
+    console.log(datas);
   };
   return (
     <main className="notes">

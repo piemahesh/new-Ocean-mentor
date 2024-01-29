@@ -46,7 +46,7 @@ export const Update = () => {
       }
     });
   };
-  const fetchData = () => {
+  const fetchData = async () => {
     try {
       setSlyLoading(true);
       const resp = api.get(`${GET_DAY_SHEET}/${batchId}`);
@@ -70,7 +70,7 @@ export const Update = () => {
     } catch (err) {
       console.log("syllabus not found");
     }
-    return () => fetchData();
+    fetchData();
   }, [courseName]);
 
   const handleUpdateSyllabus = (dayInd, sylInd, value) => {
@@ -79,10 +79,6 @@ export const Update = () => {
     setOrgSyllabus({ syllabus: localData });
     // console.log(orgSyllabus);
   };
-
-  // if (slyLoading) {
-  //   return <h1>Loading...||||</h1>;
-  // }
 
   if (slyLoading == false && syllabus.length === 0) {
     return (
@@ -192,10 +188,9 @@ export const Description = (props) => {
 
   const [message, setMessage] = useState("");
   const navigate = useNavigate();
-  const goBack = () => {
-    // console.log({ startDate, message });
-    handleNotes({ startDate, message });
-    navigate(0);
+  const goBack = async () => {
+    await handleNotes({ startDate, message });
+    setTimeout(() => navigate(0), 300);
   };
   const [startDate, setStartDate] = useState(new Date());
   return (
