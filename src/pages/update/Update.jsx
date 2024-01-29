@@ -15,6 +15,7 @@ import { GET_DAY_SHEET, PUT_DAY_SHEET } from "../../constant/ApiEndpoint";
 import { useEffect } from "react";
 import api from "../../ApiService";
 import { Syllabus } from "./Syllabus";
+import oceanImg from "../../assets/loading-image/Vector.svg";
 
 export const Update = () => {
   const { batchId } = useParams();
@@ -26,6 +27,7 @@ export const Update = () => {
   const [description, setDescription] = useState(false);
   const [syllabus, setSyllabus] = useState([]);
   const [slyLoading, setSlyLoading] = useState(null);
+  const [submitBtn, setSubmitBtn] = useState(false);
 
   function desc() {
     return setDescription(!description);
@@ -63,7 +65,7 @@ export const Update = () => {
     try {
       if (selectedSyllabus) {
         setOrgSyllabus(selectedSyllabus);
-        console.log(`Syllabus for ${courseName}:`, selectedSyllabus);
+        // console.log(`Syllabus for ${courseName}:`, selectedSyllabus);
       }
     } catch (err) {
       console.log("syllabus not found");
@@ -72,23 +74,27 @@ export const Update = () => {
   }, [courseName]);
 
   const handleUpdateSyllabus = (dayInd, sylInd, value) => {
-    console.log(dayInd, sylInd);
     const localData = syllabus;
     localData[dayInd].topics[sylInd].isCompleted = value;
     setOrgSyllabus({ syllabus: localData });
-    console.log(orgSyllabus);
+    // console.log(orgSyllabus);
   };
 
-  if (slyLoading) {
-    return <h1>Loading...||||</h1>;
-  }
+  // if (slyLoading) {
+  //   return <h1>Loading...||||</h1>;
+  // }
 
-  if (slyLoading === false && syllabus.length === 0) {
+  if (slyLoading == false && syllabus.length === 0) {
     return (
-      <div>
-        <p>do you want to create syllabus?</p>
-        <button onClick={createSyllabus}>yes</button>
-        <button onClick={goBack}>no</button>
+      <div className="syllabusPopup">
+        <div>
+          <img src={oceanImg} alt="img" />
+        </div>
+        <p>Do you want to create syllabus?</p>
+        <div>
+          <button onClick={createSyllabus}>yes</button>
+          <button onClick={goBack}>no</button>
+        </div>
       </div>
     );
   }
@@ -98,26 +104,24 @@ export const Update = () => {
       <GroupInfoNavbar name="Updates" />
 
       {/* {selectedsyl.length !== 0 && <Description onclose={desc} />} */}
-      <div className="list-syllabus m-3 gap-4 d-flex flex-column p-2">
-        <button
-          onClick={() => {
-            createSyllabus();
-          }}
-        >
-          Check
-        </button>
-
+      <div className="list-syllabus m-3 pb-5 gap-4 d-flex flex-column p-2">
+        {submitBtn ? <SubmitBtn createSyllabus={createSyllabus} /> : ""}
         {syllabus.map((dayData, dayInd) => {
           return (
             <div key={dayInd} className="day-data">
-              <p>{`${dayData.day_number}`}</p>
-              <ol>
+              <p className="day">{`Day ${dayData.day_number}`}</p>
+              <ol className="order">
                 {[...dayData.topics].map((sylData, sylInd) => {
                   return (
-                    <li key={sylInd}>
+                    <li key={sylInd} className="listCont">
                       <input
                         type="checkbox"
+                        className="checkBox"
                         checked={sylData.isCompleted}
+                        id={`${dayInd}/${sylInd}`}
+                        onClick={() => {
+                          setSubmitBtn(true);
+                        }}
                         onChange={() =>
                           handleUpdateSyllabus(
                             dayInd,
@@ -126,7 +130,12 @@ export const Update = () => {
                           )
                         }
                       />
-                      <span>{sylData.topic}</span>
+                      <label
+                        htmlFor={`${dayInd}/${sylInd}`}
+                        className={`${sylData.isCompleted ? "topic" : "none"}`}
+                      >
+                        {sylData.topic}
+                      </label>
                     </li>
                   );
                 })}
@@ -161,14 +170,31 @@ export const Update = () => {
 };
 
 // ...........................................................................
-
-export const ListSyllabus = (props) => {
-  const { index, day_number, topics } = props;
+export const SubmitBtn = (props) => {
+  const { createSyllabus } = props;
+  return (
+    <button
+      onClick={() => {
+        createSyllabus();
+      }}
+      className="submitBtn"
+    >
+      submit
+    </button>
+  );
 };
+// export const ListSyllabus = (props) => {
+//   const { index, day_number, topics } = props;
+// };
 
 export const Description = (props) => {
+  const { handleNotes, ...rest } = props;
+
+  const [message, setMessage] = useState("");
   const navigate = useNavigate();
   const goBack = () => {
+    // console.log({ startDate, message });
+    handleNotes({ startDate, message });
     navigate(0);
   };
   const [startDate, setStartDate] = useState(new Date());
@@ -184,7 +210,12 @@ export const Description = (props) => {
         </article>
       </section>
       <article className="m-3 d-flex flex-column gap-4 justify-content-center align-items-center">
-        <textarea className="border-primary"></textarea>
+        <textarea
+          className="border-primary"
+          onChange={(e) => {
+            setMessage(e.target.value);
+          }}
+        ></textarea>
         <button className="btn btn-primary my-2 p-2 fs-5" onClick={goBack}>
           Submit
         </button>

@@ -3,19 +3,23 @@ import UseQueryRe from "../../customHooks/UseQueryRe";
 import { BATCH_BY_TRAINER_ID } from "../../constant/ApiEndpoint";
 import { Courses } from "./Courses";
 import { useSelector } from "react-redux";
+// import { Loading } from "../../pages/loading/Loading";
+import { OALoaders } from "../../pages/loaders/Loader";
 
 export const Group = (props) => {
   const { searchVal, view } = props;
   const filter = useSelector((state) => state.filter.value);
   const checked = useSelector((state) => state.courseFilter.value);
-  
+
   const trainerId = localStorage.getItem("tokenId");
-  const { data, isError } = UseQueryRe(
+  const { data, isError, isLoading } = UseQueryRe(
     "batchDetails",
     BATCH_BY_TRAINER_ID,
     trainerId
   );
-
+  if (isLoading) {
+    return <OALoaders />;
+  }
   if (isError) {
     return <div>error..........</div>;
   }
@@ -27,7 +31,9 @@ export const Group = (props) => {
     <>
       {data &&
         data.map((e) => {
-          {/* console.log(e) */}
+          {
+            /* console.log(e) */
+          }
           const { _id, batchData } = e;
           if (filter.sort === "New") {
             batchData.sort((a, b) => conv(b.date) - conv(a.date));

@@ -2,41 +2,90 @@ import "./_notes.scss";
 
 import { BsSearch, BsThreeDotsVertical } from "react-icons/bs";
 import { MdOutlineKeyboardArrowLeft } from "react-icons/md";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useNavigate, useParams } from "react-router-dom";
 import note from "../../assets/notes-image/note.png";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Description } from "../update/Update";
+import api from "../../ApiService";
+import { GET_NOTES, PUT_NOTES } from "../../constant/ApiEndpoint";
 
 export const Notes = () => {
+  const { batchId } = useParams();
   const [opennote, setOpenNote] = useState();
-  // function Open(){
-  //   return setOpenNote(!opennote)
-  // }
+  const [notes, setNotes] = useState([]);
+  const getData = async () => {
+    const resp = api.get(`${GET_NOTES}/${batchId}`);
+    resp
+      .then((res) => {
+        console.log(res.data);
+        setNotes(res.data.notes);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  };
+
+  const addData = async (datas) => {
+    const resp = api.post(`${PUT_NOTES}/${batchId}`, datas);
+    resp
+      .then((res) => {
+        console.log(res);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  };
+
+  useEffect(() => {
+    return () => getData();
+  }, []);
+
+  const handleNotes = (datas) => {
+    const newNotes = notes || [];
+    newNotes.push(datas);
+    addData({ notes: newNotes });
+  };
   return (
     <main className="notes">
       <GroupInfoNavbar name="Notes" />
       <div className="notes-add d-flex flex-column justify-content-center align-items-center gap-2">
-        <img src={note} alt="note-img not found" />
-        <h5 className="text-secondary">No Notes exist here</h5>
+        {notes.length === 0 ? (
+          <div className="d-flex flex-column justify-content-center align-items-center gap-2">
+            <img src={note} alt="note-img not found" />
+            <h5 className="text-secondary">No Notes exist here</h5>
+          </div>
+        ) : (
+          <h5></h5>
+        )}
       </div>
 
       <div className="p-3 notes-add">
         <h1 className="py-2">All notes</h1>
-        <AddNotes
-          title="Ocean Project"
-          content="Front end develop"
-          date="20/07/2023"
-        />
+        {notes.map((e, i) => {
+          const cal = new Date(e.startDate);
+          const date = cal.getDate();
+          const year = cal.getFullYear();
+          const month = cal.getMonth() + 1;
+          const dayFormat = `${date}/${month}/${year}`;
+          return (
+            <AddNotes
+              key={i}
+              title={`Notes for ${dayFormat}`}
+              content={e.message}
+              date={dayFormat}
+            />
+          );
+        })}
       </div>
       <button
-        className="fab position-sticky shadow d-flex justify-content-center align-items-center bg-primary text-white text-decoration-none rounded-circle"
+        className="fab  shadow d-flex justify-content-center align-items-center bg-primary text-white text-decoration-none rounded-circle"
         onClick={() => {
           setOpenNote(!opennote);
         }}
       >
         +
       </button>
-      {opennote && <Description />}
+      {opennote && <Description handleNotes={handleNotes} />}
     </main>
   );
 };

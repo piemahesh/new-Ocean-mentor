@@ -2,11 +2,11 @@
   max-width: 500px;
   min-height: calc(100vh);
   margin-inline: auto;
+  position: relative;
 
- 
   .notes-add {
-    height: calc(100vh - 10vh);
-    overflow-y: auto;
+    /* height: calc(100vh - 10vh);
+    overflow-y: auto; */
   }
   .notes-add::-webkit-scrollbar {
     display: none;
@@ -26,7 +26,9 @@
   }
   .fab {
     bottom: 20px;
+    right: 0;
     float: right;
+    position: absolute;
     margin: 20px;
     height: 60px;
     width: 60px;
@@ -35,7 +37,7 @@
   }
 }
 
-.groupinfo-navbar{
+.groupinfo-navbar {
   height: 10vh;
   .left-arrow {
     font-size: 3rem;

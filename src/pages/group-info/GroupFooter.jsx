@@ -5,15 +5,13 @@ import { RxUpdate } from "react-icons/rx";
 import { MdTask } from "react-icons/md";
 
 export const GroupFooter = (props) => {
-  // const { courseName } = props;
   const { batchId } = props;
-  // console.log(batchId);
-  // console.log(courseName);
+
   return (
     <footer className="footer position-fixed bg-primary w-100 d-flex justify-content-between align-items-center position-absolute">
       <article className="mx-4 text-white">
         <Link
-          to="/notes"
+          to={`/notes/${batchId}`}
           className="text-decoration-none d-flex  flex-column align-items-center"
         >
           <GiNotebook className="fs-2 text-white" />

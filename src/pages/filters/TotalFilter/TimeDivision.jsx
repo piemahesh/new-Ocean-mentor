@@ -17,9 +17,10 @@ export const TimeDivision = () => {
             <RiCloseCircleFill className="text-primary fs-3" />
           </Link>
         </div>
-        <div className="time-division-inner border-bottom mt-3 d-flex gap-3 align-items-center text-primary fs-4 mx-auto p-2 ">
+        <div className="time-division-inner border-bottom mt-3 d-flex gap-3 justify-content-between align-items-center text-primary fs-4 mx-auto p-2 ">
           <BsFillClockFill />
-          <span className="text-secondary">Add Time</span>
+          <input type="time" />
+          <span className="text-secondary position-absolute">Add Time</span>
         </div>
 
         <article className="d-flex justify-content-center mt-5">

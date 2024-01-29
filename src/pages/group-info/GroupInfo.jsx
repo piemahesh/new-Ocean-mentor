@@ -12,22 +12,70 @@ import { GroupFooter } from "./GroupFooter";
 import { BATCH_STUDENT } from "../../constant/ApiEndpoint";
 import { useParams } from "react-router-dom";
 import SetImg from "../../assets/course-byBatches/SetImg";
+// import { OALoaders } from "../loaders/Loader";
+import { useEffect } from "react";
 
 export const GroupInfo = () => {
   const navigate = useNavigate();
   const { batchId } = useParams();
   const [show, setShow] = useState(false);
-  const { data, isError } = UseQueryRe(
+  const [completedPercentage, setCompletedPercentage] = useState(0);
+  const { data, isError, isLoading } = UseQueryRe(
     "MenotDetails",
     BATCH_STUDENT,
     `${batchId}`
   );
   const datas = data || [];
+  useEffect(() => {
+    try {
+      datas.map((e) => {
+        const syllabus = e.syllabus;
+        const totalIsCompleted = syllabus.reduce(
+          (acc, day) => acc + day.topics.length,
+          0
+        );
+        const trueIsCompletedCount = countTrueIsCompleted(syllabus);
+        const completedPercentage = Math.round(
+          (trueIsCompletedCount / totalIsCompleted) * 100
+        );
+        setCompletedPercentage(completedPercentage);
+        // console.log(completedPercentage);
+        // console.log(`Total isCompleted fields: ${totalIsCompleted}`);
+        // console.log(`Number of true isCompleted fields: ${trueIsCompletedCount}`);
+      });
+    } catch (err) {
+      setCompletedPercentage(0);
+      console.log("datas not found");
+    }
+  }, [datas]);
+
+  function countTrueIsCompleted(syllabus) {
+    let trueCount = 0;
+
+    syllabus.forEach((day) => {
+      day.topics.forEach((topic) => {
+        if (topic.isCompleted === true) {
+          trueCount++;
+        }
+      });
+    });
+
+    return trueCount;
+  }
+
   if (isError) {
     return <p>error............</p>;
   }
   const goBack = () => {
     navigate(-1);
+  };
+  // if (isLoading) {
+  //   return <OALoaders />;
+  // }
+
+  const styles = {
+    background: `radial-gradient(closest-side, white 79%, transparent 90% 100%),
+        conic-gradient(rgba(0, 116, 218, 0.542) ${completedPercentage}%, white 0)`,
   };
 
   return (
@@ -48,10 +96,6 @@ export const GroupInfo = () => {
         </Link>
       </nav>
       {datas.map((e) => {
-        {
-          /* console.log(e); */
-        }
-
         const {
           _id,
           batchName,
@@ -71,11 +115,12 @@ export const GroupInfo = () => {
                   aria-valuenow="75"
                   aria-valuemin="0"
                   aria-valuemax="100"
+                  style={styles}
                 >
                   <SetImg course={courseName.toLowerCase()} />
                 </div>
                 <article className=" percentage position-absolute text-primary d-flex justify-content-center align-items-center">
-                  <span>50%</span>
+                  <span>{`${completedPercentage}%`}</span>
                 </article>
               </section>
               <h6>{batchName.split("_")[0]}</h6>
@@ -100,10 +145,15 @@ export const GroupInfo = () => {
             </div>
             <section className=" gap-4 py-2 d-flex flex-column justify-content-center align-items-center">
               <article className="range w-75 px-4 py-2 border bg-white">
-                <progress className="w-100" value="70" min="0" max="100" />
+                <progress
+                  className="w-100"
+                  value={completedPercentage}
+                  min="0"
+                  max="100"
+                />
                 <article className=" d-flex justify-content-between ">
                   <span>{completedStatus}</span>
-                  <span>50%</span>
+                  <span>{`${completedPercentage}%`}</span>
                 </article>
               </article>
             </section>
