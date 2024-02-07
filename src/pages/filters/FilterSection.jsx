@@ -5,13 +5,13 @@ import { MdOutlineAddBox } from "react-icons/md";
 export const FilterSection = () => {
   return (
     <section className="filters-section position-sticky mb-2 d-flex justify-content-between gap-2 py-2 align-items-center bg-white">
-      {/* <Link
+      <Link
         to="/home/filter"
         className="filters-inner text-decoration-none border d-flex align-items-center gap-2 px-4 py-2"
       >
         <span>Filter</span>
         <IoCaretDownSharp />
-      </Link> */}
+      </Link>
       <Link
         to="/home/sort"
         className="filters-inner border text-decoration-none d-flex align-items-center gap-2 px-4 py-2"

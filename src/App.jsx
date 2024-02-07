@@ -45,6 +45,7 @@ import { AnotherMentorPage } from "./pages/another-mentor/AnotherMentorPage";
 import { Syllabus } from "./pages/syllabus/Syllabus";
 import { QueryClient, QueryClientProvider } from "react-query";
 import ProtectedRoutes from "./ProtectedRoutes";
+import { Jars } from "./pages/6jars/Jars";
 // import { ReactQueryDevtools } from "react-query/devtools";
 const queryClient = new QueryClient();
 
@@ -55,6 +56,7 @@ export const App = () => {
         <Router>
           <Routes>
             <Route path="/" Component={Login} />
+            <Route path="/6jars/query/" Component={Jars} />
             <Route path="/register" Component={Register} />
             <Route element={<ProtectedRoutes />}>
               <Route path="/updatedetails" Component={UpdateDetails} />
@@ -107,7 +109,10 @@ export const App = () => {
                 <Route path="add-date" element={<AddDateDivision />} />
               </Route>
               <Route path="/update/:batchId" Component={Update} />
-              <Route path="/studentattendance/:studentId" Component={StudentAttendance} />
+              <Route
+                path="/studentattendance/:studentId"
+                Component={StudentAttendance}
+              />
               <Route path="/credit" Component={CreditPercentange} />
               <Route path="/leader" Component={LeaderBoard} />
               <Route path="/batch" Component={BatchBoard} />

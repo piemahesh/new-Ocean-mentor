@@ -24,6 +24,7 @@ export const Landing = () => {
 
   return (
     <main className="landing position-relative overflow-hidden">
+    
       <SideBar
         onclose={aside}
         style={{

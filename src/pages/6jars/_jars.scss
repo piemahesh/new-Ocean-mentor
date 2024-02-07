@@ -1,0 +1,29 @@
+.formHead{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .forms {
+        margin: auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        gap: 20px;
+        border-radius: 15px;
+        padding: 30px;
+        border: 2px solid blue;
+        >input{
+          padding: 10px;
+          border: 2px solid rgb(13, 149, 233);
+          border-radius: 10px;
+          width: 250px;
+        }
+        >button{
+            color: white;
+            background-color:rgb(13, 149, 233);
+            border: 2px solid rgb(0, 136, 255);
+            border-radius: 5px;
+        }
+      }
+}
