@@ -8,26 +8,21 @@ import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 // import api from "../../ApiService";
 import { GENERATE_QR } from "../../constant/ApiEndpoint";
-import UseQueryRe from "../../customHooks/UseQueryRe";
+import api from "../../ApiService";
+import { useQuery } from "react-query";
 
 export const QrScanner = () => {
+  const fetchData = async () => {
+    const response = await api.get(GENERATE_QR);
+    return response.data;
+  };
   const [qrcode, setQrCode] = useState("");
-  // const fetchData = async () => {
-  //   await api
-  //     .get(GENERATE_QR,"")
-  //     .then((res) => {
-  //       setQrCode(res.data);
-  //       console.log(res.data);
-  //     })
-  //     .catch((err) => {
-  //       console.log(err);
-  //     });
-  // };
-  // console.log(qrcode);
-  // useEffect(() => {
-  //   fetchData();
-  // }, []);
-  const { data } = UseQueryRe("qrGenerate", GENERATE_QR, "");
+
+  const { data } = useQuery("qrGenerate", fetchData, {
+    staleTime: 600000,
+    refetchInterval: 600000,
+  });
+
   useEffect(() => {
     setQrCode(data);
   }, [data]);
