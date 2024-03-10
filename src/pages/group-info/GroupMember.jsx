@@ -19,7 +19,7 @@ export const GroupMember = (props) => {
 
   return (
     <>
-      <Link to={`/studentattendance/${id}`} className="text-decoration-none">
+      <main >
         <section
           key={id}
           className="group-member d-flex gap-3 align-items-center m-2"
@@ -33,9 +33,11 @@ export const GroupMember = (props) => {
               <span>{courseName}</span>
             </article>
           </section>
+          <Link to={`/studentattendance/${id}`} className="text-decoration-none">view</Link>
+          <button className="border-2 bg-gradient  border-primary rounded-2 markAbsent" onClick={() => handleAbsent(id)}>absent</button>
         </section>
-      </Link>
-      <button onClick={() => handleAbsent(id)}>notify</button>
+      </main>
+
     </>
   );
 };
