@@ -87,7 +87,7 @@ export const App = () => {
               <Route path="/course" Component={Course} />
               <Route path="/groupinfo/:batchId" Component={GroupInfo} />
               <Route path="/notes/:batchId" Component={Notes} />
-              <Route path="/task" Component={Task} />
+              <Route path="/task/:batchId" Component={Task} />
               <Route path="/mentor" Component={Mentor} />
               <Route
                 path="/another-mentor-page/:mentorId"

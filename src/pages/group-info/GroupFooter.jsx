@@ -38,7 +38,7 @@ export const GroupFooter = (props) => {
       </article>
       <article className="mx-4 text-white ">
         <Link
-          to="/task"
+          to={`/task/${batchId}`}
           className="text-decoration-none d-flex  flex-column align-items-center"
         >
           <MdTask className="fs-2 text-white" />

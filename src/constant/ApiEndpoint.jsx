@@ -11,4 +11,6 @@ export const GET_NOTES = "trainer/get/notes";
 export const GENERATE_QR = "trainer/generateQR";
 export const SIX_JARS = "query/";
 export const ABSENT = "trainer/absent/";
+export const GET_TASK = "trainer/batch/taskroom";
+export const ADD_TASK = "trainer/add/task";
 // http://127.0.0.1:5001/oa-admin-sms/us-central1/app/v1/trainer/get/trainer/batch/all/623a44b6-04db-4c59-b106-8092677cb4b0
