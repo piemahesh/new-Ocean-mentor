@@ -29,7 +29,7 @@ export const Task = () => {
   const navigate = useNavigate();
 
   const { batchId } = useParams();
-  const { data } = UseQueryRe("get_task", `${GET_TASK}/${batchId}`, "");
+  const { data, error } = UseQueryRe("get_task", `${GET_TASK}/${batchId}`, "");
   const datas = data || [];
 
   function filterDate() {
@@ -171,11 +171,15 @@ export const UploadTask = (props) => {
   const navigate = useNavigate();
   const handleSubmit = async () => {
     props.onclose;
-    const resp = await api.post(ADD_TASK, {
-      question,
-      deadLine,
-      batchId: props.batchId,
-    });
+    try {
+      const resp = await api.post(ADD_TASK, {
+        question,
+        deadLine,
+        batchId: props.batchId,
+      });
+    } catch (error) {
+      console.log("error");
+    }
     console.log(resp);
     navigate(0);
   };

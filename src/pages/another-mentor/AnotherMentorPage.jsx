@@ -9,15 +9,23 @@ import { IoCaretDownSharp } from "react-icons/io5";
 import { Link } from "react-router-dom";
 import { useParams } from "react-router-dom";
 import { Courses } from "../../components/group/Courses";
+import { useState } from "react";
+import { useSelector } from "react-redux";
 
 export const AnotherMentorPage = () => {
   // here we use useparams => bcz we need to get the mentor id from the path
   const { mentorId } = useParams();
+  const filter = useSelector((state) => state.filter.value);
+  const checked = useSelector((state) => state.courseFilter.value);
+
   const { data, isError } = UseQueryRe(
     "batchByMentor",
     BATCH_BY_TRAINER_ID,
     mentorId
   );
+
+  const [searching, setSearching] = useState("");
+  const [view, setView] = useState("on-going");
 
   // eslint-disable-next-line no-unused-vars
   const datas = data || [];
@@ -25,13 +33,34 @@ export const AnotherMentorPage = () => {
   if (isError) {
     return <p>error...........</p>;
   }
+  const [{ batchData = [] } = []] = data || [];
+  if (filter.sort === "New") {
+    batchData.sort((a, b) => conv(b.date) - conv(a.date));
+  } else if (filter.sort === "Old") {
+    batchData.sort((a, b) => conv(a.date) - conv(b.date));
+  }
+
+  function conv(d) {
+    const [day, month, year] = d.split("-");
+    return new Date(`${year}-${month}-${day}`);
+  }
+  const filt = batchData
+    .filter((items) => {
+      return items.courseName.toLowerCase().includes(searching);
+    })
+    .filter((items) => {
+      return items.completedStatus.includes(view);
+    })
+    .filter((course) =>
+      checked.course.includes(course.courseName.toLowerCase())
+    );
 
   return (
     <main className="another-mentor">
       <CommonNavBar to="/mentor" name="Go To Home" />
 
       <FilterSection />
-      <BatchDivision />
+      <BatchDivision setSearching={setSearching} setView={setView} />
       <article className="mx-3 scroll ">
         {data &&
           data.map((e) => {
@@ -39,7 +68,8 @@ export const AnotherMentorPage = () => {
             return (
               <div key={_id}>
                 <MentorList mentorName={name} />
-                {batchData.map((e) => {
+
+                {filt.map((e) => {
                   const {
                     _id,
                     completedStatus,

@@ -11,6 +11,8 @@ export const CourseDivision = () => {
     // console.log(selected.length);
     if (selected.length !== 0) {
       dispatch(checkBox({ course: selected }));
+    } else {
+      dispatch(checkBox({ course: courseName }));
     }
     // console.log("hi");
     navigate(-1);
@@ -28,6 +30,9 @@ export const CourseDivision = () => {
     "c",
     "c++",
     "testing",
+    "selinium",
+    "sql",
+    "javascript",
   ];
   return (
     <main className="course-division border-top d-flex flex-column justify-content-center shadow position-fixed shadow position-fixed h-100">

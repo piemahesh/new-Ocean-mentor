@@ -19,6 +19,7 @@ import {
 } from "chart.js";
 import UseQueryRe from "../../customHooks/UseQueryRe";
 import { SPECIFIC_STUDENT } from "../../constant/ApiEndpoint";
+import { OALoaders } from "../loaders/Loader";
 
 ChartJS.register(
   CategoryScale,
@@ -59,7 +60,14 @@ const labelDatas = {
 export const StudentAttendance = () => {
   const navigate = useNavigate();
   const { studentId } = useParams();
-  const { data } = UseQueryRe("one_Student", SPECIFIC_STUDENT, studentId);
+  const { data, isLoading } = UseQueryRe(
+    "one_Student",
+    SPECIFIC_STUDENT,
+    studentId
+  );
+  if (isLoading) {
+    return <OALoaders />;
+  }
   const datas = data || [];
   const goBack = () => {
     navigate(-1);

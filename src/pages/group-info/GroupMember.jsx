@@ -19,8 +19,6 @@ export const GroupMember = (props) => {
       api
         .post(`${ABSENT}${studentId}`)
         .then((res) => {
-          console.log(res);
-          console.log(res.status);
           toast.success("notification send successfully", {
             position: "top-center",
           });
@@ -28,6 +26,7 @@ export const GroupMember = (props) => {
         .catch((err) => {
           toast.error("notification not send", {
             position: "top-center",
+            autoClose: 2000,
           });
           console.log("error happen while sending notification");
           setError(true);
@@ -49,7 +48,7 @@ export const GroupMember = (props) => {
         <ToastContainer />
         <section
           key={id}
-          className="group-member d-flex gap-3 align-items-center m-2"
+          className="group-member border rounded-1 p-1 d-flex gap-3 align-items-center m-2"
         >
           <div className="imgContainer">
             <img className="rounded-circle  " alt="figma" src={photo} />
@@ -58,14 +57,15 @@ export const GroupMember = (props) => {
             <article className="d-flex flex-column w-100">
               <h6>{name}</h6>
               <p>{courseName}</p>
+              <Link
+                to={`/studentattendance/${id}`}
+                className="text-decoration-none"
+              >
+                view
+              </Link>
             </article>
           </section>
-          <Link
-            to={`/studentattendance/${id}`}
-            className="text-decoration-none"
-          >
-            view
-          </Link>
+
           <button
             className="btn border-2 border"
             type="button"

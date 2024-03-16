@@ -46,6 +46,7 @@ import { Syllabus } from "./pages/syllabus/Syllabus";
 import { QueryClient, QueryClientProvider } from "react-query";
 import ProtectedRoutes from "./ProtectedRoutes";
 import { Jars } from "./pages/6jars/Jars";
+import NetworkStatus from "./components/networkStatus/Network";
 // import { ReactQueryDevtools } from "react-query/devtools";
 const queryClient = new QueryClient();
 

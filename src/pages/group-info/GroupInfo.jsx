@@ -39,13 +39,10 @@ export const GroupInfo = () => {
           (trueIsCompletedCount / totalIsCompleted) * 100
         );
         setCompletedPercentage(completedPercentage);
-        // console.log(completedPercentage);
-        // console.log(`Total isCompleted fields: ${totalIsCompleted}`);
-        // console.log(`Number of true isCompleted fields: ${trueIsCompletedCount}`);
       });
     } catch (err) {
       setCompletedPercentage(0);
-      console.log("datas not found");
+      // console.log("datas not found");
     }
   }, [datas]);
 

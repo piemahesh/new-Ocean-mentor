@@ -19,9 +19,12 @@ import { TimeDivision } from "../filters/TotalFilter/TimeDivision";
 import { CommonNavBar } from "../mentor/Mentor";
 import { studentAction } from "../../features/StudentSlice";
 import { useDispatch } from "react-redux";
+import { useState } from "react";
 // import { BatchDivision } from "../filters/BatchDivision";
 export const Student = () => {
   const mentorId = localStorage.getItem("tokenId");
+
+  const [searching, setSearching] = useState("");
   const { data, isError } = UseQueryRe(
     "triner_students",
     TRAINERS_STUDENT,
@@ -31,6 +34,9 @@ export const Student = () => {
     return <p>error.........</p>;
   }
   const datas = data || [];
+  const filtered = datas.filter((student) =>
+    student.name.toLowerCase().includes(searching)
+  );
 
   return (
     <main className="student">
@@ -87,12 +93,12 @@ export const Student = () => {
         </section>
 
         {/* middle add-list */}
-        <BatchDivision />
+        <BatchDivision setSearching={setSearching} />
       </div>
 
       {/* Student Details */}
       <section className="mx-3 scroll ">
-        {datas.map((e) => {
+        {filtered.map((e) => {
           return (
             <div key={e._id}>
               <StudentDetails

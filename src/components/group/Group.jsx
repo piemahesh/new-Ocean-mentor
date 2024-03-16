@@ -31,10 +31,10 @@ export const Group = (props) => {
     <>
       {data &&
         data.map((e) => {
-          {
-            /* console.log(e) */
-          }
           const { _id, batchData } = e;
+          {
+            /* new and old filter */
+          }
           if (filter.sort === "New") {
             batchData.sort((a, b) => conv(b.date) - conv(a.date));
           } else if (filter.sort === "Old") {

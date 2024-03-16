@@ -1,11 +1,7 @@
 import "./_landing.scss";
-//React-icons
 import { HiOutlineUserGroup } from "@react-icons/all-files/hi/HiOutlineUserGroup";
-// router
 import { Outlet } from "react-router-dom";
-// Reusable Component
 import { Group } from "../../components/group/Group";
-// State Manage
 import { useState } from "react";
 import { SideBar } from "../filters/SideBar";
 import { NavBar } from "../navbar/NavBar";
@@ -24,7 +20,6 @@ export const Landing = () => {
 
   return (
     <main className="landing position-relative overflow-hidden">
-    
       <SideBar
         onclose={aside}
         style={{
@@ -33,7 +28,6 @@ export const Landing = () => {
       />
       {/* navbar */}
       <NavBar opensidebar={aside} />
-
       <div className="add-list d-flex flex-column my-0">
         <FilterSection />
         <BatchDivision
@@ -44,43 +38,18 @@ export const Landing = () => {
         <article className="mx-3 scroll batchCont ">
           <Group searchVal={search} view={c_batch} />
         </article>
-
         <div className="group-text d-none position-absolute d-flex flex-column align-items-center">
           <article className="group-icon d-flex justify-content-center my-3 align-items-center rounded-circle">
             <HiOutlineUserGroup className="fs-1 text-secondary" />
           </article>
           <p className="text-secondary text-center fs-5">No Group exist here</p>
         </div>
-        <GroupAdd />
+        {/* <GroupAdd /> */}
+        {/* group add component is not working but future we will use */}
       </div>
-
+      {/* outlet */}
       <Outlet />
-
       <FooterHoming />
     </main>
   );
 };
-
-// filtersection
-// batchDivision
-// groupadd
-
-// sideBar
-// footerHoming
-
-// sortDivision
-
-// courseDivision
-
-// timeDivision
-// dateDivision
-// addDateDivision
-// FilterDivision
-
-// FilterSort
-
-// FilterCourse
-
-// FilterTime
-// FilterDate
-// FilterAddDate

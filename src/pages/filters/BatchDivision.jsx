@@ -4,7 +4,7 @@ import { BiSolidGroup } from "react-icons/bi";
 import { BsSearch } from "react-icons/bs";
 
 export const BatchDivision = (props) => {
-  const { searching, setSearching, setView } = props; 
+  const { searching, setSearching, setView } = props;
   const [show, setShow] = useState(false);
   const mybatches = [
     { "Current Batches": "on-going" },
@@ -13,16 +13,17 @@ export const BatchDivision = (props) => {
   ];
 
   const inputRef = useRef(null);
-  useEffect(()=>{
-    if(show && inputRef.current){
-        inputRef.current.focus()
+  useEffect(() => {
+    if (show && inputRef.current) {
+      inputRef.current.focus();
     }
-  },[show])
+  }, [show]);
   const handleSearch = () => {
     setShow(!show);
   };
 
   const [batches, SetBatches] = useState(Object.keys(mybatches[0]));
+
   return (
     <div className="batch-division">
       <section className="d-flex justify-content-between align-items-center p-2">
@@ -46,6 +47,7 @@ export const BatchDivision = (props) => {
                   className="dropdown-item d-flex  gap-2 align-items-center"
                   onClick={() => {
                     SetBatches(Object.keys(mybatches[index]));
+                    // console.log(Object.values(value)[0]);
                     setView(Object.values(value)[0]);
                   }}
                 >
