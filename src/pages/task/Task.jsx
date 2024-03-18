@@ -180,7 +180,6 @@ export const UploadTask = (props) => {
     } catch (error) {
       console.log("error");
     }
-    console.log(resp);
     navigate(0);
   };
 

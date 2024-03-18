@@ -20,7 +20,7 @@ export const GroupInfo = () => {
   const { batchId } = useParams();
   const [show, setShow] = useState(false);
   const [completedPercentage, setCompletedPercentage] = useState(0);
-  const { data, isError, isLoading } = UseQueryRe(
+  const { data, isError } = UseQueryRe(
     "MenotDetails",
     BATCH_STUDENT,
     `${batchId}`

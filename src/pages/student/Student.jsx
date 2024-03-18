@@ -25,6 +25,7 @@ export const Student = () => {
   const mentorId = localStorage.getItem("tokenId");
 
   const [searching, setSearching] = useState("");
+  const [view, setView] = useState("on-going");
   const { data, isError } = UseQueryRe(
     "triner_students",
     TRAINERS_STUDENT,
@@ -34,18 +35,29 @@ export const Student = () => {
     return <p>error.........</p>;
   }
   const datas = data || [];
-  const filtered = datas.filter((student) =>
-    student.name.toLowerCase().includes(searching)
-  );
+
+  const filtered = datas
+    .filter((student) =>
+      student.name.toLowerCase().includes(searching.toLowerCase())
+    )
+    .filter((student) => {
+      if (view.toLowerCase() === "completed") {
+        return student.coursestatus === "completed";
+      } else if (view === "on-going") {
+        return student.coursestatus.toLowerCase() === "learning";
+      } else {
+        return student;
+      }
+    });
 
   return (
     <main className="student">
       {/* navbar */}
-      <CommonNavBar to="/home" name="Students" />
+      <CommonNavBar to="/home" names="Students" />
 
       {/* List Filter */}
       <div className="add-list d-flex flex-column my-0">
-        <section className="filters position-sticky my-2 d-flex justify-content-between gap-2 py-2 align-items-center bg-white">
+        {/* <section className="filters position-sticky my-2 d-flex justify-content-between gap-2 py-2 align-items-center bg-white">
           <Link
             to="/student/filter"
             className="filters-inner border text-decoration-none d-flex align-items-center gap-2 px-4 py-2"
@@ -90,10 +102,10 @@ export const Student = () => {
           <div className="filters-inner border bg-danger d-flex align-items-center gap-2 px-4 py-2 text-white">
             <span>Clear All</span>
           </div>
-        </section>
+        </section> */}
 
         {/* middle add-list */}
-        <BatchDivision setSearching={setSearching} />
+        <BatchDivision setSearching={setSearching} setView={setView} />
       </div>
 
       {/* Student Details */}

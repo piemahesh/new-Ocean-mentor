@@ -18,8 +18,12 @@ import {
   Tooltip,
 } from "chart.js";
 import UseQueryRe from "../../customHooks/UseQueryRe";
-import { SPECIFIC_STUDENT } from "../../constant/ApiEndpoint";
+import { SPECIFIC_STUDENT, ABSENT } from "../../constant/ApiEndpoint";
 import { OALoaders } from "../loaders/Loader";
+import { ToastContainer, toast } from "react-toastify";
+import { useState } from "react";
+
+import api from "../../ApiService";
 
 ChartJS.register(
   CategoryScale,
@@ -60,6 +64,8 @@ const labelDatas = {
 export const StudentAttendance = () => {
   const navigate = useNavigate();
   const { studentId } = useParams();
+  const [loading, setLoding] = useState(false);
+  const [error, setError] = useState(false);
   const { data, isLoading } = UseQueryRe(
     "one_Student",
     SPECIFIC_STUDENT,
@@ -68,6 +74,34 @@ export const StudentAttendance = () => {
   if (isLoading) {
     return <OALoaders />;
   }
+  const handleAbsent = (studentId) => {
+    setLoding(true);
+    try {
+      api
+        .post(`${ABSENT}${studentId}`)
+        .then((res) => {
+          toast.success("notification send successfully", {
+            position: "top-center",
+          });
+        })
+        .catch((err) => {
+          toast.error("notification not send", {
+            position: "top-center",
+            autoClose: 2000,
+          });
+          console.log("error happen while sending notification");
+          setError(true);
+        })
+        .finally(() => {
+          setTimeout(() => {
+            setLoding(false);
+            setError(false);
+          }, 2000);
+        });
+    } catch (error) {
+      console.log("user not have token");
+    }
+  };
   const datas = data || [];
   const goBack = () => {
     navigate(-1);
@@ -75,6 +109,7 @@ export const StudentAttendance = () => {
   return datas.map((e) => {
     return (
       <main key={e._id} className="student-attendance">
+        <ToastContainer style={{ padding: "30px" }} />
         {/* {console.log(e.address)}
         {console.log(e)} */}
         <div className="student-attendance-top position-relative">
@@ -127,6 +162,28 @@ export const StudentAttendance = () => {
             </div>
           </div>
         </div>
+
+        <div className="w-100 d-flex align-items-center justify-content-center mt-3 ">
+          <button
+            onClick={() => handleAbsent(e._id)}
+            className="btn btn-primary"
+          >
+            notify
+          </button>
+        </div>
+        {/* <button
+          className="btn border-2 border"
+          type="button"
+          onClick={() => handleAbsent(id)}
+          style={{
+            height: "50px",
+            paddingLeft: "20px",
+            paddingRight: "20px",
+            position: "relative",
+          }}
+        >
+          absent
+        </button> */}
 
         {/* Chart component import */}
         <div className="mt-5 mx-2">

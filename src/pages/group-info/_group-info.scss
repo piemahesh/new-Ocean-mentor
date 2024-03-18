@@ -67,10 +67,10 @@
       min-width: 100px;
       border: 5px solid rgba(3, 101, 248, 0.548);
       border-radius: 50%;
-      @media screen and (max-width: 500px) {
-        height: 70px;
-        min-width: 70px;
-      }
+      // @media screen and (max-width: 500px) {
+      //   height: 70px;
+      //   min-width: 70px;
+      // }
       img {
         height: 100%;
         /* max-width: 80px; */
@@ -80,12 +80,12 @@
         filter: brightness(1.2);
       }
     }
-    .studName {
-      // color: green;
-      @media screen and (max-width: 500px) {
-        font-size: 1em;
-      }
-    }
+    // .studName {
+    //   // color: green;
+    //   // @media screen and (max-width: 500px) {
+    //   //   font-size: 1em;
+    //   // }
+    // }
   }
   .group-member > article:last-child {
     margin-bottom: 100px;

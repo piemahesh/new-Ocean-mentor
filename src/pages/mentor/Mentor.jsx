@@ -17,9 +17,7 @@ export const Mentor = () => {
     <main className="mentor ">
       <CommonNavBar name="Mentor" to="/home" />
       <div className="members m-4 d-flex flex-column gap-3">
-
         {datas.map((e) => {
-          
           return (
             <div key={e._id}>
               <AddMentor id={e._id} names={e.name} />
