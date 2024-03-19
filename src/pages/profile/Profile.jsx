@@ -20,14 +20,14 @@ export const Profile = () => {
   const fetchBatchDetails = async () => {
     const response = await api.get(`${GET_BATCH_COUNT}/${trainerId}`);
     if (response.data) {
-      setDatas(response.data)
+      setDatas(response.data);
     }
-  }
+  };
   useEffect(() => {
-    fetchBatchDetails()
-  }, [])
+    fetchBatchDetails();
+  }, []);
 
-  console.log(datas)
+  console.log(datas);
 
   return (
     <main className="profile">
@@ -82,10 +82,12 @@ export const Profile = () => {
       </div>
       <section className="d-flex justify-content-between m-3">
         <h4>Ongoing Course</h4>
-        <span className="text-secondary">View all</span>
+        {/* <span className="text-secondary">View all</span> */}
       </section>
       {/* <OngoingCourses /> */}
-      <Group searchVal={search} view={c_batch} />
+      <div className=" p-2">
+        <Group searchVal={search} view={c_batch} />
+      </div>
     </main>
   );
 };

@@ -22,7 +22,6 @@ export const TimeDivision = () => {
           <input type="time" />
           <span className="text-secondary position-absolute">Add Time</span>
         </div>
-
         <article className="d-flex justify-content-center mt-5">
           <Link
             className="btn btn-primary fw-bold w-50 mx-auto mb-3"
