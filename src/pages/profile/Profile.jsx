@@ -8,7 +8,27 @@ import { AiFillInfoCircle } from "react-icons/ai";
 import mentor from "../../assets/profile-image/boy.avif";
 import figma from "../../assets/addcourse-image/figma.png";
 import { Link } from "react-router-dom";
+import api from "../../ApiService";
+import { GET_BATCH_COUNT } from "../../constant/ApiEndpoint";
+import { useEffect, useState } from "react";
+import { Group } from "../../components/group/Group";
 export const Profile = () => {
+  const [datas, setDatas] = useState({});
+  const [search, setSearch] = useState("");
+  const [c_batch, setbatches] = useState("on-going");
+  const trainerId = localStorage.getItem("tokenId");
+  const fetchBatchDetails = async () => {
+    const response = await api.get(`${GET_BATCH_COUNT}/${trainerId}`);
+    if (response.data) {
+      setDatas(response.data)
+    }
+  }
+  useEffect(() => {
+    fetchBatchDetails()
+  }, [])
+
+  console.log(datas)
+
   return (
     <main className="profile">
       <div className="profile-top position-relative">
@@ -28,8 +48,8 @@ export const Profile = () => {
             <img className=" rounded-circle" src={mentor} alt="not found" />
           </div>
           <div className="d-flex flex-column justify-content-center align-items-center text-white">
-            <h4>Ijass</h4>
-            <span>Ijass123</span>
+            <h4>{datas?.mentorName}</h4>
+            <span>OA</span>
           </div>
         </Link>
       </div>
@@ -40,14 +60,14 @@ export const Profile = () => {
               <LuGraduationCap className=" fs-2 my-2 text-white" />
             </div>
             <h5>In Progress</h5>
-            <p className="my-0 fs-5">20</p>
+            <p className="my-0 fs-5">{datas?.ongoing}</p>
           </article>
           <article className="border d-flex align-items-center flex-column gap-3 py-3 text-white w-100">
             <div className="icons2 d-flex align-items-center justify-content-center rounded-circle">
               <TbSquareRoundedCheckFilled className=" fs-2 my-2" />
             </div>
             <h5>Completed</h5>
-            <p className="my-0 fs-5">70</p>
+            <p className="my-0 fs-5">{datas?.completed}</p>
           </article>
         </section>
         <Link
@@ -64,7 +84,8 @@ export const Profile = () => {
         <h4>Ongoing Course</h4>
         <span className="text-secondary">View all</span>
       </section>
-      <OngoingCourses />
+      {/* <OngoingCourses /> */}
+      <Group searchVal={search} view={c_batch} />
     </main>
   );
 };

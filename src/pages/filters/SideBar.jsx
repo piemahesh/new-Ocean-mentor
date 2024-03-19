@@ -6,13 +6,33 @@ import {
 } from "react-icons/bs";
 import { GiTrophy } from "react-icons/gi";
 import { BiSolidLogOut } from "react-icons/bi";
+import { useEffect, useState } from "react";
+import { GET_PROFILE } from "../../constant/ApiEndpoint";
+import api from "../../ApiService";
 
 export const SideBar = (props) => {
   const navigate = useNavigate();
+  const [details, setDetails] = useState({});
   const removeToken = () => {
     localStorage.removeItem("tokenId");
     navigate("/");
   };
+  const trainerId = localStorage.getItem("tokenId");
+
+  const fetchMentor = async () => {
+    const response = await api.get(`${GET_PROFILE}${trainerId}`)
+    if (response.data) {
+      setDetails(response.data);
+    }
+  }
+
+  useEffect(() => {
+    fetchMentor()
+  }, [])
+
+
+
+
   return (
     <main
       className="bg-white position-absolute asided d-flex flex-column px-4 py-2"
@@ -21,7 +41,7 @@ export const SideBar = (props) => {
       <div className="content">
         <article className=" d-flex align-items-center text-primary my-3">
           <BsPersonCircle className=" icons mx-2" />
-          <h1 className=" mx-4">Ijass</h1>
+          <h4 className=" mx-4">{details?.name || "ocean mentor"}</h4>
         </article>
         <hr />
         <section>

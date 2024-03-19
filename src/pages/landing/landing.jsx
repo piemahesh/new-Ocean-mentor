@@ -7,7 +7,7 @@ import { SideBar } from "../filters/SideBar";
 import { NavBar } from "../navbar/NavBar";
 import { FilterSection } from "../filters/FilterSection";
 import { BatchDivision } from "../filters/BatchDivision";
-import { GroupAdd } from "../filters/GroupAdd";
+// import { GroupAdd } from "../filters/GroupAdd";
 import { FooterHoming } from "../filters/FooterHoming";
 
 export const Landing = () => {
