@@ -27,58 +27,41 @@ export const Group = (props) => {
     const [day, month, year] = d.split("-");
     return new Date(`${year}-${month}-${day}`);
   }
+  const [{ batchData, _id, ...rest }] = data || [];
+
+  if (filter.sort === "New") {
+    batchData.sort((a, b) => conv(b.date) - conv(a.date));
+  } else if (filter.sort === "Old") {
+    batchData.sort((a, b) => conv(a.date) - conv(b.date));
+  }
+  const filtering = batchData
+    .filter((item) =>
+      item.completedStatus.toLowerCase().includes(view.toLowerCase())
+    )
+    .filter((search) =>
+      search.courseName.toLowerCase().includes(searchVal.toLowerCase())
+    )
+    .filter((course) =>
+      checked.course.includes(course.courseName.toLowerCase())
+    );
   return (
     <>
-      {data &&
-        data.map((e) => {
-          const { _id, batchData } = e;
-          {
-            /* new and old filter */
-          }
-          if (filter.sort === "New") {
-            batchData.sort((a, b) => conv(b.date) - conv(a.date));
-          } else if (filter.sort === "Old") {
-            batchData.sort((a, b) => conv(a.date) - conv(b.date));
-          }
-          const filtering = batchData
-            .filter((item) =>
-              item.completedStatus.toLowerCase().includes(view.toLowerCase())
-            )
-            .filter((search) =>
-              search.courseName.toLowerCase().includes(searchVal.toLowerCase())
-            )
-            .filter((course) =>
-              checked.course.includes(course.courseName.toLowerCase())
-            );
-
+      <div>
+        {filtering.map((e) => {
           return (
-            <div key={_id}>
-              {filtering.map((e) => {
-                const {
-                  _id,
-                  completedStatus,
-                  date,
-                  batchTime,
-                  courseName,
-                  ...rest
-                } = e;
-
-                return (
-                  <div key={_id}>
-                    <Courses
-                      id={_id}
-                      status={completedStatus}
-                      date={date}
-                      batchTime={batchTime}
-                      courseName={courseName.toLowerCase()}
-                      rest={rest}
-                    />
-                  </div>
-                );
-              })}
+            <div key={e._id}>
+              <Courses
+                id={e._id}
+                status={e.completedStatus}
+                date={e.date}
+                batchTime={e.batchTime}
+                courseName={e.courseName.toLowerCase()}
+                rest={rest}
+              />
             </div>
           );
         })}
+      </div>
     </>
   );
 };

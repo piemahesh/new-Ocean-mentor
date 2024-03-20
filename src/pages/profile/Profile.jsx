@@ -27,8 +27,6 @@ export const Profile = () => {
     fetchBatchDetails();
   }, []);
 
-  console.log(datas);
-
   return (
     <main className="profile">
       <div className="profile-top position-relative">

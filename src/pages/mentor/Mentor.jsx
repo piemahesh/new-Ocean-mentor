@@ -11,11 +11,9 @@ export const Mentor = () => {
   if (isError) {
     return <p>error............</p>;
   }
-  // console.log(datas)
-
   return (
     <main className="mentor ">
-      <CommonNavBar name="Mentor" to="/home" />
+      <CommonNavBar names="Mentors" to="/home" />
       <div className="members m-4 d-flex flex-column gap-3">
         {datas.map((e) => {
           return (

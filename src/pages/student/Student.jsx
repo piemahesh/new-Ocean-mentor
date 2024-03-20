@@ -109,7 +109,7 @@ export const Student = () => {
       </div>
 
       {/* Student Details */}
-      <section className="mx-3 scroll ">
+      <section className="mx-3 h-100 pb-5 scroll ">
         {filtered.map((e) => {
           return (
             <div key={e._id}>
