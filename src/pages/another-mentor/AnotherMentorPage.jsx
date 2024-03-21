@@ -57,7 +57,7 @@ export const AnotherMentorPage = () => {
 
   return (
     <main className="another-mentor">
-      <CommonNavBar to="/mentor" name="Go To Home" />
+      <CommonNavBar to="/mentor" names="Mentor Batches" />
 
       <FilterSection />
       <BatchDivision setSearching={setSearching} setView={setView} />

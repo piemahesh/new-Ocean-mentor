@@ -29,6 +29,29 @@ export const Group = (props) => {
   }
   const [{ batchData, _id, ...rest }] = data || [];
 
+  // function timeConv(h, m) {
+  //   let specificDate = new Date(0, 0, 0, h, m, 0);
+  //   let hours = specificDate.getHours();
+  //   let minutes = specificDate.getMinutes();
+  //   let formattedHours = hours < 10 ? "0" + hours : hours;
+  //   let formattedMinutes = minutes < 10 ? "0" + minutes : minutes;
+  //   console.log(formattedHours, formattedMinutes);
+  // }
+  // const timeFilter = batchData.filter((batch) => {
+  //   const { batchTime } = batch;
+  //   if (batchTime.toLowerCase().includes("to")) {
+  //     const timing = batchTime.split("TO");
+  //     console.log(
+  //       timing[0].toLowerCase().includes("pm")
+  //         ? timing[0].replace("PM" || "pm", "")
+  //         : ""
+  //     );
+  //   } else {
+  //     const timing2 = batchTime.split("-");
+  //     console.log(timing2[0] + timing2[1]);
+  //   }
+  // });
+
   if (filter.sort === "New") {
     batchData.sort((a, b) => conv(b.date) - conv(a.date));
   } else if (filter.sort === "Old") {

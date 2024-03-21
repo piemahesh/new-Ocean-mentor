@@ -1,5 +1,4 @@
 import "./_group-info.scss";
-
 import { IoIosArrowDropleftCircle } from "@react-icons/all-files/io/IoIosArrowDropleftCircle";
 import { BsSearch } from "react-icons/bs";
 import { FaShareSquare, FaAward } from "react-icons/fa";
@@ -43,7 +42,6 @@ export const GroupInfo = () => {
       });
     } catch (err) {
       setCompletedPercentage(0);
-      // console.log("datas not found");
     }
   }, [datas]);
 
@@ -107,7 +105,7 @@ export const GroupInfo = () => {
           <FaShareSquare />
         </Link>
       </nav>
-      <main key={_id} className="pb-5">
+      <main key={_id} className="pb-5 ">
         <div className="d-flex flex-column justify-content-center align-items-center my-2 ">
           <section className="position-relative pic">
             <div
@@ -121,16 +119,18 @@ export const GroupInfo = () => {
               <SetImg course={courseName?.toLowerCase()} />
             </div>
             <article className=" percentage position-absolute text-primary d-flex justify-content-center align-items-center">
-              <span>{`${completedPercentage}%`}</span>
+              <span>{`${completedPercentage || 0}%`}</span>
             </article>
           </section>
-          <h6>{batchName?.split("_")[0]}</h6>
-          <h6>{`${batchName?.split("_")[4]}-${batchName?.split("_")[3]}-${
-            batchName?.split("_")[1]
-          }`}</h6>
-          <h5>{batchName?.split("_")[5]}</h5>
+          <h6>{batchName?.split("_")[0] || "course name"}</h6>
+          <h6>
+            {`${batchName?.split("_")[4] || "dd:"}-${
+              batchName?.split("_")[3] || "mm"
+            }-${batchName?.split("_")[1] || "yyyy"}`}
+          </h6>
+          <h5>{batchName?.split("_")[5] || "course timing"}</h5>
 
-          <h2 className="my-2">{courseName}</h2>
+          <h2 className="my-2">{courseName || "Course Name"}</h2>
           <p className="my-0 text-primary fw-bold">
             Group :{admissionsData?.length} students
           </p>
