@@ -38,7 +38,7 @@ export const FilterSection = () => {
       >
         <span>Date</span>
       </Link>
-      <Link
+      {/* <Link
         to="/home/add-date"
         className="filters-inner text-decoration-none border bg-success text-white fw-bold d-flex align-items-center py-2 px-4"
       >
@@ -48,7 +48,7 @@ export const FilterSection = () => {
       <div className="line py-2 "></div>
       <div className="filters-inner clear border bg-danger d-flex align-items-center gap-2 px-4 py-2 text-white">
         <span>Clear All</span>
-      </div>
+      </div> */}
     </section>
   );
 };

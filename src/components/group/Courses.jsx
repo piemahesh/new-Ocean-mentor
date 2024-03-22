@@ -5,7 +5,6 @@ import { Link } from "react-router-dom";
 import SetImg from "../../assets/course-byBatches/SetImg";
 
 export const Courses = (props) => {
-  // console.log(props)
   return (
     <main>
       <Link
@@ -14,9 +13,7 @@ export const Courses = (props) => {
       >
         <div className="d-flex gap-2 align-items-center">
           <article>
-            {/* <img src={setImg(`${courseName}`)} alt="figma not found" /> */}
             <SetImg course={props.courseName} />
-            {/* {console.log(props.courseName)} */}
           </article>
           <article className="d-flex flex-column">
             <h5 className="text-primary fs-6 mb-0">{props.courseName}</h5>
@@ -29,7 +26,6 @@ export const Courses = (props) => {
           <p className=" text-secondary texts mb-0 d-flex ">
             <AiOutlineCalendar className="text-primary fs-6" /> {props.date}
           </p>
-
           <p className=" text-secondary texts mb-0 mt-2 d-flex">
             <TbLoader className="text-primary fs-6" />
             {props.status}

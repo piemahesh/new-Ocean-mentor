@@ -7,12 +7,14 @@ import { configureStore } from "@reduxjs/toolkit";
 import MainReducer from "../src/features/MainSlice";
 import CourseReducer from "../src/features/CourseSlice";
 import StudentReducer from "../src/features/StudentSlice";
+import DateReducer from "../src/features/DateSlice";
 
 const store = configureStore({
   reducer: {
     filter: MainReducer,
     courseFilter: CourseReducer,
     studentReduce: StudentReducer,
+    dateFilter: DateReducer,
   },
 });
 

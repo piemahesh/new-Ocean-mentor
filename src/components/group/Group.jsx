@@ -10,6 +10,7 @@ export const Group = (props) => {
   const { searchVal, view } = props;
   const filter = useSelector((state) => state.filter.value);
   const checked = useSelector((state) => state.courseFilter.value);
+  const dateFilter = useSelector((state) => state.dateFilter.value);
 
   const trainerId = localStorage.getItem("tokenId");
   const { data, isError, isLoading } = UseQueryRe(
@@ -35,23 +36,62 @@ export const Group = (props) => {
   //   let minutes = specificDate.getMinutes();
   //   let formattedHours = hours < 10 ? "0" + hours : hours;
   //   let formattedMinutes = minutes < 10 ? "0" + minutes : minutes;
-  //   console.log(formattedHours, formattedMinutes);
+  //   return formattedHours, formattedMinutes;
   // }
   // const timeFilter = batchData.filter((batch) => {
   //   const { batchTime } = batch;
   //   if (batchTime.toLowerCase().includes("to")) {
   //     const timing = batchTime.split("TO");
-  //     console.log(
-  //       timing[0].toLowerCase().includes("pm")
-  //         ? timing[0].replace("PM" || "pm", "")
-  //         : ""
-  //     );
+
+  //     const from = timing[0].toLowerCase().includes("pm" || "am")
+  //       ? timing[0].replace("PM" || "pm" || "am" || "AM", "")
+  //       : "";
+  //     const to = timing[1].toLowerCase().includes("pm")
+  //       ? timing[1].replace("PM" || "pm" || "am" || "AM", "")
+  //       : "";
+  //     const orgTimes = from.split(".");
+  //     const orgTime = timeConv(orgTimes[0], orgTimes[1]);
+  //     console.log(orgTime);
+  //     // const orgTime = timeConv(from);
+  //     // console.log(orgTime);
   //   } else {
   //     const timing2 = batchTime.split("-");
-  //     console.log(timing2[0] + timing2[1]);
+  //     // console.log(timing2[0] + timing2[1]);
   //   }
   // });
 
+  function filterBatchDataByDate(batchData, startDate, endDate) {
+    if ((startDate && endDate) != "") {
+      const filteredData = batchData.filter((item) => {
+        const batchDate = item.date;
+        if (startDate == batchDate) {
+          console.log(item);
+        }
+        // const itemDate = new Date(item.date);
+        // console.log(item.date);
+        // const filterStartDate = new Date(startDate);
+        // const filterEndDate = new Date(endDate);
+        // console.log(
+        //   itemDate + " ddd" + filterStartDate + "ddd " + filterEndDate
+        // );
+        // return itemDate >= filterStartDate && itemDate <= filterEndDate;
+      });
+      console.log(filteredData);
+      return filteredData;
+    } else {
+      return batchData;
+    }
+  }
+  console.log(dateFilter);
+  const startDate = "02-01-2024"; // Client input for start date  `${dateFilter.from}`
+  const endDate = "2024-03-22"; // Client input for end date `${dateFilter.to}`
+
+  const filteredBatchData = filterBatchDataByDate(
+    batchData,
+    startDate,
+    endDate
+  );
+  console.log(filteredBatchData);
   if (filter.sort === "New") {
     batchData.sort((a, b) => conv(b.date) - conv(a.date));
   } else if (filter.sort === "Old") {

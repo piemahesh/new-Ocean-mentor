@@ -1,10 +1,17 @@
 import { useNavigate, Link } from "react-router-dom";
 import { RiCloseCircleFill } from "react-icons/ri";
 import { AiTwotoneCalendar } from "react-icons/ai";
+import { useDispatch } from "react-redux";
+import { filterByDate } from "../../../features/DateSlice";
+import { useState } from "react";
 
 export const DateDivision = () => {
+  const [from, setFrom] = useState("");
+  const [to, setTo] = useState("");
+  const dispatch = useDispatch();
   const navigate = useNavigate();
   const goBack = () => {
+    dispatch(filterByDate({ from: from, to: to }));
     navigate(-1);
   };
   return (
@@ -17,13 +24,25 @@ export const DateDivision = () => {
           </Link>
         </div>
         <div className="date-division-inner  d-flex flex-column gap-3 align-items-center text-primary fs-4 mx-auto p-2 ">
-          <article className="border-bottom w-100 d-flex gap-3 align-items-center p-2">
+          <article className="border-bottom w-100 d-flex gap-3 justify-content-center align-items-center p-2">
             <AiTwotoneCalendar />
-            <span className="text-secondary">Start Date</span>
+            <input
+              type="date"
+              id="inputDate"
+              onChange={(e) => {
+                setFrom(e.target.value);
+              }}
+            />
           </article>
-          <article className="border-bottom w-100 d-flex gap-3 align-items-center p-2">
+          <article className="border-bottom w-100 d-flex gap-3 justify-content-center align-items-center p-2">
             <AiTwotoneCalendar />
-            <span className="text-secondary">End Date</span>
+            <input
+              type="date"
+              id="inputDate"
+              onChange={(e) => {
+                setTo(e.target.value);
+              }}
+            />
           </article>
         </div>
 

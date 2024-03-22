@@ -1,0 +1,17 @@
+#inputDate {
+  border: 2px solid #1a66ca;
+  padding: 0px 15px;
+  border-radius: 7px;
+  color: grey;
+}
+#inputDate::-webkit-calendar-picker-indicator {
+  font-size: 20px;
+  opacity: 0.8;
+  filter: invert(0.4);
+
+  /* display: none; */
+}
+#inputDate:focus {
+  border: 2px solid #0d43b8;
+  outline: none;
+}
