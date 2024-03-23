@@ -5,6 +5,7 @@ import { Courses } from "./Courses";
 import { useSelector } from "react-redux";
 // import { Loading } from "../../pages/loading/Loading";
 import { OALoaders } from "../../pages/loaders/Loader";
+import notFound from "../../assets/not-found/notfound.png";
 
 export const Group = (props) => {
   const { searchVal, view } = props;
@@ -63,41 +64,37 @@ export const Group = (props) => {
   function filterBatchDataByDate(batchData, startDate, endDate) {
     if ((startDate && endDate) != "") {
       const filteredData = batchData.filter((item) => {
-        const batchDate = item.date;
-        if (startDate == batchDate) {
-          console.log(item);
-        }
-        // const itemDate = new Date(item.date);
-        // console.log(item.date);
-        // const filterStartDate = new Date(startDate);
-        // const filterEndDate = new Date(endDate);
-        // console.log(
-        //   itemDate + " ddd" + filterStartDate + "ddd " + filterEndDate
-        // );
-        // return itemDate >= filterStartDate && itemDate <= filterEndDate;
+        const [day = [0], month = [1], year = [2]] = item.date.split("-");
+        const formattedDate = month + "-" + day + "-" + year;
+        const itemDate = new Date(formattedDate);
+        const filterStartDate = new Date(startDate);
+        const filterEndDate = new Date(endDate);
+        // console.log(itemDate + " " + filterStartDate + " " + filterEndDate);
+        return itemDate >= filterStartDate && itemDate <= filterEndDate;
       });
-      console.log(filteredData);
       return filteredData;
     } else {
       return batchData;
     }
   }
-  console.log(dateFilter);
-  const startDate = "02-01-2024"; // Client input for start date  `${dateFilter.from}`
-  const endDate = "2024-03-22"; // Client input for end date `${dateFilter.to}`
+  // console.log(dateFilter);
+  const startDate = dateFilter.from;
+  const endDate = dateFilter.to;
 
   const filteredBatchData = filterBatchDataByDate(
     batchData,
     startDate,
     endDate
   );
-  console.log(filteredBatchData);
+
+  // console.log(filteredBatchData);
+
   if (filter.sort === "New") {
-    batchData.sort((a, b) => conv(b.date) - conv(a.date));
+    filteredBatchData.sort((a, b) => conv(b.date) - conv(a.date));
   } else if (filter.sort === "Old") {
-    batchData.sort((a, b) => conv(a.date) - conv(b.date));
+    filteredBatchData.sort((a, b) => conv(a.date) - conv(b.date));
   }
-  const filtering = batchData
+  const filtering = filteredBatchData
     .filter((item) =>
       item.completedStatus.toLowerCase().includes(view.toLowerCase())
     )
@@ -107,24 +104,31 @@ export const Group = (props) => {
     .filter((course) =>
       checked.course.includes(course.courseName.toLowerCase())
     );
+  if (filtering.length > 0) {
+    return (
+      <>
+        <div>
+          {filtering.map((e) => {
+            return (
+              <div key={e._id}>
+                <Courses
+                  id={e._id}
+                  status={e.completedStatus}
+                  date={e.date}
+                  batchTime={e.batchTime}
+                  courseName={e.courseName.toLowerCase()}
+                  rest={rest}
+                />
+              </div>
+            );
+          })}
+        </div>
+      </>
+    );
+  }
   return (
-    <>
-      <div>
-        {filtering.map((e) => {
-          return (
-            <div key={e._id}>
-              <Courses
-                id={e._id}
-                status={e.completedStatus}
-                date={e.date}
-                batchTime={e.batchTime}
-                courseName={e.courseName.toLowerCase()}
-                rest={rest}
-              />
-            </div>
-          );
-        })}
-      </div>
-    </>
+    <div className="text-primary d-flex  notFound align-items-center mt-4 justify-content-center">
+      <img src={notFound} alt="not found" />
+    </div>
   );
 };

@@ -1,8 +1,13 @@
 import { Link } from "react-router-dom";
 import { IoCaretDownSharp } from "react-icons/io5";
 import { MdOutlineAddBox } from "react-icons/md";
+import { useDispatch } from "react-redux";
 
 export const FilterSection = () => {
+  const dispatch = useDispatch();
+  const resetAllFilters = () => {
+    window.location.reload();
+  };
   return (
     <section className="filters-section position-sticky mb-2 d-flex justify-content-between gap-2 py-2 align-items-center bg-white">
       {/* <Link
@@ -45,10 +50,13 @@ export const FilterSection = () => {
         <MdOutlineAddBox className="mx-1" />
         <span>Add Date</span>
       </Link>
-      <div className="line py-2 "></div>
-      <div className="filters-inner clear border bg-danger d-flex align-items-center gap-2 px-4 py-2 text-white">
+      <div className="line py-2 "></div> */}
+      <div
+        onClick={resetAllFilters}
+        className="filters-inner clear border bg-danger d-flex align-items-center gap-2 px-4 py-2 text-white"
+      >
         <span>Clear All</span>
-      </div> */}
+      </div>
     </section>
   );
 };

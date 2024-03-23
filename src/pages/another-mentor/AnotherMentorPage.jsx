@@ -17,6 +17,7 @@ export const AnotherMentorPage = () => {
   const { mentorId } = useParams();
   const filter = useSelector((state) => state.filter.value);
   const checked = useSelector((state) => state.courseFilter.value);
+  const dateFilter = useSelector((state) => state.dateFilter.value);
 
   const { data, isError } = UseQueryRe(
     "batchByMentor",
@@ -54,6 +55,27 @@ export const AnotherMentorPage = () => {
     .filter((course) =>
       checked.course.includes(course.courseName.toLowerCase())
     );
+  function filterBatchDataByDate(batchData, startDate, endDate) {
+    if ((startDate && endDate) != "") {
+      const filteredData = batchData.filter((item) => {
+        const [day = [0], month = [1], year = [2]] = item.date.split("-");
+        const formattedDate = month + "-" + day + "-" + year;
+        const itemDate = new Date(formattedDate);
+        const filterStartDate = new Date(startDate);
+        const filterEndDate = new Date(endDate);
+        // console.log(itemDate + " " + filterStartDate + " " + filterEndDate);
+        return itemDate >= filterStartDate && itemDate <= filterEndDate;
+      });
+      return filteredData;
+    } else {
+      return batchData;
+    }
+  }
+
+  const startDate = dateFilter.from;
+  const endDate = dateFilter.to;
+
+  const filteredBatchData = filterBatchDataByDate(filt, startDate, endDate);
 
   return (
     <main className="another-mentor">
@@ -69,7 +91,7 @@ export const AnotherMentorPage = () => {
               <div key={_id}>
                 <MentorList mentorName={name} />
 
-                {filt.map((e) => {
+                {filteredBatchData.map((e) => {
                   const {
                     _id,
                     completedStatus,
