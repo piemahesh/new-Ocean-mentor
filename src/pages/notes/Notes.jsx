@@ -51,7 +51,7 @@ export const Notes = () => {
     // newNotes.pop(newNotes[index]);
     newNotes.splice(index, 1);
     addData({ notes: newNotes });
-    setTimeout(() => navigate(0), 300);
+    // setTimeout(() => navigate(0), 10000);
     console.log(newNotes);
   };
 
@@ -143,6 +143,7 @@ export const GroupInfoNavbar = (props) => {
 
 export const AddNotes = (props) => {
   const delNotes = props.delNotes;
+  console.log(delNotes);
 
   return (
     <section className="note-text d-flex flex-column shadow justify-content-center m-auto p-3">

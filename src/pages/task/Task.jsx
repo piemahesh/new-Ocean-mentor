@@ -30,13 +30,29 @@ export const Task = () => {
 
   const { batchId } = useParams();
   const { data, error } = UseQueryRe("get_task", `${GET_TASK}/${batchId}`, "");
-  const datas = data || [];
+  let datas = data || [];
+  if (datas.length == 0) {
+    datas = [{ question: "task not found" }];
+  }
 
   function filterDate() {
     return setFilter(!filter);
   }
   function uploadcompleted() {
     return setUploadTask(!upload);
+  }
+  function convertToAMPM(time) {
+    const convDate = new Date(time);
+    const dateFormat =
+      convDate.getDate() +
+      "/" +
+      convDate.getMonth() +
+      "/" +
+      convDate.getFullYear();
+
+    const timeFormat = convDate.getHours() + ":" + convDate.getMinutes();
+
+    return { dateFormat, timeFormat };
   }
 
   return (
@@ -80,14 +96,8 @@ export const Task = () => {
             +
           </article>
         </section>
-
-        {/* Filter */}
-        {/* {filter && <FilterTask onclose={filterDate} />} */}
-
-        {/* Upload Task */}
         {upload && <UploadTask onclose={uploadcompleted} batchId={batchId} />}
       </div>
-      {/* // get all tasks by batch */}
 
       <section>
         {datas.map((e, i) => {
@@ -96,8 +106,18 @@ export const Task = () => {
               <div className="card-body">
                 <h5 className="card-title">{e.question}</h5>
                 <div className="card-text  d-flex gap-3">
-                  deadline: {e.deadLine.split("T")[0]}
-                  <p>Time:{e.deadLine.split("T")[1]}</p>
+                  {/* {console.log(e?.deadLine.getDate || "no")} */}
+                  {}
+                  {/* {convertToAMPM(e?.deadLine || "")}
+                  deadline: {e.deadLine?.split("T")[0] || "not set"}
+                  <p>Time:{e.deadLine?.split("T")[1] || "00:00"}</p> */}
+                  <p>
+                    {" "}
+                    {`${convertToAMPM(e?.deadLine || "02-19-2000").dateFormat}`}
+                  </p>
+                  <p>
+                    {`${convertToAMPM(e?.deadLine || "02-19-2000").timeFormat}`}
+                  </p>
                 </div>
                 <div className="d-flex w-100 align-items-center justify-content-between">
                   <a href="#" className="btn btn-primary">
@@ -114,8 +134,6 @@ export const Task = () => {
             </div>
           );
         })}
-
-        {/* {edit && <Edit />} */}
       </section>
     </main>
   );
@@ -134,36 +152,6 @@ export const TaskAdd = (props) => {
   );
 };
 
-// export const FilterTask = (props) => {
-//   const [startDate, setStartDate] = useState(new Date());
-//   return (
-//     <main className="filtertask border-top d-flex flex-column justify-content-center p-4 shadow position-fixed bg-white">
-//       <div className="tab-line mx-auto"></div>
-//       <div className="filtertask-inner m-2 d-flex flex-column gap-3 text-primary mx-auto">
-//         <article className="d-flex justify-content-between py-2 ">
-//           {" "}
-//           <span>Start Date</span>{" "}
-//           <DatePicker
-//             selected={startDate}
-//             onChange={(date) => setStartDate(date)}
-//           />
-//           <IoCalendarOutline className="fs-4" />
-//         </article>
-//         <article className="d-flex justify-content-between py-2">
-//           <span>End Date</span>
-//           <IoCalendarOutline className="fs-4" />
-//         </article>
-//         <button
-//           className="btn bg-primary text-white px-3 mt-2 fw-bold w-75 mx-auto"
-//           onClick={props.onclose}
-//         >
-//           Save Changes
-//         </button>
-//       </div>
-//     </main>
-//   );
-// };
-
 export const UploadTask = (props) => {
   const [question, setQuestion] = useState("");
   const [deadLine, setDeadLine] = useState(null);
@@ -172,15 +160,18 @@ export const UploadTask = (props) => {
   const handleSubmit = async () => {
     props.onclose;
     try {
-      const resp = await api.post(ADD_TASK, {
+      await api.post(ADD_TASK, {
         question,
         deadLine,
         batchId: props.batchId,
       });
     } catch (error) {
       console.log("error");
+    } finally {
+      setTimeout(() => {
+        navigate(0);
+      }, 1500);
     }
-    navigate(0);
   };
 
   return (
@@ -204,7 +195,6 @@ export const UploadTask = (props) => {
             />
             <IoDocuments className="fs-4" />
           </div>
-          {/* <BsFillCameraFill className="fs-1" /> */}
         </section>
         <section className="taskAdd">
           <label htmlFor="deadLine">Set deadLine</label>
@@ -228,5 +218,3 @@ export const UploadTask = (props) => {
     </main>
   );
 };
-
-// question,batchId,deadline
