@@ -11,7 +11,11 @@ import { useState } from "react";
 import { GroupInfoNavbar } from "../notes/Notes";
 import { json, useNavigate, useParams } from "react-router-dom";
 // import UseQueryRe from "../../customHooks/UseQueryRe";
-import { GET_DAY_SHEET, PUT_DAY_SHEET } from "../../constant/ApiEndpoint";
+import {
+  GET_DAY_SHEET,
+  PUT_DAY_SHEET,
+  PUT_NOTES,
+} from "../../constant/ApiEndpoint";
 import { useEffect } from "react";
 import api from "../../ApiService";
 import { Syllabus } from "./Syllabus";
@@ -184,34 +188,60 @@ export const SubmitBtn = (props) => {
 // };
 
 export const Description = (props) => {
-  const { handleNotes, ...rest } = props;
-
-  const [message, setMessage] = useState("");
   const navigate = useNavigate();
-  const goBack = async () => {
-    await handleNotes({ startDate, message });
-    setTimeout(() => navigate(0), 300);
+  const [note, setNote] = useState("");
+  const [todayDate, setDate] = useState(new Date());
+  const { batchId } = props;
+  const goBack = () => {
+    props.setOpenNote(false);
   };
-  const [startDate, setStartDate] = useState(new Date());
+
+  const handleSubmit = async () => {
+    await api
+      .post(`${PUT_NOTES}/${batchId}`, { note, date: todayDate })
+      .then((res) => {
+        console.log(res);
+        setTimeout(() => {
+          navigate(0);
+        }, 1000);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  };
+
   return (
     <div className="description bg-white shadow d-flex flex-column position-absolute">
       <section className="d-flex justify-content-end m-3">
-        <article className="date d-flex align-items-center text-white gap-2 px-2">
-          <DatePicker
-            selected={startDate}
-            onChange={(date) => setStartDate(date)}
+        <article className="date d-flex align-items-center w-100 justify-content-center text-white gap-2 ">
+          <button
+            onClick={goBack}
+            className="btn  btn-primary"
+            style={{ width: "fit-content" }}
+          >
+            go back
+          </button>
+          <input
+            type="date"
+            defaultValue={todayDate}
+            onChange={(e) => {
+              console.log(e.target.value);
+              setDate(e.target.value);
+            }}
           />
-          <MdDateRange className="fs-4 text-primary" />
         </article>
       </section>
       <article className="m-3 d-flex flex-column gap-4 justify-content-center align-items-center">
         <textarea
           className="border-primary"
           onChange={(e) => {
-            setMessage(e.target.value);
+            setNote(e.target.value);
           }}
         ></textarea>
-        <button className="btn btn-primary my-2 p-2 fs-5" onClick={goBack}>
+        <button
+          className="btn btn-primary my-2 p-2 fs-5"
+          onClick={handleSubmit}
+        >
           Submit
         </button>
       </article>

@@ -68,6 +68,7 @@
     position: fixed;
     max-width: 500px;
     width: 100%;
+    z-index: 99;
     bottom: 0;
     .fab {
       float: right;
@@ -109,10 +110,12 @@
   bottom: 0%;
   max-width: 500px;
   width: 100%;
+  z-index: 999;
 
   .uploadtask-inner {
     max-width: 90%;
     width: 100%;
+
     .uploadtask-inner-input {
       max-width: 90%;
       width: 100%;

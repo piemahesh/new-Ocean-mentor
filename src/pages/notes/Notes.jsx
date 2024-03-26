@@ -3,7 +3,7 @@ import "./_notes.scss";
 import { BsSearch, BsThreeDotsVertical } from "react-icons/bs";
 import { MdOutlineKeyboardArrowLeft } from "react-icons/md";
 import { Link, useNavigate, useParams } from "react-router-dom";
-import note from "../../assets/notes-image/note.png";
+import noteImg from "../../assets/notes-image/note.png";
 import { useEffect, useState } from "react";
 import { Description } from "../update/Update";
 import api from "../../ApiService";
@@ -18,24 +18,12 @@ export const Notes = () => {
   const [notes, setNotes] = useState([]);
   const navigate = useNavigate();
 
-  const addData = async (datas) => {
-    await api
-      .post(`${PUT_NOTES}/${batchId}`, datas)
-      .then((res) => {
-        console.log(res);
-      })
-      .catch((err) => {
-        console.log(err);
-      });
-  };
-
   useEffect(() => {
     const fetchData = async () => {
       try {
         setLoading(true);
         const response = await api.get(`${GET_NOTES}/${batchId}`);
         setNotes(response.data.notes);
-        console.log(response.data);
       } catch (error) {
         setError(error);
       } finally {
@@ -47,13 +35,6 @@ export const Notes = () => {
   }, [batchId]);
 
   const newNotes = notes || [];
-  const delNotes = async (index) => {
-    // newNotes.pop(newNotes[index]);
-    newNotes.splice(index, 1);
-    addData({ notes: newNotes });
-    // setTimeout(() => navigate(0), 10000);
-    console.log(newNotes);
-  };
 
   if (loading) {
     return <OALoaders />;
@@ -63,18 +44,13 @@ export const Notes = () => {
     return <div>error.....</div>;
   }
 
-  const handleNotes = (datas) => {
-    newNotes.push(datas);
-    addData({ notes: newNotes });
-    console.log(datas);
-  };
   return (
     <main className="notes">
       <GroupInfoNavbar name="Notes" />
       <div className="notes-add d-flex flex-column justify-content-center align-items-center gap-2">
         {notes.length === 0 ? (
           <div className="d-flex emptyNotes flex-column justify-content-center align-items-center gap-2">
-            <img src={note} alt="note-img not found" />
+            <img src={noteImg} alt="note-img not found" />
             <h5 className="text-secondary">No Notes exist here</h5>
           </div>
         ) : (
@@ -84,7 +60,7 @@ export const Notes = () => {
 
       <div className="p-3 notes-add">
         {notes.length > 0 ? <h1 className="py-2">All notes</h1> : <h1></h1>}
-        {notes.map((e, i) => {
+        {newNotes.map((e, i) => {
           const cal = new Date(e.startDate);
           const date = cal.getDate();
           const year = cal.getFullYear();
@@ -110,7 +86,7 @@ export const Notes = () => {
       >
         +
       </button>
-      {opennote && <Description handleNotes={handleNotes} />}
+      {opennote && <Description batchId={batchId} setOpenNote={setOpenNote} />}
     </main>
   );
 };
@@ -142,20 +118,12 @@ export const GroupInfoNavbar = (props) => {
 };
 
 export const AddNotes = (props) => {
-  const delNotes = props.delNotes;
-  console.log(delNotes);
-
   return (
     <section className="note-text d-flex flex-column shadow justify-content-center m-auto p-3">
       <h5 className="fw-bold">{props.title}</h5>
       <p className="my-0">{props.content}</p>
       <span className="d-flex justify-content-end">{props.date}</span>
-      <button
-        className="w-25 align-self-end border-2 rounded-2"
-        onClick={() => delNotes(props.index)}
-      >
-        delete
-      </button>
+      <button className="w-25 align-self-end border-2 rounded-2">delete</button>
     </section>
   );
 };

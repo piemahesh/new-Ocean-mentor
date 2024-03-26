@@ -182,7 +182,7 @@ export const UploadTask = (props) => {
           Clear All
         </span>
       </div>
-      <section className="uploadtask-inner w-100 m-2 d-flex flex-column gap-3 text-primary mx-auto">
+      <section className="uploadtask-inner  w-100 m-2 d-flex flex-column gap-3 text-primary mx-auto">
         <section className="d-flex align-items-center my-4 gap-2 w-100">
           <div className="uploadtask-inner-input border px-2 py-3 d-flex justify-content-between align-items-center">
             <input
