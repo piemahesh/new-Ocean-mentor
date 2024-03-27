@@ -148,13 +148,13 @@ export const GroupInfo = () => {
           <article className="range w-75 px-4 py-2 border bg-white">
             <progress
               className="w-100"
-              value={completedPercentage}
+              value={completedPercentage || 0}
               min="0"
               max="100"
             />
             <article className=" d-flex justify-content-between ">
               <span>{completedStatus}</span>
-              <span>{`${completedPercentage}%`}</span>
+              <span>{`${completedPercentage || 0}%`}</span>
             </article>
           </article>
         </section>

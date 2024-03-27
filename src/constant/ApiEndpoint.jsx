@@ -8,6 +8,7 @@ export const GET_DAY_SHEET = "trainer/get/daysheet";
 export const PUT_DAY_SHEET = "trainer/add/daysheet";
 export const PUT_NOTES = "trainer/add/note";
 export const GET_NOTES = "trainer/get/notes";
+export const DEL_NOTES = "trainer/delete/note";
 export const GENERATE_QR = "trainer/generateQR";
 export const SIX_JARS = "query/";
 export const ABSENT = "trainer/absent/";

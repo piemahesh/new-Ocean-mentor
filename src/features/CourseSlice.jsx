@@ -20,6 +20,7 @@ export const CourseSlice = createSlice({
         "sql",
         "javascript",
         "selinium",
+        "flutter",
       ],
     },
   },

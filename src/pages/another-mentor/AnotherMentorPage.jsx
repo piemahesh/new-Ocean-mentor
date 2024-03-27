@@ -35,6 +35,7 @@ export const AnotherMentorPage = () => {
     return <p>error...........</p>;
   }
   const [{ batchData = [] } = []] = data || [];
+
   if (filter.sort === "New") {
     batchData.sort((a, b) => conv(b.date) - conv(a.date));
   } else if (filter.sort === "Old") {
@@ -45,6 +46,7 @@ export const AnotherMentorPage = () => {
     const [day, month, year] = d.split("-");
     return new Date(`${year}-${month}-${day}`);
   }
+
   const filt = batchData
     .filter((items) => {
       return items.courseName.toLowerCase().includes(searching);
@@ -52,9 +54,10 @@ export const AnotherMentorPage = () => {
     .filter((items) => {
       return items.completedStatus.includes(view);
     })
-    .filter((course) =>
-      checked.course.includes(course.courseName.toLowerCase())
-    );
+    .filter((course) => {
+      return checked.course.includes(course.courseName.toLowerCase());
+    });
+
   function filterBatchDataByDate(batchData, startDate, endDate) {
     if ((startDate && endDate) != "") {
       const filteredData = batchData.filter((item) => {
@@ -76,6 +79,7 @@ export const AnotherMentorPage = () => {
   const endDate = dateFilter.to;
 
   const filteredBatchData = filterBatchDataByDate(filt, startDate, endDate);
+  // console.log(filteredBatchData);
 
   return (
     <main className="another-mentor">

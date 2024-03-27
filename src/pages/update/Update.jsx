@@ -1,12 +1,8 @@
 /* eslint-disable no-prototype-builtins */
 /* eslint-disable no-unused-vars */
 import "./_update.scss";
-
 // import Datepicker
-import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
-
-import { MdDateRange } from "react-icons/md";
 import { useState } from "react";
 import { GroupInfoNavbar } from "../notes/Notes";
 import { json, useNavigate, useParams } from "react-router-dom";
@@ -69,7 +65,6 @@ export const Update = () => {
     try {
       if (selectedSyllabus) {
         setOrgSyllabus(selectedSyllabus);
-        // console.log(`Syllabus for ${courseName}:`, selectedSyllabus);
       }
     } catch (err) {
       console.log("syllabus not found");
@@ -81,7 +76,6 @@ export const Update = () => {
     const localData = syllabus;
     localData[dayInd].topics[sylInd].isCompleted = value;
     setOrgSyllabus({ syllabus: localData });
-    // console.log(orgSyllabus);
   };
 
   if (slyLoading == false && syllabus.length === 0) {
@@ -102,8 +96,6 @@ export const Update = () => {
   return (
     <main className="update">
       <GroupInfoNavbar name="Updates" />
-
-      {/* {selectedsyl.length !== 0 && <Description onclose={desc} />} */}
       <div className="list-syllabus m-3 pb-5 gap-4 d-flex flex-column p-2">
         {submitBtn ? <SubmitBtn createSyllabus={createSyllabus} /> : ""}
         {syllabus.map((dayData, dayInd) => {
@@ -144,26 +136,6 @@ export const Update = () => {
             </div>
           );
         })}
-
-        {/* {datas.map((e, i) => {
-          const { syllabus } = e;
-          return (
-            <div key={i}>
-              {syllabus.map((e, i) => {
-                const { day_number, topics } = e;
-                return (
-                  <div key={i}>
-                    <ListSyllabus
-                      index={i}
-                      day_number={day_number}
-                      topics={topics}
-                    />
-                  </div>
-                );
-              })}
-            </div>
-          );
-        })} */}
       </div>
     </main>
   );
@@ -183,9 +155,6 @@ export const SubmitBtn = (props) => {
     </button>
   );
 };
-// export const ListSyllabus = (props) => {
-//   const { index, day_number, topics } = props;
-// };
 
 export const Description = (props) => {
   const navigate = useNavigate();
@@ -211,7 +180,7 @@ export const Description = (props) => {
   };
 
   return (
-    <div className="description bg-white shadow d-flex flex-column position-absolute">
+    <div className="description  bg-white shadow d-flex flex-column ">
       <section className="d-flex justify-content-end m-3">
         <article className="date d-flex align-items-center w-100 justify-content-center text-white gap-2 ">
           <button
@@ -248,62 +217,3 @@ export const Description = (props) => {
     </div>
   );
 };
-
-{
-  /* <main className="update">
-      <GroupInfoNavbar name="Updates" />
-
-      {selectedsyl.length !== 0 && <Description onclose={desc} />}
-      <div className="list-syllabus m-3 gap-4 d-flex flex-column p-2">
-        {syllabus.map((value, index) => (
-          <ListSyllabus
-            key={index}
-            text={value}
-            index={index}
-            selectedHandler={selectedHandler}
-          />
-        ))}
-      </div>
-    </main> */
-}
-// const datas = data || [];
-//         () => setSyllabuss(datas);
-//         datas.map((e) => {
-//           const { syllabus } = e;
-//           syllabus.map((e) => {
-//             const { day_number, topics } = e;
-//             console.log(day_number);
-//             topics.map((e) => {
-//               console.log(e.topic, e.isCompleted);
-//             });
-//           });
-//         });
-
-// const { data, isSuccess, isError } = UseQueryRe(
-//   "daysheet",
-//   GET_DAY_SHEET,
-//   batchId
-// );
-// setdatas(data);
-// console.log(syllabuss);
-// const c_course = {
-//   syllabus: [
-//     {
-//       day_number: 1,
-//       topics: [
-//         { topic: "Introduction to python", isCompleted: false },
-//         { topic: "next to python", isCompleted: true },
-//       ],
-//     },
-//   ],
-// };
-{
-  /* {datas.map((value, index) => (
-          <ListSyllabus
-            key={index}
-            topo={value}
-            index={index}
-            selectedHandler={selectedHandler}
-          />
-        ))} */
-}

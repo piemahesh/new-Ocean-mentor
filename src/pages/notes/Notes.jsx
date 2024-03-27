@@ -7,7 +7,7 @@ import noteImg from "../../assets/notes-image/note.png";
 import { useEffect, useState } from "react";
 import { Description } from "../update/Update";
 import api from "../../ApiService";
-import { GET_NOTES, PUT_NOTES } from "../../constant/ApiEndpoint";
+import { DEL_NOTES, GET_NOTES, PUT_NOTES } from "../../constant/ApiEndpoint";
 import { OALoaders } from "../loaders/Loader";
 
 export const Notes = () => {
@@ -23,7 +23,7 @@ export const Notes = () => {
       try {
         setLoading(true);
         const response = await api.get(`${GET_NOTES}/${batchId}`);
-        setNotes(response.data.notes);
+        setNotes(response.data);
       } catch (error) {
         setError(error);
       } finally {
@@ -61,7 +61,7 @@ export const Notes = () => {
       <div className="p-3 notes-add">
         {notes.length > 0 ? <h1 className="py-2">All notes</h1> : <h1></h1>}
         {newNotes.map((e, i) => {
-          const cal = new Date(e.startDate);
+          const cal = new Date(e.date);
           const date = cal.getDate();
           const year = cal.getFullYear();
           const month = cal.getMonth() + 1;
@@ -69,17 +69,16 @@ export const Notes = () => {
           return (
             <AddNotes
               key={i}
-              index={i}
+              id={e._id}
               title={`Notes for ${dayFormat}`}
-              content={e.message}
+              content={e.note}
               date={dayFormat}
-              delNotes={delNotes}
             />
           );
         })}
       </div>
       <button
-        className="fab position-sticky shadow d-flex justify-content-center align-items-center bg-primary text-white text-decoration-none rounded-circle"
+        className="fab position-sticky  d-flex justify-content-center align-items-center bg-primary text-white text-decoration-none rounded-circle"
         onClick={() => {
           setOpenNote(!opennote);
         }}
@@ -90,7 +89,7 @@ export const Notes = () => {
     </main>
   );
 };
-
+// group info nav bar
 export const GroupInfoNavbar = (props) => {
   const navigate = useNavigate();
   const goBack = () => {
@@ -117,13 +116,24 @@ export const GroupInfoNavbar = (props) => {
   );
 };
 
+// add notes
 export const AddNotes = (props) => {
+  const handleDelete = async () => {
+    await api.delete(`${DEL_NOTES}/${props.id}`);
+  };
   return (
     <section className="note-text d-flex flex-column shadow justify-content-center m-auto p-3">
-      <h5 className="fw-bold">{props.title}</h5>
+      <h6 className="fw-bold " style={{ color: "grey" }}>
+        {props.title}
+      </h6>
       <p className="my-0">{props.content}</p>
-      <span className="d-flex justify-content-end">{props.date}</span>
-      <button className="w-25 align-self-end border-2 rounded-2">delete</button>
+      {/* <span className="d-flex justify-content-end">{props.date}</span> */}
+      <button
+        className="w-25 btn btn-primary align-self-end border-2 rounded-2"
+        onClick={handleDelete}
+      >
+        delete
+      </button>
     </section>
   );
 };
