@@ -47,6 +47,7 @@ import { QueryClient, QueryClientProvider } from "react-query";
 import ProtectedRoutes from "./ProtectedRoutes";
 import { Jars } from "./pages/6jars/Jars";
 import NetworkStatus from "./components/networkStatus/Network";
+import { TaskView } from "./pages/task/TaskView";
 // import { ReactQueryDevtools } from "react-query/devtools";
 const queryClient = new QueryClient();
 
@@ -89,6 +90,7 @@ export const App = () => {
               <Route path="/groupinfo/:batchId" Component={GroupInfo} />
               <Route path="/notes/:batchId" Component={Notes} />
               <Route path="/task/:batchId" Component={Task} />
+              <Route path="/taskview/:taskId" Component={TaskView} />
               <Route path="/mentor" Component={Mentor} />
               <Route
                 path="/another-mentor-page/:mentorId"

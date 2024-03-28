@@ -1,11 +1,5 @@
 import "./_task.scss";
-
-import figma from "../../assets/addcourse-image/figma.png";
-
-// import Datepicker
-import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
-
 import {
   BsSearch,
   BsThreeDotsVertical,
@@ -17,15 +11,16 @@ import { FaFilter } from "react-icons/fa";
 import { Link, useNavigate, useParams } from "react-router-dom";
 
 // import task from "../../assets/task-image/task.png";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import UseQueryRe from "../../customHooks/UseQueryRe";
-import { ADD_TASK, GET_TASK } from "../../constant/ApiEndpoint";
+import { ADD_TASK, EDIT_TASK, GET_TASK } from "../../constant/ApiEndpoint";
 import api from "../../ApiService";
 
 export const Task = () => {
   const [filter, setFilter] = useState(false);
   const [upload, setUploadTask] = useState(false);
   const [edit, setEdit] = useState(false);
+  const [task, setTask] = useState(null);
   const navigate = useNavigate();
 
   const { batchId } = useParams();
@@ -54,6 +49,11 @@ export const Task = () => {
 
     return { dateFormat, timeFormat };
   }
+
+  const handleUpdate = (task) => {
+    setTask(task);
+    setEdit(true);
+  };
 
   return (
     <main className="task position-relative">
@@ -87,6 +87,7 @@ export const Task = () => {
           </label>
         </article>
       </nav>
+      <TaskUpdating edit={edit} setEdit={setEdit} task={task} />
       <div className="position-relative">
         <section className=" taskadd">
           <article
@@ -99,30 +100,37 @@ export const Task = () => {
         {upload && <UploadTask onclose={uploadcompleted} batchId={batchId} />}
       </div>
 
-      <section>
+      <section className="mb-4">
         {datas.map((e, i) => {
           return (
             <div key={i} className="card">
               <div className="card-body">
-                <h5 className="card-title">{e.question}</h5>
+                <h5 className="card-title" style={{ color: "grey" }}>
+                  {e.question}
+                </h5>
                 <div className="card-text  d-flex gap-3">
-                  <p>
-                    deadLine  {`${convertToAMPM(e?.deadLine || "02-19-2000").dateFormat}`}
+                  <p style={{ color: "red" }}>
+                    deadLine{" "}
+                    {e?.deadLine
+                      ? `${convertToAMPM(e?.deadLine || "").dateFormat}`
+                      : "Not yet created"}
                   </p>
-                  <p>
+                  {/* <p>
                     {`${convertToAMPM(e?.deadLine || "02-19-2000").timeFormat}`}
-                  </p>
-
+                  </p> */}
                 </div>
-                <p>
+                <p
+                  className=" text-primary p-2 rounded-2"
+                  style={{ width: "fit-content", backgroundColor: "lightblue" }}
+                >
                   task createdAt: {e?.taskCreatedDate || ""}
                 </p>
                 <div className="d-flex w-100 align-items-center justify-content-between">
-                  <a href="#" className="btn btn-primary">
+                  <Link to="/taskview/2" className="btn btn-primary">
                     view room
-                  </a>
+                  </Link>
                   <button
-                    onClick={() => setEdit(true)}
+                    onClick={() => handleUpdate(e)}
                     className="btn btn-primary"
                   >
                     edit task
@@ -168,7 +176,7 @@ export const UploadTask = (props) => {
     } finally {
       setTimeout(() => {
         navigate(0);
-      }, 1500);
+      }, 1000);
     }
   };
 
@@ -214,5 +222,100 @@ export const UploadTask = (props) => {
         </button>
       </section>
     </main>
+  );
+};
+
+export const TaskUpdating = (props) => {
+  const [question, setQuestion] = useState("");
+  const [deadLine, setDeadLine] = useState(null);
+  const { task } = props;
+  const navigate = useNavigate();
+  const handleSubmit = async () => {
+    try {
+      if (question == "" || deadLine == "") {
+        console.log("some field is missing");
+        throw Error("some field is missing");
+      }
+      const resp = await api.put(EDIT_TASK, {
+        id: task._id,
+        question,
+        deadLine,
+      });
+      console.log(resp);
+      setTimeout(() => {
+        navigate(0);
+      }, 1000);
+    } catch (error) {
+      console.log("error");
+    }
+  };
+
+  return (
+    <>
+      <section
+        className={`${
+          props.edit ? "d-flex" : "d-none"
+        }  taskUpdating align-items-center p-2 justify-content-center `}
+      >
+        <main className="h-100 w-100 d-flex align-items-center justify-content-center flex-column">
+          <h5 className="text-white">Edit Task</h5>
+          <form
+            action="#"
+            className="d-flex taskEditForm align-items-center border p-4 rounded-2 gap-5 flex-column w-100"
+          >
+            <div className="w-100">
+              <label className="text-white fs-5" htmlFor="question">
+                Prev Question
+              </label>
+              <p className="text-white questionpara fs-5">
+                q) {task?.question}
+              </p>
+              <input
+                type="text"
+                id="question"
+                className="w-100 p-2 fs-5 text-primary border-2 border-warning rounded-2"
+                placeholder="Enter Question"
+                style={{ outline: "none" }}
+                onChange={(e) => {
+                  setQuestion(e.target.value);
+                }}
+                required
+              />
+            </div>
+            <div className="w-100">
+              <label className="text-white fs-5" htmlFor="deadLine">
+                prev deadLine
+              </label>
+              <p className="text-white fs-5">:) {task?.deadLine}</p>
+              <input
+                type="datetime-local"
+                id="deadLine"
+                className="w-100 p-2 fs-5 text-primary border-2 border-warning rounded-2"
+                placeholder="Enter Question"
+                style={{ outline: "none" }}
+                onChange={(e) => {
+                  setDeadLine(e.target.value);
+                }}
+                required
+              />
+            </div>
+
+            <div className="w-100 d-flex gap-2 align-items-center justify-content-evenly">
+              <div
+                onClick={() => {
+                  props.setEdit(false);
+                }}
+                className="btn bg-warning w-50"
+              >
+                exit
+              </div>
+              <div className=" btn btn-primary w-50" onClick={handleSubmit}>
+                Submit
+              </div>
+            </div>
+          </form>
+        </main>
+      </section>
+    </>
   );
 };
