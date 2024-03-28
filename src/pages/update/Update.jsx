@@ -180,7 +180,7 @@ export const Description = (props) => {
   };
 
   return (
-    <div className="description  bg-white shadow d-flex flex-column ">
+    <form className="description  bg-white shadow d-flex flex-column ">
       <section className="d-flex justify-content-end m-3">
         <article className="date d-flex align-items-center w-100 justify-content-center text-white gap-2 ">
           <button
@@ -197,6 +197,7 @@ export const Description = (props) => {
               console.log(e.target.value);
               setDate(e.target.value);
             }}
+            required
           />
         </article>
       </section>
@@ -206,6 +207,7 @@ export const Description = (props) => {
           onChange={(e) => {
             setNote(e.target.value);
           }}
+          required
         ></textarea>
         <button
           className="btn btn-primary my-2 p-2 fs-5"
@@ -214,6 +216,6 @@ export const Description = (props) => {
           Submit
         </button>
       </article>
-    </div>
+    </form>
   );
 };

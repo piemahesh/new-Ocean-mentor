@@ -45,7 +45,7 @@ export const Notes = () => {
   }
 
   return (
-    <main className="notes">
+    <main className="notes position-relative">
       <GroupInfoNavbar name="Notes" />
       <div className="notes-add d-flex flex-column justify-content-center align-items-center gap-2">
         {notes.length === 0 ? (
@@ -78,7 +78,7 @@ export const Notes = () => {
         })}
       </div>
       <button
-        className="fab position-sticky  d-flex justify-content-center align-items-center bg-primary text-white text-decoration-none rounded-circle"
+        className="fab position-absolute  d-flex justify-content-center align-items-center bg-primary text-white text-decoration-none rounded-circle"
         onClick={() => {
           setOpenNote(!opennote);
         }}
@@ -118,8 +118,12 @@ export const GroupInfoNavbar = (props) => {
 
 // add notes
 export const AddNotes = (props) => {
+  const navigate = useNavigate();
   const handleDelete = async () => {
     await api.delete(`${DEL_NOTES}/${props.id}`);
+    setTimeout(() => {
+      navigate(0)
+    }, 1000)
   };
   return (
     <section className="note-text d-flex flex-column shadow justify-content-center m-auto p-3">

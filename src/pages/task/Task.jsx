@@ -106,19 +106,17 @@ export const Task = () => {
               <div className="card-body">
                 <h5 className="card-title">{e.question}</h5>
                 <div className="card-text  d-flex gap-3">
-                  {/* {console.log(e?.deadLine.getDate || "no")} */}
-                  {}
-                  {/* {convertToAMPM(e?.deadLine || "")}
-                  deadline: {e.deadLine?.split("T")[0] || "not set"}
-                  <p>Time:{e.deadLine?.split("T")[1] || "00:00"}</p> */}
                   <p>
-                    {" "}
-                    {`${convertToAMPM(e?.deadLine || "02-19-2000").dateFormat}`}
+                    deadLine  {`${convertToAMPM(e?.deadLine || "02-19-2000").dateFormat}`}
                   </p>
                   <p>
                     {`${convertToAMPM(e?.deadLine || "02-19-2000").timeFormat}`}
                   </p>
+
                 </div>
+                <p>
+                  task createdAt: {e?.taskCreatedDate || ""}
+                </p>
                 <div className="d-flex w-100 align-items-center justify-content-between">
                   <a href="#" className="btn btn-primary">
                     view room
