@@ -135,8 +135,9 @@
   height: 90vh;
   width: 100%;
   max-width: 500px;
-  background-color: #0860d3cb;
+  background-color: #4480b1a1;
   z-index: 999;
+  border: 2px solid #8080802c;
 
   .questionpara {
     color: yellow;
@@ -147,7 +148,9 @@
   max-height: 450px;
   max-width: 450px;
   overflow-y: scroll;
-  background: linear-gradient(129deg, #006effb9 0% 20%, #ffffffa2 90% 100%);
+  // background: linear-gradient(129deg, #458be6dc 0% 20%, #bdb6b657 90% 100%);
+  background: rgba(255, 255, 255, 0.589);
+  box-shadow: 0 0 40px #6993c48f;
   /* width */
   &::-webkit-scrollbar {
     width: 10px;

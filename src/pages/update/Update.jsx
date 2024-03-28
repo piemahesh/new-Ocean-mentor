@@ -42,7 +42,7 @@ export const Update = () => {
     const resp = api.put(`${PUT_DAY_SHEET}/${batchId}`, orgSyllabus);
     resp.then((res) => {
       if (res.status === 200) {
-        navigate(0);
+        window.location.reload();
       }
     });
   };
@@ -171,7 +171,8 @@ export const Description = (props) => {
       .then((res) => {
         console.log(res);
         setTimeout(() => {
-          navigate(0);
+          window.location.reload();
+          // navigate(0);
         }, 1000);
       })
       .catch((err) => {

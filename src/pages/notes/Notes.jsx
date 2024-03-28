@@ -122,8 +122,8 @@ export const AddNotes = (props) => {
   const handleDelete = async () => {
     await api.delete(`${DEL_NOTES}/${props.id}`);
     setTimeout(() => {
-      navigate(0)
-    }, 1000)
+      window.location.reload();
+    }, 1000);
   };
   return (
     <section className="note-text d-flex flex-column shadow justify-content-center m-auto p-3">

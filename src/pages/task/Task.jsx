@@ -105,7 +105,16 @@ export const Task = () => {
           return (
             <div key={i} className="card">
               <div className="card-body">
-                <h5 className="card-title" style={{ color: "grey" }}>
+                <h5
+                  className="card-title"
+                  style={{
+                    color: "grey",
+                    width: "100%",
+                    height: "70px",
+                    overflow: "hidden",
+                    textOverflow: "ellipsis",
+                  }}
+                >
                   {e.question}
                 </h5>
                 <div className="card-text  d-flex gap-3">
@@ -123,7 +132,7 @@ export const Task = () => {
                   className=" text-primary p-2 rounded-2"
                   style={{ width: "fit-content", backgroundColor: "lightblue" }}
                 >
-                  task createdAt: {e?.taskCreatedDate || ""}
+                  task createdAt: {e?.taskCreatedDate?.split("T")[0] || ""}
                 </p>
                 <div className="d-flex w-100 align-items-center justify-content-between">
                   <Link to="/taskview/2" className="btn btn-primary">
@@ -175,7 +184,7 @@ export const UploadTask = (props) => {
       console.log("error");
     } finally {
       setTimeout(() => {
-        navigate(0);
+        window.location.reload();
       }, 1000);
     }
   };
@@ -185,7 +194,7 @@ export const UploadTask = (props) => {
       <div className="d-flex justify-content-between border-bottom px-4 pt-4">
         <h4>Upload Task</h4>
         <span className="text-primary" onClick={props.onclose}>
-          Clear All
+          close
         </span>
       </div>
       <section className="uploadtask-inner  w-100 m-2 d-flex flex-column gap-3 text-primary mx-auto">
@@ -243,7 +252,7 @@ export const TaskUpdating = (props) => {
       });
       console.log(resp);
       setTimeout(() => {
-        navigate(0);
+        window.location.reload();
       }, 1000);
     } catch (error) {
       console.log("error");
@@ -258,18 +267,16 @@ export const TaskUpdating = (props) => {
         }  taskUpdating align-items-center p-2 justify-content-center `}
       >
         <main className="h-100 w-100 d-flex align-items-center justify-content-center flex-column">
-          <h5 className="text-white">Edit Task</h5>
+          <h5 className="text-primary">Edit Task</h5>
           <form
             action="#"
             className="d-flex taskEditForm align-items-center border p-4 rounded-2 gap-5 flex-column w-100"
           >
             <div className="w-100">
-              <label className="text-white fs-5" htmlFor="question">
+              <label className="text-primary fs-5" htmlFor="question">
                 Prev Question
               </label>
-              <p className="text-white questionpara fs-5">
-                q) {task?.question}
-              </p>
+              <p className="text-info questionpara fs-5">q) {task?.question}</p>
               <input
                 type="text"
                 id="question"
@@ -283,10 +290,10 @@ export const TaskUpdating = (props) => {
               />
             </div>
             <div className="w-100">
-              <label className="text-white fs-5" htmlFor="deadLine">
+              <label className="text-primary fs-5" htmlFor="deadLine">
                 prev deadLine
               </label>
-              <p className="text-white fs-5">:) {task?.deadLine}</p>
+              <p className="text-info fs-5">:) {task?.deadLine}</p>
               <input
                 type="datetime-local"
                 id="deadLine"
