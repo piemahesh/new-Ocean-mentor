@@ -105,18 +105,22 @@ export const Task = () => {
           return (
             <div key={i} className="card">
               <div className="card-body">
-                <h5
-                  className="card-title"
-                  style={{
-                    color: "grey",
-                    width: "100%",
-                    height: "70px",
-                    overflow: "hidden",
-                    textOverflow: "ellipsis",
-                  }}
-                >
-                  {e.question}
-                </h5>
+                <div className="d-flex text-secondary">
+                  <h4>Q</h4>
+                  <h5
+                    className="card-title"
+                    style={{
+                      width: "100%",
+                      height: "100%",
+                      overflow: "hidden",
+                      textOverflow: "ellipsis",
+                      textIndent: "10px",
+                      whiteSpace: "nowrap",
+                    }}
+                  >
+                    {e.question}
+                  </h5>
+                </div>
                 <div className="card-text  d-flex gap-3">
                   <p style={{ color: "red" }}>
                     deadLine{" "}
