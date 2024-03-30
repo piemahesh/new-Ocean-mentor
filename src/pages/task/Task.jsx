@@ -139,7 +139,7 @@ export const Task = () => {
                   task createdAt: {e?.taskCreatedDate?.split("T")[0] || ""}
                 </p>
                 <div className="d-flex w-100 align-items-center justify-content-between">
-                  <Link to="/taskview/2" className="btn btn-primary">
+                  <Link to={`/taskview/${e?._id}`} className="btn btn-primary">
                     view room
                   </Link>
                   <button

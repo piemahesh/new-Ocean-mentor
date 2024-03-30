@@ -2,5 +2,13 @@
   max-width: 500px;
   min-height: calc(100vh);
   margin-inline: auto;
-  background-color: saddlebrown;
+  background-color: #ffffff;
+
+  .taskInfo {
+    padding: 7px;
+    .question {
+      width: 100%;
+      max-width: 500px;
+    }
+  }
 }

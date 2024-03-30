@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import "./_taskView.scss";
 import { MdOutlineKeyboardArrowLeft } from "react-icons/md";
@@ -9,11 +9,19 @@ import {
 } from "react-icons/bs";
 import { FaFilter } from "react-icons/fa";
 import { Link } from "react-router-dom";
+import UseQueryRe from "../../customHooks/UseQueryRe";
+import { TASK_ROOM } from "../../constant/ApiEndpoint";
+import SetImg from "../../assets/course-byBatches/SetImg";
 
 export const TaskView = () => {
   const { taskId } = useParams();
   const navigate = useNavigate();
-  console.log(taskId);
+  const { data } = UseQueryRe("task", TASK_ROOM, taskId);
+  // console.log(data || null);
+
+  const { courseName = "course name" } = data?.batch_details[0] || {};
+  const { studentAnswer = "" } = data?.studentAnswers || {};
+
   return (
     <>
       <section className="taskView task">
@@ -27,26 +35,36 @@ export const TaskView = () => {
             </span>
             <h5 className="my-0 fs-4">Task Room</h5>
           </article>
-          {/* <article className="d-flex gap-3">
-            <Link to="" className="text-decoration-none text-white">
-              <BsSearch className="fs-2 " />
-            </Link>
-
-            <label className="dropdown">
-              <BsThreeDotsVertical className="fs-2" />
-              <input type="checkbox" className="dd-input" id="test" />
-              <div
-                className="dd-menu mx-auto text-primary"
-                onClick={() => setFilter(!filter)}
-              >
-                <span>
-                  <FaFilter />
-                </span>
-                <span>Filter</span>
-              </div>
-            </label>
-          </article> */}
         </nav>
+
+        <main className="taskInfo">
+          <div className=" d-flex align-items-center justify-content-center flex-column">
+            <div className="text-secondary fs-3 d-flex align-items-center justify-content-center ">
+              <div
+                style={{
+                  height: "75px",
+                  width: "75px",
+                  // border: "2px solid grey",
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                }}
+              >
+                <SetImg course={courseName.toLowerCase()} />
+              </div>
+              <p>{courseName}</p>
+            </div>
+            <h3 className="text-danger " style={{ alignSelf: "flex-start" }}>
+              Question
+            </h3>
+            <p className=" fs-5 text-primary" style={{ textIndent: "20px" }}>
+              {data?.question}
+            </p>
+            <div className="text-success fs-5">
+              deadLine: {`${data?.deadLine || "not found"}`}
+            </div>
+          </div>
+        </main>
       </section>
     </>
   );
