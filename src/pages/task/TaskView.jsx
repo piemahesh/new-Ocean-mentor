@@ -55,7 +55,7 @@ export const TaskView = () => {
             <h5 className="my-0 fs-4">Task Room</h5>
           </article>
         </nav>
-        <main className="taskInfo ">
+        <main className="taskInfo p-4">
           <div className=" d-flex taskContent gap-4 align-items-center justify-content-center flex-column">
             <div className="text-secondary fs-3 d-flex align-items-center justify-content-center ">
               <div
@@ -85,10 +85,10 @@ export const TaskView = () => {
           </div>
         </main>
 
-        <main className="d-flex flex-column gap-3">
+        <main className="d-flex flex-column gap-3 p-4">
           {studentAnswer?.map((e, i) => {
             return (
-              <main key={i} className="studentAnswer bg-primary rounded-3">
+              <main key={i} className="studentAnswer rounded-3">
                 <article className="d-flex align-items-center gap-3 p-2">
                   <div className="studImg">
                     <img src={e?.photo} alt="" />
@@ -97,16 +97,15 @@ export const TaskView = () => {
                 </article>
                 <div className="answer p-2 text-centert">
                   <p className="fs-5"> answer: {e?.answer}</p>
-                  <p>{e?._id}</p>
                 </div>
-                <div className="d-flex gap-4 align-items-center  justify-content-between p-2">
+                <div className="d-flex gap-4 p-2">
                   {
                     marks.map((option, i) => {
                       return (
                         <div key={i} className="d-flex align-items-center">
-                          <label className={`text-success fs-5 d-flex align-items-center justify-content-center ${option == e?.mark ? "bg-success text-white" : "bg-warning"}`}
+                          <label className={`d-flex align-items-center justify-content-center ${option == e?.mark ? "bg-success text-white" : "bg-white"}`}
                             htmlFor={`marks${i}`} onClick={() => { handleMarks(e?._id, option) }} id="star">
-                            {option}
+                            <p className={`mt-3 ${option == e?.mark ? "text-white" : "text-secondary "}`}>{option}</p>
                           </label>
                           <input style={{ display: "none" }} type="radio" name="mark" id={`marks${i}`} value={option} />
 

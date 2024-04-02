@@ -8,8 +8,8 @@ export const GroupFooter = (props) => {
   const { batchId } = props;
 
   return (
-    <footer className="footer position-fixed bg-primary w-100 d-flex justify-content-between align-items-center position-absolute">
-      <article className="mx-4 text-white">
+    <footer className="footer position-fixed bg-primary w-100 d-flex justify-content-between align-items-center ">
+      <article className="text-white">
         <Link
           to={`/notes/${batchId}`}
           className="text-decoration-none d-flex  flex-column align-items-center"
@@ -18,7 +18,7 @@ export const GroupFooter = (props) => {
           <p className="m-0 text-white">Notes</p>
         </Link>
       </article>
-      <article className="mx-4 text-white">
+      <article className=" text-white">
         <Link
           to="/whatsapp"
           className="text-decoration-none d-flex  flex-column align-items-center"
@@ -27,7 +27,7 @@ export const GroupFooter = (props) => {
           <p className="m-0 text-white">Whatsapp</p>
         </Link>
       </article>
-      <article className="mx-4 text-white">
+      <article className="text-white">
         <Link
           to={`/update/${batchId}`}
           className="text-decoration-none d-flex  flex-column align-items-center"
@@ -36,7 +36,7 @@ export const GroupFooter = (props) => {
           <p className="m-0 text-white">Updates</p>
         </Link>
       </article>
-      <article className="mx-4 text-white ">
+      <article className="text-white ">
         <Link
           to={`/task/${batchId}`}
           className="text-decoration-none d-flex  flex-column align-items-center"
