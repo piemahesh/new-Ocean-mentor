@@ -38,8 +38,8 @@ export const QrScanner = () => {
       </div>
       <section className="text d-flex flex-column fs-4 mx-4 justify-content-center align-items-center">
         <p className="text-center">
-          Please qr code inside the frame to scan please avoid shake to get
-          result quickly.
+          Please scan inside the box for attendance entry,and minimize shaking
+          for the best results.
         </p>
         <article className="bg-white  qr my-4 p-3">
           <img src={qrcode} alt="QrCode not found" />

@@ -109,7 +109,7 @@ export const StudentAttendance = () => {
   return datas.map((e) => {
     return (
       <main key={e._id} className="student-attendance">
-        <ToastContainer style={{ padding: "30px" }} />
+        <ToastContainer style={{ padding: "10px" }} />
         {/* {console.log(e.address)}
         {console.log(e)} */}
         <div className="student-attendance-top position-relative">
