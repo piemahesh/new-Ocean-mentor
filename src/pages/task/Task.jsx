@@ -3,15 +3,15 @@ import "react-datepicker/dist/react-datepicker.css";
 import {
   BsSearch,
   BsThreeDotsVertical,
-  BsFillCameraFill,
+
 } from "react-icons/bs";
 import { MdOutlineKeyboardArrowLeft } from "react-icons/md";
-import { IoCalendarOutline, IoDocuments } from "react-icons/io5";
+import { IoDocuments } from "react-icons/io5";
 import { FaFilter } from "react-icons/fa";
 import { Link, useNavigate, useParams } from "react-router-dom";
 
 // import task from "../../assets/task-image/task.png";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import UseQueryRe from "../../customHooks/UseQueryRe";
 import { ADD_TASK, EDIT_TASK, GET_TASK } from "../../constant/ApiEndpoint";
 import api from "../../ApiService";
@@ -24,7 +24,7 @@ export const Task = () => {
   const navigate = useNavigate();
 
   const { batchId } = useParams();
-  const { data, error } = UseQueryRe("get_task", `${GET_TASK}/${batchId}`, "");
+  const { data } = UseQueryRe("get_task", `${GET_TASK}/${batchId}`, "");
   let datas = data || [];
   if (datas.length == 0) {
     datas = [{ question: "task not found" }];
@@ -266,9 +266,8 @@ export const TaskUpdating = (props) => {
   return (
     <>
       <section
-        className={`${
-          props.edit ? "d-flex" : "d-none"
-        }  taskUpdating align-items-center p-2 justify-content-center `}
+        className={`${props.edit ? "d-flex" : "d-none"
+          }  taskUpdating align-items-center p-2 justify-content-center `}
       >
         <main className="h-100 w-100 d-flex align-items-center justify-content-center flex-column">
           <h5 className="text-primary">Edit Task</h5>

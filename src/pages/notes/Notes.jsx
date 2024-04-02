@@ -9,6 +9,7 @@ import { Description } from "../update/Update";
 import api from "../../ApiService";
 import { DEL_NOTES, GET_NOTES, PUT_NOTES } from "../../constant/ApiEndpoint";
 import { OALoaders } from "../loaders/Loader";
+import SyllabusComponent from "../../components/csvConverter/SyllabusComponent";
 
 export const Notes = () => {
   const { batchId } = useParams();
@@ -96,8 +97,11 @@ export const GroupInfoNavbar = (props) => {
     navigate(-1);
   };
 
+
+
   return (
     <nav className="groupinfo-navbar sticky-top shadow d-flex justify-content-between align-items-center text-white px-2 bg-primary">
+
       <article className="d-flex align-items-center">
         <Link onClick={goBack} className="text-decoration-none text-white">
           <MdOutlineKeyboardArrowLeft className="left-arrow " />
@@ -105,13 +109,16 @@ export const GroupInfoNavbar = (props) => {
         <h5 className="my-0 fs-4">{props.name}</h5>
       </article>
       <article className="d-flex gap-3">
+        <SyllabusComponent syllabusData={props.syllabus} />
         <Link to="" className="text-decoration-none text-white">
           <BsSearch className="fs-2 " />
         </Link>
         <Link to="" className="text-decoration-none text-white">
           <BsThreeDotsVertical className="fs-2 " />
         </Link>
+
       </article>
+
     </nav>
   );
 };

@@ -73,9 +73,12 @@ export const Update = () => {
   }, [courseName]);
 
   const handleUpdateSyllabus = (dayInd, sylInd, value) => {
+    const date = new Date();
     const localData = syllabus;
     localData[dayInd].topics[sylInd].isCompleted = value;
+    localData[dayInd].topics[sylInd].date = date;
     setOrgSyllabus({ syllabus: localData });
+    console.log({ syllabus: localData })
   };
 
   if (slyLoading == false && syllabus.length === 0) {
@@ -95,7 +98,7 @@ export const Update = () => {
 
   return (
     <main className="update">
-      <GroupInfoNavbar name="Updates" />
+      <GroupInfoNavbar name="Updates" syllabus={syllabus} />
       <div className="list-syllabus m-3 pb-5 gap-4 d-flex flex-column p-2">
         {submitBtn ? <SubmitBtn createSyllabus={createSyllabus} /> : ""}
         {syllabus.map((dayData, dayInd) => {

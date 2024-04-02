@@ -6,9 +6,68 @@
 
   .taskInfo {
     padding: 7px;
+    .taskContent {
+      .taskQuestion {
+        width: 100%;
+        background-color: slateblue;
+        color: white;
+        padding: 15px;
+        font-size: 1.5em;
+      }
+      .completion {
+        height: 7px;
+        width: 100%;
+        max-width: 80%;
+        overflow: hidden;
+        border-radius: 5px;
+        box-shadow: 0 0 10px lightblue;
+        .progress {
+          height: 100%;
+        }
+      }
+    }
     .question {
       width: 100%;
       max-width: 500px;
     }
   }
+  .studentAnswer {
+    box-shadow: 0 0 10px skyblue;
+    .studImg {
+      height: 90px;
+      width: 90px;
+      min-height: 70px;
+      min-width: 70px;
+      overflow: hidden;
+      border-radius: 50%;
+      img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        object-position: top;
+      }
+    }
+    .answer {
+      color: white;
+    }
+  }
+}
+
+#star {
+  height: 50px;
+  width: 50px;
+  background-color: white;
+  transition: all 0.5s linear;
+  clip-path: polygon(
+    50% 0%,
+    61% 35%,
+    98% 35%,
+    68% 57%,
+    79% 91%,
+    50% 70%,
+    21% 91%,
+    32% 57%,
+    2% 35%,
+    39% 35%
+  );
 }
