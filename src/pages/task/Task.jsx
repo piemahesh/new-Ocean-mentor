@@ -1,20 +1,18 @@
 import "./_task.scss";
 import "react-datepicker/dist/react-datepicker.css";
-import {
-  BsSearch,
-  BsThreeDotsVertical,
-
-} from "react-icons/bs";
+import { BsSearch, BsThreeDotsVertical } from "react-icons/bs";
 import { MdOutlineKeyboardArrowLeft } from "react-icons/md";
 import { IoDocuments } from "react-icons/io5";
 import { FaFilter } from "react-icons/fa";
 import { Link, useNavigate, useParams } from "react-router-dom";
-
 // import task from "../../assets/task-image/task.png";
 import { useState } from "react";
 import UseQueryRe from "../../customHooks/UseQueryRe";
 import { ADD_TASK, EDIT_TASK, GET_TASK } from "../../constant/ApiEndpoint";
 import api from "../../ApiService";
+// task not found image
+import taskNotFound from "../../assets/not-found/taskNotAssinged.png";
+import { Vortex } from "react-loader-spinner";
 
 export const Task = () => {
   const [filter, setFilter] = useState(false);
@@ -24,10 +22,34 @@ export const Task = () => {
   const navigate = useNavigate();
 
   const { batchId } = useParams();
-  const { data } = UseQueryRe("get_task", `${GET_TASK}/${batchId}`, "");
+  const { data, isFetching, isLoading } = UseQueryRe(
+    "get_task",
+    `${GET_TASK}/${batchId}`,
+    ""
+  );
   let datas = data || [];
-  if (datas.length == 0) {
-    datas = [{ question: "task not found" }];
+
+  if (isLoading || isFetching) {
+    return (
+      <main className="loaders">
+        <Vortex
+          visible={true}
+          height="80"
+          width="80"
+          ariaLabel="vortex-loading"
+          wrapperStyle={{}}
+          wrapperClass="vortex-wrapper"
+          colors={[
+            "#0A73BE",
+            "lightblue",
+            "#0A73BE",
+            "lightblue",
+            "#0A73BE",
+            "lightblue",
+          ]}
+        />
+      </main>
+    );
   }
 
   function filterDate() {
@@ -101,58 +123,72 @@ export const Task = () => {
       </div>
 
       <section className="mb-4">
-        {datas.map((e, i) => {
-          return (
-            <div key={i} className="card">
-              <div className="card-body">
-                <div className="d-flex text-secondary">
-                  <h4>Q</h4>
-                  <h5
-                    className="card-title"
-                    style={{
-                      width: "100%",
-                      height: "100%",
-                      overflow: "hidden",
-                      textOverflow: "ellipsis",
-                      textIndent: "10px",
-                      whiteSpace: "nowrap",
-                    }}
-                  >
-                    {e.question}
-                  </h5>
-                </div>
-                <div className="card-text  d-flex gap-3">
-                  <p style={{ color: "red" }}>
-                    deadLine{" "}
-                    {e?.deadLine
-                      ? `${convertToAMPM(e?.deadLine || "").dateFormat}`
-                      : "Not yet created"}
-                  </p>
-                  {/* <p>
+        {datas && datas.length > 0 ? (
+          datas.map((e, i) => {
+            return (
+              <div key={i} className="card">
+                <div className="card-body">
+                  <div className="d-flex text-secondary">
+                    <h4>Q</h4>
+                    <h5
+                      className="card-title"
+                      style={{
+                        width: "100%",
+                        height: "100%",
+                        overflow: "hidden",
+                        textOverflow: "ellipsis",
+                        textIndent: "10px",
+                        whiteSpace: "nowrap",
+                      }}
+                    >
+                      {e.question}
+                    </h5>
+                  </div>
+                  <div className="card-text  d-flex gap-3">
+                    <p style={{ color: "red" }}>
+                      deadLine{" "}
+                      {e?.deadLine
+                        ? `${convertToAMPM(e?.deadLine || "").dateFormat}`
+                        : ""}
+                    </p>
+                    {/* <p>
                     {`${convertToAMPM(e?.deadLine || "02-19-2000").timeFormat}`}
                   </p> */}
-                </div>
-                <p
-                  className=" text-primary p-2 rounded-2"
-                  style={{ width: "fit-content", backgroundColor: "lightblue" }}
-                >
-                  task createdAt: {e?.taskCreatedDate?.split("T")[0] || ""}
-                </p>
-                <div className="d-flex w-100 align-items-center justify-content-between">
-                  <Link to={`/taskview/${e?._id}`} className="btn btn-primary">
-                    view room
-                  </Link>
-                  <button
-                    onClick={() => handleUpdate(e)}
-                    className="btn btn-primary"
+                  </div>
+                  <p
+                    className=" text-primary p-2 rounded-2"
+                    style={{
+                      width: "fit-content",
+                      backgroundColor: "lightblue",
+                    }}
                   >
-                    edit task
-                  </button>
+                    task createdAt: {e?.taskCreatedDate?.split("T")[0] || ""}
+                  </p>
+                  <div className="d-flex w-100 align-items-center justify-content-between">
+                    <Link
+                      to={`/taskview/${e?._id}`}
+                      className="btn btn-primary"
+                    >
+                      view room
+                    </Link>
+                    <button
+                      onClick={() => handleUpdate(e)}
+                      className="btn btn-primary"
+                    >
+                      edit task
+                    </button>
+                  </div>
                 </div>
               </div>
-            </div>
-          );
-        })}
+            );
+          })
+        ) : (
+          <main className="d-flex w-100 align-items-center justify-content-center">
+            <picture id="notFound">
+              <img src={taskNotFound} alt="task not found" />
+            </picture>
+          </main>
+        )}
       </section>
     </main>
   );
@@ -201,7 +237,7 @@ export const UploadTask = (props) => {
           close
         </span>
       </div>
-      <section className="uploadtask-inner  w-100 m-2 d-flex flex-column gap-3 text-primary mx-auto">
+      <form className="uploadtask-inner  w-100 m-2 d-flex flex-column gap-3 text-primary mx-auto">
         <section className="d-flex align-items-center my-4 gap-2 w-100">
           <div className="uploadtask-inner-input border px-2 py-3 d-flex justify-content-between align-items-center">
             <input
@@ -211,6 +247,7 @@ export const UploadTask = (props) => {
               onChange={(e) => {
                 setQuestion(e.target.value);
               }}
+              required
             />
             <IoDocuments className="fs-4" />
           </div>
@@ -222,6 +259,7 @@ export const UploadTask = (props) => {
             name="deadLine"
             className="border-2 rounded-2 btn"
             id="deadLine"
+            required
             onChange={(e) => {
               setDeadLine(e.target.value);
             }}
@@ -229,11 +267,12 @@ export const UploadTask = (props) => {
         </section>
         <button
           className="btn bg-primary text-white px-3 my-2 fw-bold w-75 mx-auto"
+          type="submit"
           onClick={handleSubmit}
         >
           create room
         </button>
-      </section>
+      </form>
     </main>
   );
 };
@@ -266,8 +305,9 @@ export const TaskUpdating = (props) => {
   return (
     <>
       <section
-        className={`${props.edit ? "d-flex" : "d-none"
-          }  taskUpdating align-items-center p-2 justify-content-center `}
+        className={`${
+          props.edit ? "d-flex" : "d-none"
+        }  taskUpdating align-items-center p-2 justify-content-center `}
       >
         <main className="h-100 w-100 d-flex align-items-center justify-content-center flex-column">
           <h5 className="text-primary">Edit Task</h5>

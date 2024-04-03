@@ -3,7 +3,6 @@ import api from "../ApiService";
 
 const fetchData = async (url) => {
   const response = await api.get(url);
-  //   console.log(response.data)
   return response.data;
 };
 

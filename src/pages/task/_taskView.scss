@@ -20,7 +20,7 @@
         max-width: 80%;
         overflow: hidden;
         border-radius: 5px;
-        box-shadow: 0 0 10px lightblue;
+        box-shadow: 0 0 20px lightblue;
         .progress {
           height: 100%;
         }
@@ -36,8 +36,8 @@
     padding: 10px;
     background-color: lightblue;
     .studImg {
-      height: 90px;
-      width: 90px;
+      height: 70px;
+      width: 70px;
       min-height: 70px;
       min-width: 70px;
       overflow: hidden;
@@ -49,15 +49,24 @@
         object-position: top;
       }
     }
+    .taskImg {
+      height: 200px;
+      width: 200px;
+      img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+      }
+    }
     .answer {
-      color: white;
+      color: #646363;
     }
   }
 }
 
 #star {
-  height: 40px;
-  width: 40px;
+  height: 38px;
+  width: 38px;
   background-color: white;
   transition: all 0.5s linear;
   clip-path: polygon(

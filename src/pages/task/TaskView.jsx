@@ -4,41 +4,71 @@ import { MdOutlineKeyboardArrowLeft } from "react-icons/md";
 import UseQueryRe from "../../customHooks/UseQueryRe";
 import { PUT_MARKS, TASK_ROOM } from "../../constant/ApiEndpoint";
 import SetImg from "../../assets/course-byBatches/SetImg";
-import dummyImg from "../../assets/profile-image/boy.avif"
+import dummyImg from "../../assets/profile-image/boy.avif";
 import { useState } from "react";
 import api from "../../ApiService";
 import { ToastContainer, toast } from "react-toastify";
+import { Vortex } from "react-loader-spinner";
+// task no one is submitted img
+import taskNotSubmitted from "../../assets/not-found/noOneis.png";
 
 export const TaskView = () => {
   const { taskId } = useParams();
   const navigate = useNavigate();
-  const { data, refetch } = UseQueryRe("task", TASK_ROOM, taskId);
+  const { data, refetch, isLoading, isFetching, isRefetching } = UseQueryRe(
+    "task",
+    TASK_ROOM,
+    taskId
+  );
   // console.log(data || null);
 
   const { courseName = "course name" } = data?.task || {};
   const studentAnswer = data?.studentSubmittedAnswer || null;
-  const [mark, setMark] = useState(0)
+  const [mark, setMark] = useState(0);
   function conv(data) {
     const date = new Date(data);
     return date;
   }
   const marks = [0, 1, 2, 3, 4, 5];
-
+  if (isLoading || isRefetching) {
+    return (
+      <main className="loaders">
+        <Vortex
+          visible={true}
+          height="80"
+          width="80"
+          ariaLabel="vortex-loading"
+          wrapperStyle={{}}
+          wrapperClass="vortex-wrapper"
+          colors={[
+            "#0A73BE",
+            "lightblue",
+            "#0A73BE",
+            "lightblue",
+            "#0A73BE",
+            "lightblue",
+          ]}
+        />
+      </main>
+    );
+  }
   const handleMarks = async (answerId, option) => {
     const resp = await api.put(`${PUT_MARKS}/${answerId}`, { mark: option });
     if (resp.status == 200) {
-
-      toast.success("mark successfully submitted", {
-        position: "top-center",
-      });
+      setTimeout(() => {
+        toast.success("mark successfully submitted", {
+          position: "top-center",
+        });
+      }, 1000);
     } else {
-
-      toast.error(resp.data, {
-        position: "top-center",
-      });
+      setTimeout(() => {
+        toast.error("mark not submitted", {
+          position: "top-center",
+        });
+      }, 1000);
     }
-    refetch()
-  }
+    refetch();
+  };
 
   return (
     <>
@@ -76,49 +106,93 @@ export const TaskView = () => {
               Question
             </h3> */}
             <div className="completion">
-              <div className="progress bg-primary" style={{ width: `${data?.percentage || 0}%` }}></div>
+              <div
+                className="progress bg-primary"
+                style={{ width: `${data?.percentage || 0}%` }}
+              ></div>
             </div>
-            <div className="align-self-end"> progress: {data?.percentage || 0}%</div>
-            <p className=" taskQuestion rounded-2 " style={{ textIndent: "10px" }}>
+            <div className="align-self-end">
+              {" "}
+              progress: {data?.percentage || 0}%
+            </div>
+            <p
+              className=" taskQuestion rounded-2 "
+              style={{ textIndent: "10px" }}
+            >
               Q: {data?.task?.question}
             </p>
           </div>
         </main>
-
-        <main className="d-flex flex-column gap-3 p-4">
-          {studentAnswer?.map((e, i) => {
-            return (
-              <main key={i} className="studentAnswer rounded-3">
-                <article className="d-flex align-items-center gap-3 p-2">
-                  <div className="studImg">
-                    <img src={e?.photo} alt="" />
+        <main className="d-flex flex-column  gap-3 p-4">
+          {data && data.length > 0 ? (
+            studentAnswer?.map((e, i) => {
+              return (
+                <main
+                  key={i}
+                  className="studentAnswer d-flex gap-2 flex-column align-items-center justify-content-center rounded-3"
+                >
+                  <article className="d-flex align-self-start align-items-center gap-3 p-2">
+                    <div className="studImg ">
+                      <img src={e?.photo} alt="" />
+                    </div>
+                    <h4 className="text-secondary text-uppercase text-wrap">
+                      {e?.name}
+                    </h4>
+                  </article>
+                  <div className="answer p-2 text-center ">
+                    <p className="fs-5"> answer: {e?.answer}</p>
                   </div>
-                  <h4 className="text-white text-uppercase text-wrap">{e?.name}</h4>
-                </article>
-                <div className="answer p-2 text-centert">
-                  <p className="fs-5"> answer: {e?.answer}</p>
-                </div>
-                <div className="d-flex gap-4 p-2">
-                  {
-                    marks.map((option, i) => {
+                  {/* <div className="taskImg">
+                  <img src={dummyImg} />
+                </div> */}
+                  <div className="d-flex gap-2 align-self-start flex-wrap">
+                    {marks.map((option, i) => {
                       return (
-                        <div key={i} className="d-flex align-items-center">
-                          <label className={`d-flex align-items-center justify-content-center ${option == e?.mark ? "bg-success text-white" : "bg-white"}`}
-                            htmlFor={`marks${i}`} onClick={() => { handleMarks(e?._id, option) }} id="star">
-                            <p className={`mt-3 ${option == e?.mark ? "text-white" : "text-secondary "}`}>{option}</p>
+                        <div key={i} className="d-flex ">
+                          <label
+                            className={`d-flex align-items-center justify-content-center ${
+                              option == e?.mark
+                                ? "bg-success text-white"
+                                : "bg-white"
+                            }`}
+                            htmlFor={`marks${i}`}
+                            onClick={() => {
+                              handleMarks(e?._id, option);
+                            }}
+                            id="star"
+                          >
+                            <p
+                              className={`mt-3 ${
+                                option == e?.mark
+                                  ? "text-white"
+                                  : "text-secondary "
+                              }`}
+                            >
+                              {option}
+                            </p>
                           </label>
-                          <input style={{ display: "none" }} type="radio" name="mark" id={`marks${i}`} value={option} />
-
+                          <input
+                            style={{ display: "none" }}
+                            type="radio"
+                            name="mark"
+                            id={`marks${i}`}
+                            value={option}
+                          />
                         </div>
-                      )
-                    })
-                  }
-                </div>
-              </main>
-            )
-          })}
+                      );
+                    })}
+                  </div>
+                </main>
+              );
+            })
+          ) : (
+            <main>
+              <picture id="notFound">
+                <img src={taskNotSubmitted} alt="no one is submitted" />
+              </picture>
+            </main>
+          )}
         </main>
-
       </section>
     </>
   );

@@ -12,6 +12,7 @@ import { BATCH_STUDENT } from "../../constant/ApiEndpoint";
 import { useParams } from "react-router-dom";
 import SetImg from "../../assets/course-byBatches/SetImg";
 // import { OALoaders } from "../loaders/Loader";
+import { Vortex } from "react-loader-spinner";
 import { useEffect } from "react";
 
 export const GroupInfo = () => {
@@ -20,7 +21,7 @@ export const GroupInfo = () => {
   const [search, setSearch] = useState("");
   const [show, setShow] = useState(false);
   const [completedPercentage, setCompletedPercentage] = useState(0);
-  const { data, isError } = UseQueryRe(
+  const { data, isError, isLoading, isFetching } = UseQueryRe(
     "MenotDetails",
     BATCH_STUDENT,
     `${batchId}`
@@ -44,6 +45,29 @@ export const GroupInfo = () => {
       setCompletedPercentage(0);
     }
   }, [datas]);
+
+  if (isLoading || isFetching) {
+    return (
+      <main className="loaders">
+        <Vortex
+          visible={true}
+          height="80"
+          width="80"
+          ariaLabel="vortex-loading"
+          wrapperStyle={{}}
+          wrapperClass="vortex-wrapper"
+          colors={[
+            "#0A73BE",
+            "lightblue",
+            "#0A73BE",
+            "lightblue",
+            "#0A73BE",
+            "lightblue",
+          ]}
+        />
+      </main>
+    );
+  }
 
   function countTrueIsCompleted(syllabus) {
     let trueCount = 0;
