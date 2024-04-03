@@ -78,7 +78,7 @@ export const Update = () => {
     localData[dayInd].topics[sylInd].isCompleted = value;
     localData[dayInd].topics[sylInd].date = date;
     setOrgSyllabus({ syllabus: localData });
-    console.log({ syllabus: localData })
+    console.log({ syllabus: localData });
   };
 
   if (slyLoading == false && syllabus.length === 0) {
@@ -168,7 +168,8 @@ export const Description = (props) => {
     props.setOpenNote(false);
   };
 
-  const handleSubmit = async () => {
+  const handleSubmit = async (e) => {
+    e.preventDefault;
     await api
       .post(`${PUT_NOTES}/${batchId}`, { note, date: todayDate })
       .then((res) => {
@@ -213,12 +214,14 @@ export const Description = (props) => {
           }}
           required
         ></textarea>
-        <button
+        <div
           className="btn btn-primary my-2 p-2 fs-5"
-          onClick={handleSubmit}
+          onClick={(e) => {
+            handleSubmit(e);
+          }}
         >
           Submit
-        </button>
+        </div>
       </article>
     </form>
   );

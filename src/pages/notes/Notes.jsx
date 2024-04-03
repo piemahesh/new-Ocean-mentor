@@ -97,11 +97,8 @@ export const GroupInfoNavbar = (props) => {
     navigate(-1);
   };
 
-
-
   return (
     <nav className="groupinfo-navbar sticky-top shadow d-flex justify-content-between align-items-center text-white px-2 bg-primary">
-
       <article className="d-flex align-items-center">
         <Link onClick={goBack} className="text-decoration-none text-white">
           <MdOutlineKeyboardArrowLeft className="left-arrow " />
@@ -116,9 +113,7 @@ export const GroupInfoNavbar = (props) => {
         <Link to="" className="text-decoration-none text-white">
           <BsThreeDotsVertical className="fs-2 " />
         </Link>
-
       </article>
-
     </nav>
   );
 };

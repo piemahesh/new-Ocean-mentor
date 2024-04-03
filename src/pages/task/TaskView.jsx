@@ -15,22 +15,23 @@ import taskNotSubmitted from "../../assets/not-found/noOneis.png";
 export const TaskView = () => {
   const { taskId } = useParams();
   const navigate = useNavigate();
-  const { data, refetch, isLoading, isFetching, isRefetching } = UseQueryRe(
+  const { data, refetch, isLoading, isFetching } = UseQueryRe(
     "task",
     TASK_ROOM,
     taskId
   );
   // console.log(data || null);
-
+  const datas = data || [];
   const { courseName = "course name" } = data?.task || {};
   const studentAnswer = data?.studentSubmittedAnswer || null;
   const [mark, setMark] = useState(0);
-  function conv(data) {
-    const date = new Date(data);
+  function conv(d) {
+    const date = new Date(d);
     return date;
   }
   const marks = [0, 1, 2, 3, 4, 5];
-  if (isLoading || isRefetching) {
+
+  if (isLoading || isFetching) {
     return (
       <main className="loaders">
         <Vortex
@@ -124,7 +125,7 @@ export const TaskView = () => {
           </div>
         </main>
         <main className="d-flex flex-column  gap-3 p-4">
-          {data && data.length > 0 ? (
+          {studentAnswer && studentAnswer.length > 0 ? (
             studentAnswer?.map((e, i) => {
               return (
                 <main
