@@ -19,6 +19,7 @@ export const Task = () => {
   const [upload, setUploadTask] = useState(false);
   const [edit, setEdit] = useState(false);
   const [task, setTask] = useState(null);
+  const [preview, setPreview] = useState(false);
   const navigate = useNavigate();
 
   const { batchId } = useParams();
@@ -119,8 +120,22 @@ export const Task = () => {
             +
           </article>
         </section>
-        {upload && <UploadTask onclose={uploadcompleted} batchId={batchId} />}
+        {upload && (
+          <UploadTask
+            onclose={uploadcompleted}
+            batchId={batchId}
+            setPreview={setPreview}
+          />
+        )}
       </div>
+
+      {preview ? (
+        <div className="w-100 d-flex align-items-center justify-content-center mt-5">
+          dfd
+        </div>
+      ) : (
+        <></>
+      )}
 
       <section className="mb-4">
         {datas && datas.length > 0 ? (
@@ -151,9 +166,6 @@ export const Task = () => {
                         ? `${convertToAMPM(e?.deadLine || "").dateFormat}`
                         : ""}
                     </p>
-                    {/* <p>
-                    {`${convertToAMPM(e?.deadLine || "02-19-2000").timeFormat}`}
-                  </p> */}
                   </div>
                   <p
                     className=" text-primary p-2 rounded-2"
@@ -212,7 +224,8 @@ export const UploadTask = (props) => {
   const [deadLine, setDeadLine] = useState(null);
 
   const navigate = useNavigate();
-  const handleSubmit = async () => {
+  const handleSubmit = async (e) => {
+    e.preventDefault();
     props.onclose;
     try {
       await api.post(ADD_TASK, {
@@ -233,11 +246,20 @@ export const UploadTask = (props) => {
     <main className="uploadtask border-top d-flex flex-column justify-content-center  shadow position-fixed bg-white">
       <div className="d-flex justify-content-between border-bottom px-4 pt-4">
         <h4>Upload Task</h4>
-        <span className="text-primary" onClick={props.onclose}>
+        <span
+          className="text-primary"
+          onClick={() => {
+            props.onclose();
+            props.setPreview(false);
+          }}
+        >
           close
         </span>
       </div>
-      <form className="uploadtask-inner  w-100 m-2 d-flex flex-column gap-3 text-primary mx-auto">
+      <form
+        onSubmit={handleSubmit}
+        className="uploadtask-inner  w-100 m-2 d-flex flex-column gap-3 text-primary mx-auto"
+      >
         <section className="d-flex align-items-center my-4 gap-2 w-100">
           <div className="uploadtask-inner-input border px-2 py-3 d-flex justify-content-between align-items-center">
             <input
@@ -252,6 +274,18 @@ export const UploadTask = (props) => {
             <IoDocuments className="fs-4" />
           </div>
         </section>
+        <div className="d-flex align-items-center justify-content-center">
+          {" "}
+          (or)
+        </div>
+        <section>
+          <input
+            type="file"
+            name="taskImg"
+            id="taskImg"
+            onClick={props.setPreview}
+          />
+        </section>
         <section className="taskAdd">
           <label htmlFor="deadLine">Set deadLine</label>
           <input
@@ -265,10 +299,11 @@ export const UploadTask = (props) => {
             }}
           />
         </section>
+
         <button
           className="btn bg-primary text-white px-3 my-2 fw-bold w-75 mx-auto"
           type="submit"
-          onClick={handleSubmit}
+          // onClick={handleSubmit}
         >
           create room
         </button>
@@ -282,7 +317,8 @@ export const TaskUpdating = (props) => {
   const [deadLine, setDeadLine] = useState(null);
   const { task } = props;
   const navigate = useNavigate();
-  const handleSubmit = async () => {
+  const handleSubmit = async (e) => {
+    e.preventDefault();
     try {
       if (question == "" || deadLine == "") {
         console.log("some field is missing");
@@ -312,7 +348,7 @@ export const TaskUpdating = (props) => {
         <main className="h-100 w-100 d-flex align-items-center justify-content-center flex-column">
           <h5 className="text-primary">Edit Task</h5>
           <form
-            action="#"
+            onSubmit={handleSubmit}
             className="d-flex taskEditForm align-items-center border p-4 rounded-2 gap-5 flex-column w-100"
           >
             <div className="w-100">
@@ -359,9 +395,9 @@ export const TaskUpdating = (props) => {
               >
                 exit
               </div>
-              <div className=" btn btn-primary w-50" onClick={handleSubmit}>
+              <button className=" btn btn-primary w-50" type="submit">
                 Submit
-              </div>
+              </button>
             </div>
           </form>
         </main>
