@@ -30,7 +30,8 @@ export const Task = () => {
   );
   let datas = data || [];
 
-  if (isLoading || isFetching) {
+  if (isLoading) {
+    console.log("colg")
     return (
       <main className="loaders">
         <Vortex
@@ -158,6 +159,9 @@ export const Task = () => {
                     >
                       {e.question}
                     </h5>
+                    <div>
+                      <img src={e?.taskImg} alt="" />
+                    </div>
                   </div>
                   <div className="card-text  d-flex gap-3">
                     <p style={{ color: "red" }}>
@@ -223,18 +227,31 @@ export const UploadTask = (props) => {
   const [question, setQuestion] = useState("");
   const [deadLine, setDeadLine] = useState(null);
 
+  const [selectedFile, setSelectedFile] = useState(null);
+
+
+
+
   const navigate = useNavigate();
   const handleSubmit = async (e) => {
+
     e.preventDefault();
+    const formData = new FormData();
+    formData.append("taskImg", selectedFile)
+    formData.append("question", question);
+    formData.append("batchId", props.batchId)
+    formData.append("deadLine", deadLine)
+    console.log(selectedFile)
     props.onclose;
     try {
-      await api.post(ADD_TASK, {
-        question,
-        deadLine,
-        batchId: props.batchId,
+      await api.post(ADD_TASK, formData, {
+        headers: {
+          'Content-Type': 'multipart/form-data'
+        }
       });
     } catch (error) {
       console.log("error");
+
     } finally {
       setTimeout(() => {
         window.location.reload();
@@ -283,7 +300,8 @@ export const UploadTask = (props) => {
             type="file"
             name="taskImg"
             id="taskImg"
-            onClick={props.setPreview}
+            // onClick={props.setPreview}
+            onChange={(e) => { setSelectedFile(e.target.files[0]) }}
           />
         </section>
         <section className="taskAdd">
@@ -303,7 +321,7 @@ export const UploadTask = (props) => {
         <button
           className="btn bg-primary text-white px-3 my-2 fw-bold w-75 mx-auto"
           type="submit"
-          // onClick={handleSubmit}
+        // onClick={handleSubmit}
         >
           create room
         </button>
@@ -341,9 +359,8 @@ export const TaskUpdating = (props) => {
   return (
     <>
       <section
-        className={`${
-          props.edit ? "d-flex" : "d-none"
-        }  taskUpdating align-items-center p-2 justify-content-center `}
+        className={`${props.edit ? "d-flex" : "d-none"
+          }  taskUpdating align-items-center p-2 justify-content-center `}
       >
         <main className="h-100 w-100 d-flex align-items-center justify-content-center flex-column">
           <h5 className="text-primary">Edit Task</h5>

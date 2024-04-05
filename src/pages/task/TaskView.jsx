@@ -122,6 +122,9 @@ export const TaskView = () => {
             >
               Q: {data?.task?.question}
             </p>
+            <div className="taskImg">
+              <img src={data?.task?.taskImg} alt="" />
+            </div>
           </div>
         </main>
         <main className="d-flex flex-column  gap-3 p-4">
@@ -151,11 +154,10 @@ export const TaskView = () => {
                       return (
                         <div key={i} className="d-flex ">
                           <label
-                            className={`d-flex align-items-center justify-content-center ${
-                              option == e?.mark
-                                ? "bg-success text-white"
-                                : "bg-white"
-                            }`}
+                            className={`d-flex align-items-center justify-content-center ${option == e?.mark
+                              ? "bg-success text-white"
+                              : "bg-white"
+                              }`}
                             htmlFor={`marks${i}`}
                             onClick={() => {
                               handleMarks(e?._id, option);
@@ -163,11 +165,10 @@ export const TaskView = () => {
                             id="star"
                           >
                             <p
-                              className={`mt-3 ${
-                                option == e?.mark
-                                  ? "text-white"
-                                  : "text-secondary "
-                              }`}
+                              className={`mt-3 ${option == e?.mark
+                                ? "text-white"
+                                : "text-secondary "
+                                }`}
                             >
                               {option}
                             </p>
