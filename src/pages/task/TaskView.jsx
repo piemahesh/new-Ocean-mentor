@@ -152,9 +152,11 @@ export const TaskView = () => {
                   <div className="answer p-2 text-center ">
                     <p className="fs-5"> answer: {e?.answer}</p>
                   </div>
-                  {/* <div className="taskImg">
-                  <img src={dummyImg} />
-                </div> */}
+                  <a href={e?.answerImg} target="_blank">
+                    <div className="taskImg">
+                      <img src={e?.answerImg} />
+                    </div>
+                  </a>
                   <div className="d-flex gap-2 align-self-start flex-wrap">
                     {marks.map((option, i) => {
                       return (
