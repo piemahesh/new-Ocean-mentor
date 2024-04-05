@@ -31,12 +31,12 @@ export const FilterSection = () => {
         <span>Course</span>
         <IoCaretDownSharp />
       </Link>
-      <Link
+      {/* <Link
         to="/home/time"
         className="filters-inner border text-decoration-none d-flex align-items-center gap-2 px-4 py-2"
       >
         <span>Time</span>
-      </Link>
+      </Link> */}
       <Link
         to="/home/date"
         className="filters-inner border text-decoration-none d-flex align-items-center gap-2 px-4 py-2"

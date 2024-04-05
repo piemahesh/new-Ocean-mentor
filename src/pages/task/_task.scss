@@ -121,6 +121,7 @@
       width: 100%;
       border-radius: 20px;
       input {
+        width: 100%;
         outline: none;
       }
     }
@@ -171,5 +172,15 @@
   /* Handle on hover */
   &::-webkit-scrollbar-thumb:hover {
     background: #033eac;
+  }
+}
+
+.taskImg {
+  height: 70px;
+  width: 70px;
+  & > img {
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
   }
 }

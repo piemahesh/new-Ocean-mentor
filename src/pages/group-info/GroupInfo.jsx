@@ -14,9 +14,12 @@ import SetImg from "../../assets/course-byBatches/SetImg";
 // import { OALoaders } from "../loaders/Loader";
 import { Vortex } from "react-loader-spinner";
 import { useEffect } from "react";
+import useScreenshotShare from "../../components/html2canvas/HtmltoCanvas";
 
 export const GroupInfo = () => {
   const navigate = useNavigate();
+  const takeScreenshotAndShare = useScreenshotShare();
+
   const { batchId } = useParams();
   const [search, setSearch] = useState("");
   const [show, setShow] = useState(false);
@@ -113,7 +116,7 @@ export const GroupInfo = () => {
   });
 
   return (
-    <main className="group-info ">
+    <main className="group-info " id="screenshot">
       <nav className="d-flex justify-content-between align-items-center text-primary px-2 ">
         <section className="d-flex align-items-center gap-2">
           <Link onClick={goBack} className="text-decoration-none">
@@ -121,11 +124,12 @@ export const GroupInfo = () => {
           </Link>
           <h4 className="my-0">Group Info</h4>
         </section>
+
         <Link
           // to="/share"
           className="share text-decoration-none bg-primary d-flex align-items-center gap-2 py-1 px-2 text-white"
         >
-          <span>Share</span>
+          <span onClick={takeScreenshotAndShare}>Share</span>
           <FaShareSquare />
         </Link>
       </nav>
@@ -168,6 +172,7 @@ export const GroupInfo = () => {
             <span>BatchBoard</span>
           </Link>
         </div>
+
         <section className=" gap-4 py-2 d-flex flex-column justify-content-center align-items-center">
           <article className="range w-75 px-4 py-2 border bg-white">
             <progress
