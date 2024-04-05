@@ -101,7 +101,7 @@ export const TaskView = () => {
               >
                 <SetImg course={courseName.toLowerCase()} />
               </div>
-              <p>{courseName}</p>
+              <p className="fs-4 text-primary">{courseName}</p>
             </div>
             {/* <h3 className="text-danger" style={{ alignSelf: "flex-start" }}>
               Question

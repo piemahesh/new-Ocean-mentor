@@ -88,15 +88,15 @@ export const Task = () => {
           >
             <MdOutlineKeyboardArrowLeft className="left-arrow " />
           </span>
-          <h5 className="my-0 fs-4">Task</h5>
+          <h5 className="my-0 fs-4">Task Rooms</h5>
         </article>
         <article className="d-flex gap-3">
-          <Link to="" className="text-decoration-none text-white">
+          {/* <Link to="" className="text-decoration-none text-white">
             <BsSearch className="fs-2 " />
-          </Link>
+          </Link> */}
 
           <label className="dropdown">
-            <BsThreeDotsVertical className="fs-2" />
+            {/* <BsThreeDotsVertical className="fs-2" /> */}
             <input type="checkbox" className="dd-input" id="test" />
             <div
               className="dd-menu mx-auto text-primary"
@@ -164,9 +164,21 @@ export const Task = () => {
                       {e.question}
                     </h5>
                   </div>
-                  <main className="w-100 d-flex align-items-end justify-content-end">
+                  <main className="w-100 d-flex align-items-center justify-content-between">
+                    <div className="card-text  d-flex gap-3">
+                      <p style={{ color: "red" }}>
+                        deadLine{" "}
+                        {e?.deadLine
+                          ? `${convertToAMPM(e?.deadLine || "").dateFormat}`
+                          : ""}
+                      </p>
+                    </div>
                     {e?.taskImg ? (
-                      <a href={`${e?.taskImg}`} target="_blank">
+                      <a
+                        href={`${e?.taskImg}`}
+                        className="w-25 border"
+                        target="_blank"
+                      >
                         <div className="taskImg">
                           <img src={e?.taskImg} alt="taskImg" />
                         </div>
@@ -175,14 +187,7 @@ export const Task = () => {
                       <></>
                     )}
                   </main>
-                  <div className="card-text  d-flex gap-3">
-                    <p style={{ color: "red" }}>
-                      deadLine{" "}
-                      {e?.deadLine
-                        ? `${convertToAMPM(e?.deadLine || "").dateFormat}`
-                        : ""}
-                    </p>
-                  </div>
+
                   <p
                     className=" text-primary p-2 rounded-2"
                     style={{
@@ -344,26 +349,6 @@ export const TaskUpdating = (props) => {
   const [selectedFile, setSelectedFile] = useState(null);
   const { task } = props;
   const navigate = useNavigate();
-  // const handleSubmit = async (e) => {
-  //   e.preventDefault();
-  //   try {
-  //     if (question == "" || deadLine == "") {
-  //       console.log("some field is missing");
-  //       throw Error("some field is missing");
-  //     }
-  //     const resp = await api.put(EDIT_TASK, {
-  //       id: task._id,
-  //       question,
-  //       deadLine,
-  //     });
-  //     console.log(resp);
-  //     setTimeout(() => {
-  //       window.location.reload();
-  //     }, 1000);
-  //   } catch (error) {
-  //     console.log("error");
-  //   }
-  // };
   const handleSubmit = async (e) => {
     e.preventDefault();
     const formData = new FormData();
@@ -382,12 +367,11 @@ export const TaskUpdating = (props) => {
       });
     } catch (error) {
       console.log("error");
+    } finally {
+      setTimeout(() => {
+        window.location.reload();
+      }, 1000);
     }
-    // } finally {
-    //   setTimeout(() => {
-    //     window.location.reload();
-    //   }, 1000);
-    // }
   };
   return (
     <>
@@ -419,7 +403,7 @@ export const TaskUpdating = (props) => {
                 required
               />
             </div>
-            <section>
+            <section className="d-flex w-100 border">
               <input
                 type="file"
                 name="taskImg"

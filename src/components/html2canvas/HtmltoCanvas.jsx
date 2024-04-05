@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import html2canvas from "html2canvas";
 
 const useScreenshotShare = () => {
@@ -8,9 +8,12 @@ const useScreenshotShare = () => {
       // Convert the canvas to base64 image
       const image = canvas.toDataURL("image/png");
       // Open the share dialog
-      console.log(image);
-      console.log(navigator.share);
-      console.log("first");
+      const link = document.createElement("a");
+      link.href = image;
+      link.download = "screenshot.png";
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
       if (navigator.share) {
         navigator
           .share({

@@ -9,10 +9,10 @@
     .taskContent {
       .taskQuestion {
         width: 100%;
-        background-color: slateblue;
-        color: white;
+        background-color: #ffffff;
+        color: #a59c9c;
         padding: 15px;
-        font-size: 1.5em;
+        font-size: 1.3em;
       }
       .completion {
         height: 7px;
@@ -82,3 +82,12 @@
     39% 35%
   );
 }
+// .taskImg {
+//   height: 70px;
+//   width: 70px;
+//   & > img {
+//     height: 100%;
+//     width: 100%;
+//     object-fit: contain;
+//   }
+// }
