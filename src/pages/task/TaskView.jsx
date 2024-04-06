@@ -31,7 +31,7 @@ export const TaskView = () => {
   }
   const marks = [0, 1, 2, 3, 4, 5];
 
-  if (isLoading || isFetching) {
+  if (isLoading) {
     return (
       <main className="loaders">
         <Vortex
@@ -150,7 +150,13 @@ export const TaskView = () => {
                     </h4>
                   </article>
                   <div className="answer p-2 text-center ">
-                    <p className="fs-5"> answer: {e?.answer}</p>
+                    <a
+                      href={e?.answer}
+                      target="_blank"
+                      className="fs-5 text-decoration-none btn btn-secondary border-bottom"
+                    >
+                      git Link
+                    </a>
                   </div>
                   <a href={e?.answerImg} target="_blank">
                     <div className="taskImg">
