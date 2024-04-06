@@ -118,7 +118,7 @@ export const App = () => {
               />
               <Route path="/credit" Component={CreditPercentange} />
               <Route path="/leader" Component={LeaderBoard} />
-              <Route path="/batch" Component={BatchBoard} />
+              <Route path="/batch/:batchId" Component={BatchBoard} />
               <Route path="/batchinfo" Component={BatchInfo} />
               <Route path="/syllabus" Component={Syllabus} />
             </Route>

@@ -163,7 +163,7 @@ export const GroupInfo = () => {
             Group :{admissionsData?.length} students
           </p>
           <Link
-            to="/batch"
+            to={`/batch/${batchId}`}
             className="mt-2 btn btn-primary d-flex gap-1 text-decoration-none"
           >
             <span>

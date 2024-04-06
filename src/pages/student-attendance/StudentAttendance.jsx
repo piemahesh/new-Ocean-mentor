@@ -72,7 +72,11 @@ export const StudentAttendance = () => {
     studentId
   );
   if (isLoading) {
-    return <OALoaders />;
+    return (
+      <main id="loaders">
+        <OALoaders />
+      </main>
+    );
   }
   const handleAbsent = (studentId) => {
     setLoding(true);
