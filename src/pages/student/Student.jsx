@@ -57,54 +57,6 @@ export const Student = () => {
 
       {/* List Filter */}
       <div className="add-list d-flex flex-column my-0">
-        {/* <section className="filters position-sticky my-2 d-flex justify-content-between gap-2 py-2 align-items-center bg-white">
-          <Link
-            to="/student/filter"
-            className="filters-inner border text-decoration-none d-flex align-items-center gap-2 px-4 py-2"
-          >
-            <span>Filter</span>
-            <IoCaretDownSharp />
-          </Link>
-          <Link
-            to="/student/sort"
-            className="filters-inner text-decoration-none border d-flex align-items-center gap-2 px-4 py-2"
-          >
-            <span>Sort By</span>
-            <IoCaretDownSharp />
-          </Link>
-          <Link
-            to="/student/course"
-            className="filters-inner text-decoration-none border d-flex align-items-center gap-2 px-4 py-2"
-          >
-            <span>Course</span>
-            <IoCaretDownSharp />
-          </Link>
-          <Link
-            to="/student/time"
-            className="filters-inner border text-decoration-none d-flex align-items-center gap-2 px-4 py-2"
-          >
-            <span>Time</span>
-          </Link>
-          <Link
-            to="/student/date"
-            className="filters-inner border text-decoration-none d-flex align-items-center gap-2 px-4 py-2"
-          >
-            <span>Date</span>
-          </Link>
-          <Link
-            to="/student/add-date"
-            className="filters-inner border text-decoration-none bg-success text-white fw-bold d-flex align-items-center py-2 px-4"
-          >
-            <MdOutlineAddBox className="mx-1" />
-            <span>Add Date</span>
-          </Link>
-          <div className="line py-2 "></div>
-          <div className="filters-inner border bg-danger d-flex align-items-center gap-2 px-4 py-2 text-white">
-            <span>Clear All</span>
-          </div>
-        </section> */}
-
-        {/* middle add-list */}
         <BatchDivision setSearching={setSearching} setView={setView} />
       </div>
 

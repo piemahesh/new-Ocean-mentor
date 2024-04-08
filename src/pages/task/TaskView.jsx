@@ -123,7 +123,11 @@ export const TaskView = () => {
               Q: {data?.task?.question}
             </p>
             {data?.task.taskImg ? (
-              <a href={`${data?.task.taskImg}`} target="_blank">
+              <a
+                href={`${data?.task.taskImg}`}
+                className="border rounded-2 overflow-hidden"
+                target="_blank"
+              >
                 <div className="taskImg">
                   <img src={data?.task.taskImg} alt="taskImg" />
                 </div>
@@ -164,16 +168,16 @@ export const TaskView = () => {
                     </div>
                   </a>
                   <div className="d-flex gap-2 align-self-start flex-wrap">
-                    {marks.map((option, i) => {
+                    {marks.map((option, j) => {
                       return (
-                        <div key={i} className="d-flex ">
+                        <div key={i + "" + j} className="d-flex ">
                           <label
                             className={`d-flex align-items-center justify-content-center ${
                               option == e?.mark
                                 ? "bg-success text-white"
                                 : "bg-white"
                             }`}
-                            htmlFor={`marks${i}`}
+                            htmlFor={`marks${i + "" + j}`}
                             onClick={() => {
                               handleMarks(e?._id, option);
                             }}
@@ -193,7 +197,7 @@ export const TaskView = () => {
                             style={{ display: "none" }}
                             type="radio"
                             name="mark"
-                            id={`marks${i}`}
+                            id={`marks${i + "" + j}`}
                             value={option}
                           />
                         </div>

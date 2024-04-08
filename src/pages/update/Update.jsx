@@ -21,6 +21,7 @@ export const Update = () => {
   const { batchId } = useParams();
   const navigate = useNavigate();
   const [datas, setdatas] = useState([]);
+  const [loader, setLoader] = useState(false);
   const [courseName, setCourseName] = useState("");
   const [orgSyllabus, setOrgSyllabus] = useState([]);
   const [selectedsyl, setSelectedSyl] = useState([]);
@@ -48,13 +49,18 @@ export const Update = () => {
   };
   const fetchData = async () => {
     try {
+      setLoader(true);
       setSlyLoading(true);
-      const resp = api.get(`${GET_DAY_SHEET}/${batchId}`);
-      resp.then((e) => {
-        setCourseName(e.data.courseName);
-        setdatas(e.data);
-        setSyllabus(e.data.syllabus);
-      });
+      api
+        .get(`${GET_DAY_SHEET}/${batchId}`)
+        .then((e) => {
+          setCourseName(e.data.courseName);
+          setdatas(e.data);
+          setSyllabus(e.data.syllabus);
+        })
+        .finally(() => {
+          setLoader(false);
+        });
       setTimeout(() => setSlyLoading(false), 1000);
     } catch (err) {
       console.log("datas not found");
@@ -78,7 +84,7 @@ export const Update = () => {
     localData[dayInd].topics[sylInd].isCompleted = value;
     localData[dayInd].topics[sylInd].date = date;
     setOrgSyllabus({ syllabus: localData });
-    console.log({ syllabus: localData });
+    // console.log({ syllabus: localData });
   };
 
   if (slyLoading == false && syllabus.length === 0) {
@@ -100,7 +106,11 @@ export const Update = () => {
     <main className="update">
       <GroupInfoNavbar name="Updates" syllabus={syllabus} />
       <div className="list-syllabus m-3 pb-5 gap-4 d-flex flex-column p-2">
-        {submitBtn ? <SubmitBtn createSyllabus={createSyllabus} /> : ""}
+        {submitBtn ? (
+          <SubmitBtn createSyllabus={createSyllabus} loader={loader} />
+        ) : (
+          ""
+        )}
         {syllabus.map((dayData, dayInd) => {
           return (
             <div key={dayInd} className="day-data">
@@ -146,16 +156,20 @@ export const Update = () => {
 
 // ...........................................................................
 export const SubmitBtn = (props) => {
+  const loader = props.loader;
   const { createSyllabus } = props;
   return (
-    <button
-      onClick={() => {
-        createSyllabus();
-      }}
-      className="submitBtn"
-    >
-      submit
-    </button>
+    <main className="w-100 d-flex align-items-center justify-content-center">
+      <button
+        onClick={() => {
+          createSyllabus();
+        }}
+        className="submitBtn"
+      >
+        {loader ? <div className="spinner"></div> : <></>}
+        submiting
+      </button>
+    </main>
   );
 };
 
@@ -185,7 +199,10 @@ export const Description = (props) => {
   };
 
   return (
-    <form className="description  bg-white shadow d-flex flex-column ">
+    <form
+      onSubmit={handleSubmit}
+      className="description  bg-white shadow d-flex flex-column "
+    >
       <section className="d-flex justify-content-end m-3">
         <article className="date d-flex align-items-center w-100 justify-content-center text-white gap-2 ">
           <button
@@ -214,14 +231,9 @@ export const Description = (props) => {
           }}
           required
         ></textarea>
-        <div
-          className="btn btn-primary my-2 p-2 fs-5"
-          onClick={(e) => {
-            handleSubmit(e);
-          }}
-        >
+        <button className="btn btn-primary my-2 p-2 fs-5" type="submit">
           Submit
-        </div>
+        </button>
       </article>
     </form>
   );

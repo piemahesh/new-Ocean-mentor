@@ -9,7 +9,9 @@ import { Description } from "../update/Update";
 import api from "../../ApiService";
 import { DEL_NOTES, GET_NOTES, PUT_NOTES } from "../../constant/ApiEndpoint";
 import { OALoaders } from "../loaders/Loader";
-import SyllabusComponent from "../../components/csvConverter/SyllabusComponent";
+import SyllabusComponent, {
+  NoteBtnComponent,
+} from "../../components/csvConverter/SyllabusComponent";
 
 export const Notes = () => {
   const { batchId } = useParams();
@@ -106,7 +108,11 @@ export const GroupInfoNavbar = (props) => {
         <h5 className="my-0 fs-4">{props.name}</h5>
       </article>
       <article className="d-flex gap-3">
-        <SyllabusComponent syllabusData={props.syllabus} />
+        {props.name == "Notes" ? (
+          <NoteBtnComponent />
+        ) : (
+          <SyllabusComponent syllabusData={props.syllabus} />
+        )}
         <Link to="" className="text-decoration-none text-white">
           <BsSearch className="fs-2 " />
         </Link>
@@ -120,12 +126,16 @@ export const GroupInfoNavbar = (props) => {
 
 // add notes
 export const AddNotes = (props) => {
+  const [loader, setLoader] = useState(false);
   const navigate = useNavigate();
   const handleDelete = async () => {
-    await api.delete(`${DEL_NOTES}/${props.id}`);
+    setLoader(true);
+    await api
+      .delete(`${DEL_NOTES}/${props.id}`)
+      .finally(() => setLoader(false));
     setTimeout(() => {
       window.location.reload();
-    }, 1000);
+    }, 700);
   };
   return (
     <section className="note-text d-flex flex-column shadow justify-content-center m-auto p-3">
@@ -135,9 +145,10 @@ export const AddNotes = (props) => {
       <p className="my-0">{props.content}</p>
       {/* <span className="d-flex justify-content-end">{props.date}</span> */}
       <button
-        className="w-25 btn btn-primary align-self-end border-2 rounded-2"
+        className="w-25 btn btn-primary d-flex align-items-center justify-content-center gap-2 align-self-end border-2 rounded-2"
         onClick={handleDelete}
       >
+        {loader ? <div className="spinner"></div> : <></>}
         delete
       </button>
     </section>

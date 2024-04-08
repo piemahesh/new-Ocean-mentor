@@ -30,24 +30,6 @@ export const GroupInfo = () => {
     `${batchId}`
   );
   const datas = data || [];
-  useEffect(() => {
-    try {
-      datas.map((e) => {
-        const syllabus = e.syllabus;
-        const totalIsCompleted = syllabus.reduce(
-          (acc, day) => acc + day.topics.length,
-          0
-        );
-        const trueIsCompletedCount = countTrueIsCompleted(syllabus);
-        const completedPercentage = Math.round(
-          (trueIsCompletedCount / totalIsCompleted) * 100
-        );
-        setCompletedPercentage(completedPercentage);
-      });
-    } catch (err) {
-      setCompletedPercentage(0);
-    }
-  }, [datas]);
 
   if (isLoading || isFetching) {
     return (
@@ -72,30 +54,11 @@ export const GroupInfo = () => {
     );
   }
 
-  function countTrueIsCompleted(syllabus) {
-    let trueCount = 0;
-
-    syllabus.forEach((day) => {
-      day.topics.forEach((topic) => {
-        if (topic.isCompleted === true) {
-          trueCount++;
-        }
-      });
-    });
-
-    return trueCount;
-  }
-
   if (isError) {
     return <p>error............</p>;
   }
   const goBack = () => {
     navigate(-1);
-  };
-
-  const styles = {
-    background: `radial-gradient(closest-side, white 79%, transparent 90% 100%),
-        conic-gradient(rgba(0, 116, 218, 0.542) ${completedPercentage}%, white 0)`,
   };
 
   const [
@@ -107,6 +70,7 @@ export const GroupInfo = () => {
       batchTime,
       courseName,
       trainerData,
+      syllabusCompletionPercentage,
       ...rest
     } = {},
   ] = datas || [];
@@ -114,6 +78,12 @@ export const GroupInfo = () => {
   const filtered = admissionsData.filter((students) => {
     return students.name.toLowerCase().includes(search.toLowerCase());
   });
+  const styles = {
+    background: `radial-gradient(closest-side, white 79%, transparent 90% 100%),
+        conic-gradient(rgba(0, 116, 218, 0.542) ${Math.round(
+          syllabusCompletionPercentage
+        )}%, white 0)`,
+  };
 
   return (
     <main className="group-info " id="screenshot">
@@ -147,7 +117,7 @@ export const GroupInfo = () => {
               <SetImg course={courseName?.toLowerCase()} />
             </div>
             <article className=" percentage position-absolute text-primary d-flex justify-content-center align-items-center">
-              <span>{`${completedPercentage || 0}%`}</span>
+              <span>{`${Math.round(syllabusCompletionPercentage) || 0}%`}</span>
             </article>
           </section>
           <h6>{batchName?.split("_")[0] || "course name"}</h6>

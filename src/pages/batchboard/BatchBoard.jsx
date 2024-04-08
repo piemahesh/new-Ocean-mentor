@@ -27,7 +27,7 @@ export const BatchBoard = () => {
   };
   const firstRank = datas[0];
   const secondRank = datas[1];
-  const thirdRank = datas[3];
+  const thirdRank = datas[2];
   return (
     <main className="batch">
       <div className="batch-header position-relative">

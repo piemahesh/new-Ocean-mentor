@@ -142,7 +142,7 @@ export const Task = () => {
         <></>
       )}
 
-      <section className="mb-4">
+      <section style={{ marginBottom: "200px" }}>
         {datas && datas.length > 0 ? (
           datas.map((e, i) => {
             return (
@@ -245,8 +245,10 @@ export const UploadTask = (props) => {
   const [question, setQuestion] = useState("");
   const [deadLine, setDeadLine] = useState(null);
   const [selectedFile, setSelectedFile] = useState(null);
+  const [loader, setLoader] = useState(false);
   const navigate = useNavigate();
   const handleSubmit = async (e) => {
+    setLoader(true);
     e.preventDefault();
     const formData = new FormData();
     formData.append("taskImg", selectedFile);
@@ -264,6 +266,7 @@ export const UploadTask = (props) => {
     } catch (error) {
       console.log("error");
     } finally {
+      setLoader(false);
       setTimeout(() => {
         window.location.reload();
       }, 1000);
@@ -331,10 +334,11 @@ export const UploadTask = (props) => {
         </section>
 
         <button
-          className="btn bg-primary text-white px-3 my-2 fw-bold w-75 mx-auto"
+          className="btn bg-primary d-flex align-items-center justify-content-center gap-2 text-white px-3 my-2 fw-bold w-75 mx-auto"
           type="submit"
           // onClick={handleSubmit}
         >
+          {loader ? <div className="spinner"></div> : <></>}
           create room
         </button>
       </form>
