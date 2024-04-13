@@ -51,8 +51,12 @@ const SyllabusComponent = ({ syllabusData }) => {
   return (
     <div>
       {/* Button to trigger sharing functionality */}
-      <button className="btn btn-primary border " onClick={handleShareClick}>
-        Share daysheet
+      <button
+        className="btn bg-white border-2 border "
+        onClick={handleShareClick}
+        style={{ boxShadow: "0 0 10px white", color: "blue" }}
+      >
+        daysheet
       </button>
     </div>
   );

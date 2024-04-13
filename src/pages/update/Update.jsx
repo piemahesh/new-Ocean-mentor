@@ -40,16 +40,21 @@ export const Update = () => {
 
   // create syllabus api
   const createSyllabus = () => {
+    setLoader(true);
     const resp = api.put(`${PUT_DAY_SHEET}/${batchId}`, orgSyllabus);
-    resp.then((res) => {
-      if (res.status === 200) {
-        window.location.reload();
-      }
-    });
+    resp
+      .then((res) => {
+        if (res.status === 200) {
+          window.location.reload();
+        }
+      })
+      .finally(() => {
+        setLoader(false);
+      });
   };
+
   const fetchData = async () => {
     try {
-      setLoader(true);
       setSlyLoading(true);
       api
         .get(`${GET_DAY_SHEET}/${batchId}`)
@@ -103,17 +108,18 @@ export const Update = () => {
   }
 
   return (
-    <main className="update">
+    <form
+      className="update"
+      onSubmit={(e) => {
+        e.preventDefault();
+        createSyllabus();
+      }}
+    >
       <GroupInfoNavbar name="Updates" syllabus={syllabus} />
       <div className="list-syllabus m-3 pb-5 gap-4 d-flex flex-column p-2">
-        {submitBtn ? (
-          <SubmitBtn createSyllabus={createSyllabus} loader={loader} />
-        ) : (
-          ""
-        )}
         {syllabus.map((dayData, dayInd) => {
           return (
-            <div key={dayInd} className="day-data">
+            <main onSubmit={createSyllabus} key={dayInd} className="day-data">
               <p className="day">{`Day ${dayData.day_number}`}</p>
               <ol className="order">
                 {[...dayData.topics].map((sylData, sylInd) => {
@@ -146,32 +152,42 @@ export const Update = () => {
                 })}
               </ol>
               <hr />
-            </div>
+            </main>
           );
         })}
       </div>
-    </main>
+      {submitBtn ? (
+        <div className="w-100 d-flex align-items-center justify-content-center">
+          <button className="btn gap-2 px-4 btn-primary d-flex align-items-center justify-content-center mb-5 position-fixed my-auto">
+            {loader ? <div className="spinner"></div> : <></>}
+            submit
+          </button>
+        </div>
+      ) : (
+        <></>
+      )}
+    </form>
   );
 };
 
 // ...........................................................................
-export const SubmitBtn = (props) => {
-  const loader = props.loader;
-  const { createSyllabus } = props;
-  return (
-    <main className="w-100 d-flex align-items-center justify-content-center">
-      <button
-        onClick={() => {
-          createSyllabus();
-        }}
-        className="submitBtn"
-      >
-        {loader ? <div className="spinner"></div> : <></>}
-        submiting
-      </button>
-    </main>
-  );
-};
+// export const SubmitBtn = (props) => {
+//   const loader = props.loader;
+//   const { createSyllabus } = props;
+//   return (
+//     <main className="w-100 d-flex align-items-center justify-content-center">
+//       <button
+//         // onClick={() => {
+//         //   createSyllabus();
+//         // }}
+//         className="submitBtn"
+//       >
+//         {loader ? <div className="spinner"></div> : <></>}
+//         submit
+//       </button>
+//     </main>
+//   );
+// };
 
 export const Description = (props) => {
   const navigate = useNavigate();
