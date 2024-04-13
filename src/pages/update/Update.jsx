@@ -183,7 +183,7 @@ export const Description = (props) => {
   };
 
   const handleSubmit = async (e) => {
-    e.preventDefault;
+    e.preventDefault();
     await api
       .post(`${PUT_NOTES}/${batchId}`, { note, date: todayDate })
       .then((res) => {

@@ -29,6 +29,12 @@ export const Task = () => {
     ""
   );
   let datas = data || [];
+  // const filteredData = datas.filter((value) => {
+
+  // });
+  const sortedData = [...datas].sort(
+    (a, b) => new Date(b.taskCreatedDate) - new Date(a.taskCreatedDate)
+  );
 
   if (isLoading) {
     return (
@@ -143,8 +149,8 @@ export const Task = () => {
       )}
 
       <section style={{ marginBottom: "200px" }}>
-        {datas && datas.length > 0 ? (
-          datas.map((e, i) => {
+        {sortedData && sortedData.length > 0 ? (
+          sortedData.map((e, i) => {
             return (
               <div key={i} className="card">
                 <div className="card-body">

@@ -49,7 +49,7 @@ export const Notes = () => {
 
   return (
     <main className="notes position-relative">
-      <GroupInfoNavbar name="Notes" />
+      <GroupInfoNavbar name="Notes" datas={newNotes} />
       <div className="notes-add d-flex flex-column justify-content-center align-items-center gap-2">
         {notes.length === 0 ? (
           <div className="d-flex emptyNotes flex-column justify-content-center align-items-center gap-2">
@@ -109,7 +109,7 @@ export const GroupInfoNavbar = (props) => {
       </article>
       <article className="d-flex gap-3">
         {props.name == "Notes" ? (
-          <NoteBtnComponent />
+          <NoteBtnComponent datas={props.datas} />
         ) : (
           <SyllabusComponent syllabusData={props.syllabus} />
         )}
@@ -135,7 +135,7 @@ export const AddNotes = (props) => {
       .finally(() => setLoader(false));
     setTimeout(() => {
       window.location.reload();
-    }, 700);
+    }, 1000);
   };
   return (
     <section className="note-text d-flex flex-column shadow justify-content-center m-auto p-3">

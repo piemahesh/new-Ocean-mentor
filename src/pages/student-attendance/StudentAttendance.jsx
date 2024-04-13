@@ -160,9 +160,14 @@ export const StudentAttendance = () => {
               >
                 <BiMessageRoundedDots />
               </a>
-              <article className="icons fs-4 d-flex align-items-center justify-content-center">
+              <a
+                rel="noreferrer"
+                href={e?.gitLink}
+                target="_blank"
+                className="icons fs-4 d-flex align-items-center text-decoration-none text-white justify-content-center"
+              >
                 <FiGithub />
-              </article>
+              </a>
             </div>
           </div>
         </div>
