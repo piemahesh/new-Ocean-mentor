@@ -22,7 +22,7 @@ export const TaskView = () => {
   );
   // console.log(data || null);
   const datas = data || [];
-  console.log(datas);
+  // console.log(datas);
   const { courseName = "course name" } = data?.task || {};
   const studentAnswer = data?.studentSubmittedAnswer || null;
   const [mark, setMark] = useState(0);
